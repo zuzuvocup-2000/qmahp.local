@@ -675,7 +675,33 @@
 			<description>Xóa</description>
 		</item>
 	</permissions>
-	
+	<permissions>
+		<title>Quản lý - [Từ khóa]</title>
+		<item>
+			<param>backend/language/languagekeyword/index</param>
+			<description>Xem</description>
+		</item>
+		<item>
+			<param>backend/language/languagekeyword/create</param>
+			<description>Thêm</description>
+		</item>
+		<item>
+			<param>backend/language/languagekeyword/update</param>
+			<description>Sửa</description>
+		</item>
+		<item>
+			<param>backend/language/languagekeyword/delete</param>
+			<description>Xóa</description>
+		</item>
+		<item>
+			<param>backend/language/languagekeyword/import</param>
+			<description>Import</description>
+		</item>
+		<item>
+			<param>backend/language/languagekeyword/export</param>
+			<description>Export</description>
+		</item>
+	</permissions>
 	<permissions>
 		<title>Quản lý - [Bản dịch]</title>
 		<item>
