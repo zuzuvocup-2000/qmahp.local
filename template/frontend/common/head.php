@@ -19,7 +19,8 @@
 <link href="resources/plugins/lightslider-master/dist/css/lightslider.min.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
-<link href="resources/customize.css" rel="stylesheet" />
+<link href="resources/all.css" rel="stylesheet" />
+<link href="resources/csssystem.css" rel="stylesheet" />
 <link href="resources/style.css" rel="stylesheet" />
 <script src="resources/library/js/jquery.js"></script>
 <script src="resources/uikit/js/uikit.min.js"></script>
