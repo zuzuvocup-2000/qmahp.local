@@ -1,0 +1,12 @@
+CRITICAL - 2022-08-31 06:35:04 --> Use of undefined constant HTDBUSER - assumed 'HTDBUSER' (this will throw an Error in a future version of PHP)
+#0 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Config/Config.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', '/home/allincli/...', 157, Array)
+#1 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Config/Config.php(83): CodeIgniter\Config\Config::createClass('Config\\Database')
+#2 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Common.php(155): CodeIgniter\Config\Config::get('Database', true)
+#3 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Database/Config.php(91): config('Database')
+#4 /home/allincli/public_html/menu/app/Models/AutoloadModel.php(13): CodeIgniter\Database\Config::connect()
+#5 /home/allincli/public_html/menu/app/Controllers/FrontendController.php(21): App\Models\AutoloadModel->__construct()
+#6 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(891): App\Controllers\FrontendController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#7 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#8 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#10 {main}
