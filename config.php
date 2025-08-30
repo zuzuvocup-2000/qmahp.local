@@ -8,7 +8,7 @@ define('SYSTEM_NAME', 'AIC');
 define('AUTH', 'HTVIETNAM_');
 define('ASSET_BACKEND', 'public/backend/');
 
-define('BASE_URL', 'http://nailboutiquenspa.cvgoup.com/');
+define('BASE_URL', 'http://qmahp.local/');
 define('HTSUFFIX', '');
 
 define('DEBUG', 0);
@@ -21,7 +21,7 @@ define('HTSEARCH', 'tim-kiem');
 define('HTCONTACT', 'contact-us');
 define('HTMAP', 'contact-map');
 
-define('HTDBHOST', 'localhost');
-define('HTDBUSER', 'nail_data');
-define('HTDBPASS', 'Vanh@123456');
-define('HTDBNAME', 'nail_data');
+define('HTDBHOST', 'MySQL-5.6');
+define('HTDBUSER', 'root');
+define('HTDBPASS', '');
+define('HTDBNAME', 'qmahp');
