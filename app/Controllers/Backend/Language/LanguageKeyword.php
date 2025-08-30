@@ -389,7 +389,6 @@ class LanguageKeyword extends BaseController
 
         $store = [
             'keyword' => validate_input($this->request->getPost('keyword')),
-            'module' => validate_input($this->request->getPost('module')),
             'en_translation' => validate_input($this->request->getPost('en_translation')),
             'vi_translation' => validate_input($this->request->getPost('vi_translation')),
             'description' => validate_input($this->request->getPost('description')),
@@ -417,7 +416,6 @@ class LanguageKeyword extends BaseController
     {
         $validate = [
             'keyword' => 'required|min_length[1]|max_length[255]',
-            'module' => 'required|min_length[1]|max_length[100]',
             'en_translation' => 'required|min_length[1]|max_length[500]',
             'vi_translation' => 'required|min_length[1]|max_length[500]',
         ];
@@ -427,11 +425,6 @@ class LanguageKeyword extends BaseController
                 'required' => 'Bạn phải nhập vào trường từ khóa',
                 'min_length' => 'Từ khóa phải có ít nhất 1 ký tự',
                 'max_length' => 'Từ khóa không được vượt quá 255 ký tự'
-            ],
-            'module' => [
-                'required' => 'Bạn phải chọn module',
-                'min_length' => 'Module phải có ít nhất 1 ký tự',
-                'max_length' => 'Module không được vượt quá 100 ký tự'
             ],
             'en_translation' => [
                 'required' => 'Bạn phải nhập bản dịch tiếng Anh',
