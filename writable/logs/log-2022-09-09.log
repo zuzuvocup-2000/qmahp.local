@@ -1,0 +1,137 @@
+CRITICAL - 2022-09-09 21:49:55 --> json_decode() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'json_decode() e...', '/home/allincli/...', 283, Array)
+#1 /home/allincli/public_html/menu/app/Helpers/mypanel_helper.php(283): json_decode(Array)
+#2 /home/allincli/public_html/menu/app/Controllers/Frontend/Homepage/Home.php(31): only_cat(Array)
+#3 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Frontend\Homepage\Home->index()
+#4 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homepage\Home))
+#5 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-09-09 21:50:17 --> json_decode() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'json_decode() e...', '/home/allincli/...', 283, Array)
+#1 /home/allincli/public_html/menu/app/Helpers/mypanel_helper.php(283): json_decode(Array)
+#2 /home/allincli/public_html/menu/app/Controllers/Frontend/Homepage/Home.php(31): only_cat(Array)
+#3 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Frontend\Homepage\Home->index()
+#4 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homepage\Home))
+#5 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-09-09 21:50:55 --> json_decode() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'json_decode() e...', '/home/allincli/...', 283, Array)
+#1 /home/allincli/public_html/menu/app/Helpers/mypanel_helper.php(283): json_decode(Array)
+#2 /home/allincli/public_html/menu/app/Controllers/Frontend/Homepage/Home.php(31): only_cat(Array)
+#3 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Frontend\Homepage\Home->index()
+#4 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homepage\Home))
+#5 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-09-09 21:50:56 --> Undefined index: select_cat
+#0 /home/allincli/public_html/menu/app/Helpers/mypanel_helper.php(296): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/home/allincli/...', 296, Array)
+#1 /home/allincli/public_html/menu/app/Controllers/Frontend/Homepage/Home.php(31): only_cat(Array)
+#2 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Frontend\Homepage\Home->index()
+#3 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homepage\Home))
+#4 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-09 21:50:58 --> Undefined index: select_cat
+#0 /home/allincli/public_html/menu/app/Helpers/mypanel_helper.php(296): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/home/allincli/...', 296, Array)
+#1 /home/allincli/public_html/menu/app/Controllers/Frontend/Homepage/Home.php(31): only_cat(Array)
+#2 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Frontend\Homepage\Home->index()
+#3 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homepage\Home))
+#4 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-09 21:51:53 --> Undefined index: param
+#0 /home/allincli/public_html/menu/app/Helpers/mypanel_helper.php(303): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/home/allincli/...', 303, Array)
+#1 /home/allincli/public_html/menu/app/Controllers/Frontend/Homepage/Home.php(34): only_cat(Array)
+#2 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Frontend\Homepage\Home->index()
+#3 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homepage\Home))
+#4 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-09 21:51:58 --> Undefined index: param
+#0 /home/allincli/public_html/menu/app/Helpers/mypanel_helper.php(303): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', '/home/allincli/...', 303, Array)
+#1 /home/allincli/public_html/menu/app/Controllers/Frontend/Homepage/Home.php(34): only_cat(Array)
+#2 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Frontend\Homepage\Home->index()
+#3 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homepage\Home))
+#4 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-09-09 21:55:43 --> Undefined variable: model
+#0 /home/allincli/public_html/menu/app/Controllers/Frontend/Homepage/Home.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/allincli/...', 51, Array)
+#1 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Frontend\Homepage\Home->index()
+#2 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homepage\Home))
+#3 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-09 21:56:38 --> Undefined variable: productCatalogueList
+#0 /home/allincli/public_html/menu/app/Controllers/Frontend/Homepage/Home.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/allincli/...', 103, Array)
+#1 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Frontend\Homepage\Home->index()
+#2 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homepage\Home))
+#3 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-09 21:56:40 --> Undefined variable: productCatalogueList
+#0 /home/allincli/public_html/menu/app/Controllers/Frontend/Homepage/Home.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/allincli/...', 103, Array)
+#1 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Frontend\Homepage\Home->index()
+#2 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homepage\Home))
+#3 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-09 21:56:42 --> Undefined variable: productCatalogueList
+#0 /home/allincli/public_html/menu/app/Controllers/Frontend/Homepage/Home.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', '/home/allincli/...', 103, Array)
+#1 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Frontend\Homepage\Home->index()
+#2 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Homepage\Home))
+#3 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-09-09 22:44:38 --> {0} is not a valid rule.
+#0 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Validation/Validation.php(333): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('check_promotion...')
+#1 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Validation/Validation.php(189): CodeIgniter\Validation\Validation->processRules('promotionid', 'promotionid', 'FIRST_TIME', Array, Array)
+#2 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Controller.php(219): CodeIgniter\Validation\Validation->run()
+#3 /home/allincli/public_html/menu/app/Controllers/Backend/Promotion/Promotion.php(125): CodeIgniter\Controller->validate(Array, Array)
+#4 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Backend\Promotion\Promotion->update(1)
+#5 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Promotion\Promotion))
+#6 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-09-09 22:45:32 --> {0} is not a valid rule.
+#0 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Validation/Validation.php(333): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('check_promotion...')
+#1 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Validation/Validation.php(189): CodeIgniter\Validation\Validation->processRules('promotionid', 'promotionid', 'FIRST_TIME', Array, Array)
+#2 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Controller.php(219): CodeIgniter\Validation\Validation->run()
+#3 /home/allincli/public_html/menu/app/Controllers/Backend/Promotion/Promotion.php(125): CodeIgniter\Controller->validate(Array, Array)
+#4 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Backend\Promotion\Promotion->update(1)
+#5 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Promotion\Promotion))
+#6 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-09-09 22:46:03 --> {0} is not a valid rule.
+#0 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Validation/Validation.php(333): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('check_promotion...')
+#1 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Validation/Validation.php(189): CodeIgniter\Validation\Validation->processRules('promotionid', 'promotionid', 'FIRST_TIME', Array, Array)
+#2 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Controller.php(219): CodeIgniter\Validation\Validation->run()
+#3 /home/allincli/public_html/menu/app/Controllers/Backend/Promotion/Promotion.php(125): CodeIgniter\Controller->validate(Array, Array)
+#4 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Backend\Promotion\Promotion->update(1)
+#5 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Promotion\Promotion))
+#6 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-09-09 22:46:05 --> {0} is not a valid rule.
+#0 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Validation/Validation.php(333): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('check_promotion...')
+#1 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Validation/Validation.php(189): CodeIgniter\Validation\Validation->processRules('promotionid', 'promotionid', 'FIRST_TIME', Array, Array)
+#2 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Controller.php(219): CodeIgniter\Validation\Validation->run()
+#3 /home/allincli/public_html/menu/app/Controllers/Backend/Promotion/Promotion.php(125): CodeIgniter\Controller->validate(Array, Array)
+#4 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Backend\Promotion\Promotion->update(1)
+#5 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Promotion\Promotion))
+#6 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-09-09 22:46:06 --> {0} is not a valid rule.
+#0 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Validation/Validation.php(333): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('check_promotion...')
+#1 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Validation/Validation.php(189): CodeIgniter\Validation\Validation->processRules('promotionid', 'promotionid', 'FIRST_TIME', Array, Array)
+#2 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/Controller.php(219): CodeIgniter\Validation\Validation->run()
+#3 /home/allincli/public_html/menu/app/Controllers/Backend/Promotion/Promotion.php(125): CodeIgniter\Controller->validate(Array, Array)
+#4 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Backend\Promotion\Promotion->update(1)
+#5 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Backend\Promotion\Promotion))
+#6 /home/allincli/public_html/menu/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 /home/allincli/public_html/menu/index.php(47): CodeIgniter\CodeIgniter->run()
+#8 {main}
