@@ -117,19 +117,6 @@ if (!function_exists('lang_keyword_count')) {
     }
 }
 
-if (!function_exists('lang_keyword_modules')) {
-    /**
-     * Get all available modules
-     * 
-     * @return array List of available modules
-     */
-    function lang_keyword_modules(): array
-    {
-        $model = new \App\Models\LanguageKeywordModel();
-        return $model->getAvailableModules();
-    }
-}
-
 if (!function_exists('lang_keyword_import')) {
     /**
      * Import keywords from language files

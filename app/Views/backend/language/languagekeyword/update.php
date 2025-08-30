@@ -44,20 +44,7 @@
                                     </small>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="module">Module <span class="text-danger">*</span></label>
-                                    <select id="module" name="module" class="form-control" required>
-                                        <option value="">Chọn module</option>
-                                        <?php foreach ($availableModules as $module): ?>
-                                            <option value="<?= $module ?>" 
-                                                    <?= (old('module') ?: $language_keyword['module']) === $module ? 'selected' : '' ?>>
-                                                <?= ucfirst($module) ?>
-                                            </option>
-                                        <?php endforeach; ?>
-                                        <option value="new_module">+ Thêm module mới</option>
-                                    </select>
-                                </div>
-
+                            
                                 <div class="form-group" id="newModuleGroup" style="display: none;">
                                     <label for="newModule">Tên module mới</label>
                                     <input type="text" id="newModule" name="newModule" class="form-control" 

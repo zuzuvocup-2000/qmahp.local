@@ -1,10 +1,4 @@
-<?= $this->extend('backend/dashboard/layout/default') ?>
 
-<?= $this->section('title') ?>
-    Thêm từ khóa đa ngữ mới
-<?= $this->endSection() ?>
-
-<?= $this->section('content') ?>
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
@@ -44,18 +38,7 @@
                                     </small>
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="module">Module <span class="text-danger">*</span></label>
-                                    <select id="module" name="module" class="form-control" required>
-                                        <option value="">Chọn module</option>
-                                        <?php foreach ($availableModules as $module): ?>
-                                            <option value="<?= $module ?>" <?= (old('module') === $module) ? 'selected' : '' ?>>
-                                                <?= ucfirst($module) ?>
-                                            </option>
-                                        <?php endforeach; ?>
-                                        <option value="new_module">+ Thêm module mới</option>
-                                    </select>
-                                </div>
+                                
 
                                 <div class="form-group" id="newModuleGroup" style="display: none;">
                                     <label for="newModule">Tên module mới</label>
@@ -244,4 +227,3 @@ $(document).ready(function() {
     $('#vi_translation').trigger('input');
 });
 </script>
-<?= $this->endSection() ?>

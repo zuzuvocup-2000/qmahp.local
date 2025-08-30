@@ -41,20 +41,7 @@
                         <div class="card-body">
                             <form method="GET" action="<?= BASE_URL ?>backend/language/languagekeyword/export">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="module">Module <span class="text-danger">*</span></label>
-                                            <select id="module" name="module" class="form-control" required>
-                                                <option value="">Chọn module</option>
-                                                <?php foreach ($availableModules as $module): ?>
-                                                    <option value="<?= $module ?>"><?= ucfirst($module) ?></option>
-                                                <?php endforeach; ?>
-                                            </select>
-                                            <small class="form-text text-muted">
-                                                Chọn module để export từ khóa
-                                            </small>
-                                        </div>
-                                    </div>
+                                   
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="language">Ngôn ngữ <span class="text-danger">*</span></label>

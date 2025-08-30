@@ -7,30 +7,30 @@ use App\Models\LanguageKeywordModel;
 
 /**
  * Language Keyword Controller
- * 
+ *
  * Manages language keywords and translations in the backend
- * 
+ *
  * @package App\Controllers\Backend\Language
  */
 class LanguageKeyword extends BaseController
 {
     /**
      * Data array for view
-     * 
+     *
      * @var array
      */
     protected $data;
 
     /**
      * Language Keyword Model instance
-     * 
+     *
      * @var LanguageKeywordModel
      */
     protected $languageKeywordModel;
 
     /**
      * Constructor
-     * 
+     *
      * @return void
      */
     public function __construct()
@@ -42,7 +42,7 @@ class LanguageKeyword extends BaseController
 
     /**
      * Index page - List all language keywords
-     * 
+     *
      * @param int $page Page number
      * @return \CodeIgniter\HTTP\Response
      */
@@ -52,20 +52,20 @@ class LanguageKeyword extends BaseController
         $flag = $this->authentication->check_permission([
             'routes' => 'backend/language/languagekeyword/index'
         ]);
-        
+
         if ($flag === false) {
             $session->setFlashdata('message-danger', 'Bạn không có quyền truy cập vào chức năng này!');
             return redirect()->to(BASE_URL . 'backend/dashboard/dashboard/index');
         }
 
         helper(['mypagination']);
-        $page = (int)$page;
-        $perpage = ($this->request->getGet('perpage')) ? (int)$this->request->getGet('perpage') : 20;
+        $page = (int) $page;
+        $perpage = ($this->request->getGet('perpage')) ? (int) $this->request->getGet('perpage') : 20;
         $where = $this->condition_where();
         $keyword = $this->condition_keyword();
         $module = $this->request->getGet('module');
 
-            // Get total count
+        // Get total count
         $config['total_rows'] = $this->languageKeywordModel->getKeywordsCount(
             $module,
             isset($where['publish']) ? $where['publish'] : null
@@ -103,7 +103,7 @@ class LanguageKeyword extends BaseController
 
     /**
      * Create new language keyword
-     * 
+     *
      * @return \CodeIgniter\HTTP\Response
      */
     public function create()
@@ -112,7 +112,7 @@ class LanguageKeyword extends BaseController
         $flag = $this->authentication->check_permission([
             'routes' => 'backend/language/languagekeyword/create'
         ]);
-        
+
         if ($flag === false) {
             $session->setFlashdata('message-danger', 'Bạn không có quyền truy cập vào chức năng này!');
             return redirect()->to(BASE_URL . 'backend/language/languagekeyword/index');
@@ -136,9 +136,6 @@ class LanguageKeyword extends BaseController
             }
         }
 
-        // Get available modules for dropdown
-        $this->data['availableModules'] = $this->languageKeywordModel->getAvailableModules();
-
         $this->data['fixWrapper'] = 'fix-wrapper';
         $this->data['method'] = 'create';
         $this->data['template'] = 'backend/language/languagekeyword/create';
@@ -147,18 +144,18 @@ class LanguageKeyword extends BaseController
 
     /**
      * Update existing language keyword
-     * 
+     *
      * @param int $id Keyword ID
      * @return \CodeIgniter\HTTP\Response
      */
     public function update($id = 0)
     {
-        $id = (int)$id;
+        $id = (int) $id;
         $session = session();
         $flag = $this->authentication->check_permission([
             'routes' => 'backend/language/languagekeyword/update'
         ]);
-        
+
         if ($flag === false) {
             $session->setFlashdata('message-danger', 'Bạn không có quyền truy cập vào chức năng này!');
             return redirect()->to(BASE_URL . 'backend/language/languagekeyword/index');
@@ -189,9 +186,6 @@ class LanguageKeyword extends BaseController
             }
         }
 
-        // Get available modules for dropdown
-        $this->data['availableModules'] = $this->languageKeywordModel->getAvailableModules();
-
         $this->data['fixWrapper'] = 'fix-wrapper';
         $this->data['method'] = 'update';
         $this->data['template'] = 'backend/language/languagekeyword/update';
@@ -200,18 +194,18 @@ class LanguageKeyword extends BaseController
 
     /**
      * Delete language keyword
-     * 
+     *
      * @param int $id Keyword ID
      * @return \CodeIgniter\HTTP\Response
      */
     public function delete($id = 0)
     {
-        $id = (int)$id;
+        $id = (int) $id;
         $session = session();
         $flag = $this->authentication->check_permission([
             'routes' => 'backend/language/languagekeyword/delete'
         ]);
-        
+
         if ($flag === false) {
             $session->setFlashdata('message-danger', 'Bạn không có quyền truy cập vào chức năng này!');
             return redirect()->to(BASE_URL . 'backend/language/languagekeyword/index');
@@ -242,7 +236,7 @@ class LanguageKeyword extends BaseController
 
     /**
      * Bulk import keywords from language files
-     * 
+     *
      * @return \CodeIgniter\HTTP\Response
      */
     public function import()
@@ -251,7 +245,7 @@ class LanguageKeyword extends BaseController
         $flag = $this->authentication->check_permission([
             'routes' => 'backend/language/languagekeyword/import'
         ]);
-        
+
         if ($flag === false) {
             $session->setFlashdata('message-danger', 'Bạn không có quyền truy cập vào chức năng này!');
             return redirect()->to(BASE_URL . 'backend/language/languagekeyword/index');
@@ -279,9 +273,6 @@ class LanguageKeyword extends BaseController
             }
         }
 
-        // Get available modules for dropdown
-        $this->data['availableModules'] = $this->languageKeywordModel->getAvailableModules();
-
         $this->data['fixWrapper'] = 'fix-wrapper';
         $this->data['template'] = 'backend/language/languagekeyword/import';
         return view('backend/dashboard/layout/home', $this->data);
@@ -289,7 +280,7 @@ class LanguageKeyword extends BaseController
 
     /**
      * Export keywords to language file format
-     * 
+     *
      * @return \CodeIgniter\HTTP\Response
      */
     public function export()
@@ -298,7 +289,7 @@ class LanguageKeyword extends BaseController
         $flag = $this->authentication->check_permission([
             'routes' => 'backend/language/languagekeyword/export'
         ]);
-        
+
         if ($flag === false) {
             $session->setFlashdata('message-danger', 'Bạn không có quyền truy cập vào chức năng này!');
             return redirect()->to(BASE_URL . 'backend/language/languagekeyword/index');
@@ -309,15 +300,14 @@ class LanguageKeyword extends BaseController
 
         if (!empty($module)) {
             $exportData = $this->languageKeywordModel->exportLanguageFile($module, $language);
-            
-            // Return JSON response for download
-            return $this->response->setJSON($exportData)
-                                ->setHeader('Content-Type', 'application/json')
-                                ->setHeader('Content-Disposition', "attachment; filename=\"{$module}_{$language}.json\"");
-        }
 
-        // Get available modules for dropdown
-        $this->data['availableModules'] = $this->languageKeywordModel->getAvailableModules();
+            // Return JSON response for download
+            return $this
+                ->response
+                ->setJSON($exportData)
+                ->setHeader('Content-Type', 'application/json')
+                ->setHeader('Content-Disposition', "attachment; filename=\"{$module}_{$language}.json\"");
+        }
 
         $this->data['fixWrapper'] = 'fix-wrapper';
         $this->data['template'] = 'backend/language/languagekeyword/export';
@@ -326,14 +316,14 @@ class LanguageKeyword extends BaseController
 
     /**
      * AJAX search keywords
-     * 
+     *
      * @return \CodeIgniter\HTTP\Response
      */
     public function ajaxSearch()
     {
         $keyword = $this->request->getGet('keyword');
         $module = $this->request->getGet('module');
-        $limit = (int)($this->request->getGet('limit') ?: 10);
+        $limit = (int) ($this->request->getGet('limit') ?: 10);
 
         if (!empty($keyword)) {
             $results = $this->languageKeywordModel->searchKeywords($keyword, $module, $limit);
@@ -351,13 +341,13 @@ class LanguageKeyword extends BaseController
 
     /**
      * Set where conditions for filtering
-     * 
+     *
      * @return array
      */
     private function condition_where(): array
     {
         $where = [];
-        
+
         $publish = $this->request->getGet('publish');
         if (isset($publish)) {
             $where['publish'] = $publish;
@@ -375,7 +365,7 @@ class LanguageKeyword extends BaseController
 
     /**
      * Set keyword search condition
-     * 
+     *
      * @param string $keyword
      * @return string
      */
@@ -389,22 +379,22 @@ class LanguageKeyword extends BaseController
 
     /**
      * Prepare data for store/update
-     * 
+     *
      * @param array $param
      * @return array
      */
     private function store(array $param = []): array
     {
         helper(['text']);
-        
+
         $store = [
             'keyword' => validate_input($this->request->getPost('keyword')),
             'module' => validate_input($this->request->getPost('module')),
             'en_translation' => validate_input($this->request->getPost('en_translation')),
             'vi_translation' => validate_input($this->request->getPost('vi_translation')),
             'description' => validate_input($this->request->getPost('description')),
-            'order' => (int)($this->request->getPost('order') ?: 0),
-            'publish' => (int)($this->request->getPost('publish') ?: 1),
+            'order' => (int) ($this->request->getPost('order') ?: 0),
+            'publish' => (int) ($this->request->getPost('publish') ?: 1),
         ];
 
         if ($param['method'] === 'create') {
@@ -420,7 +410,7 @@ class LanguageKeyword extends BaseController
 
     /**
      * Validation rules
-     * 
+     *
      * @return array
      */
     private function validation(): array

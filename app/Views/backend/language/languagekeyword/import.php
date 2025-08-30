@@ -62,24 +62,7 @@
                                 <div class="card-body">
                                     <form method="POST" action="<?= BASE_URL ?>backend/language/languagekeyword/import">
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="module">Module <span class="text-danger">*</span></label>
-                                                    <select id="module" name="module" class="form-control" required>
-                                                        <option value="">Chọn module</option>
-                                                        <?php foreach ($availableModules as $module): ?>
-                                                            <option value="<?= $module ?>"><?= ucfirst($module) ?></option>
-                                                        <?php endforeach; ?>
-                                                        <option value="new_module">+ Thêm module mới</option>
-                                                    </select>
-                                                </div>
-
-                                                <div class="form-group" id="newModuleGroup" style="display: none;">
-                                                    <label for="newModule">Tên module mới</label>
-                                                    <input type="text" id="newModule" name="newModule" class="form-control" 
-                                                           placeholder="Nhập tên module mới">
-                                                </div>
-                                            </div>
+                                            
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="keywords">Dữ liệu từ khóa (JSON) <span class="text-danger">*</span></label>
@@ -130,24 +113,7 @@
                                 <div class="card-body">
                                     <form method="POST" action="<?= BASE_URL ?>backend/language/languagekeyword/import" enctype="multipart/form-data">
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="fileModule">Module <span class="text-danger">*</span></label>
-                                                    <select id="fileModule" name="fileModule" class="form-control" required>
-                                                        <option value="">Chọn module</option>
-                                                        <?php foreach ($availableModules as $module): ?>
-                                                            <option value="<?= $module ?>"><?= ucfirst($module) ?></option>
-                                                        <?php endforeach; ?>
-                                                        <option value="new_module">+ Thêm module mới</option>
-                                                    </select>
-                                                </div>
-
-                                                <div class="form-group" id="fileNewModuleGroup" style="display: none;">
-                                                    <label for="fileNewModule">Tên module mới</label>
-                                                    <input type="text" id="fileNewModule" name="fileNewModule" class="form-control" 
-                                                           placeholder="Nhập tên module mới">
-                                                </div>
-                                            </div>
+                                            
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="jsonFile">File JSON <span class="text-danger">*</span></label>
