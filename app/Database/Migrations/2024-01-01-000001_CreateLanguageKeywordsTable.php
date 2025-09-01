@@ -34,12 +34,6 @@ class CreateLanguageKeywordsTable extends Migration
                 'null' => false,
                 'comment' => 'Unique keyword identifier'
             ],
-            'module' => [
-                'type' => 'VARCHAR',
-                'constraint' => 100,
-                'null' => false,
-                'comment' => 'Module name where keyword is used'
-            ],
             'en_translation' => [
                 'type' => 'TEXT',
                 'null' => false,
@@ -105,13 +99,9 @@ class CreateLanguageKeywordsTable extends Migration
         $this->forge->addUniqueKey('keyword');
         
         // Add indexes for better performance
-        $this->forge->addKey('module');
         $this->forge->addKey('publish');
         $this->forge->addKey('order');
         $this->forge->addKey('created_at');
-        
-        // Add fulltext index for search functionality
-        $this->forge->addKey(['keyword', 'en_translation', 'vi_translation', 'description'], 'fulltext_search', 'FULLTEXT');
         
         // Create the table
         $this->forge->createTable('language_keywords', true, [

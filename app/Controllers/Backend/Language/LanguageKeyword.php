@@ -63,12 +63,10 @@ class LanguageKeyword extends BaseController
         $perpage = ($this->request->getGet('perpage')) ? (int) $this->request->getGet('perpage') : 20;
         $where = $this->condition_where();
         $keyword = $this->condition_keyword();
-        $module = $this->request->getGet('module');
 
         // Get total count
         $config['total_rows'] = $this->languageKeywordModel->getKeywordsCount(
-            $module,
-            isset($where['publish']) ? $where['publish'] : null
+            isset($where['publish']) ? (int) $where['publish'] : null
         );
 
         if ($config['total_rows'] > 0) {
@@ -87,7 +85,6 @@ class LanguageKeyword extends BaseController
             // Get keywords with pagination
             $this->data['keywordList'] = $this->languageKeywordModel->searchKeywords(
                 $keyword,
-                $module,
                 $config['per_page'],
                 $page * $config['per_page']
             );
@@ -122,20 +119,20 @@ class LanguageKeyword extends BaseController
             $validate = $this->validation();
             if ($this->validate($validate['validate'], $validate['errorValidate'])) {
                 $insert = $this->store(['method' => 'create']);
-
                 $resultId = $this->languageKeywordModel->insert($insert);
 
                 if ($resultId > 0) {
                     $session->setFlashdata('message-success', 'Tạo từ khóa đa ngữ thành công! Hãy tạo từ khóa tiếp theo.');
                     return redirect()->to(BASE_URL . 'backend/language/languagekeyword/create');
                 } else {
-                    $session->setFlashdata('message-danger', 'Có vấn đề xảy ra, vui lòng thử lại!');
+                    return redirect()->back()->withInput()->with('message-danger', 'Có vấn đề xảy ra, vui lòng thử lại!');
                 }
             } else {
-                $this->data['validate'] = $this->validator->listErrors();
+                return redirect()->back()->withInput()->with('validate', $this->validator->listErrors());
             }
         }
 
+        $this->data['validate'] = session()->getFlashdata('validate');
         $this->data['fixWrapper'] = 'fix-wrapper';
         $this->data['method'] = 'create';
         $this->data['template'] = 'backend/language/languagekeyword/create';
@@ -179,13 +176,14 @@ class LanguageKeyword extends BaseController
                     $session->setFlashdata('message-success', 'Cập nhật từ khóa đa ngữ thành công!');
                     return redirect()->to(BASE_URL . 'backend/language/languagekeyword/index');
                 } else {
-                    $session->setFlashdata('message-danger', 'Có vấn đề xảy ra, vui lòng thử lại!');
+                    return redirect()->back()->withInput()->with('message-danger', 'Có vấn đề xảy ra, vui lòng thử lại!');
                 }
             } else {
-                $this->data['validate'] = $this->validator->listErrors();
+                return redirect()->back()->withInput()->with('validate', $this->validator->listErrors());
             }
         }
 
+        $this->data['validate'] = session()->getFlashdata('validate');
         $this->data['fixWrapper'] = 'fix-wrapper';
         $this->data['method'] = 'update';
         $this->data['template'] = 'backend/language/languagekeyword/update';
@@ -235,86 +233,6 @@ class LanguageKeyword extends BaseController
     }
 
     /**
-     * Bulk import keywords from language files
-     *
-     * @return \CodeIgniter\HTTP\Response
-     */
-    public function import()
-    {
-        $session = session();
-        $flag = $this->authentication->check_permission([
-            'routes' => 'backend/language/languagekeyword/import'
-        ]);
-
-        if ($flag === false) {
-            $session->setFlashdata('message-danger', 'Bạn không có quyền truy cập vào chức năng này!');
-            return redirect()->to(BASE_URL . 'backend/language/languagekeyword/index');
-        }
-
-        if ($this->request->getMethod() === 'post') {
-            $module = $this->request->getPost('module');
-            $keywords = $this->request->getPost('keywords');
-
-            if (!empty($module) && !empty($keywords)) {
-                try {
-                    $keywordsArray = json_decode($keywords, true);
-                    if (is_array($keywordsArray)) {
-                        $imported = $this->languageKeywordModel->bulkImportKeywords($keywordsArray, $module);
-                        $session->setFlashdata('message-success', "Import thành công {$imported} từ khóa!");
-                        return redirect()->to(BASE_URL . 'backend/language/languagekeyword/index');
-                    } else {
-                        $session->setFlashdata('message-danger', 'Định dạng dữ liệu không hợp lệ!');
-                    }
-                } catch (\Exception $e) {
-                    $session->setFlashdata('message-danger', 'Có lỗi xảy ra: ' . $e->getMessage());
-                }
-            } else {
-                $session->setFlashdata('message-danger', 'Vui lòng nhập đầy đủ thông tin!');
-            }
-        }
-
-        $this->data['fixWrapper'] = 'fix-wrapper';
-        $this->data['template'] = 'backend/language/languagekeyword/import';
-        return view('backend/dashboard/layout/home', $this->data);
-    }
-
-    /**
-     * Export keywords to language file format
-     *
-     * @return \CodeIgniter\HTTP\Response
-     */
-    public function export()
-    {
-        $session = session();
-        $flag = $this->authentication->check_permission([
-            'routes' => 'backend/language/languagekeyword/export'
-        ]);
-
-        if ($flag === false) {
-            $session->setFlashdata('message-danger', 'Bạn không có quyền truy cập vào chức năng này!');
-            return redirect()->to(BASE_URL . 'backend/language/languagekeyword/index');
-        }
-
-        $module = $this->request->getGet('module');
-        $language = $this->request->getGet('language') ?: 'en';
-
-        if (!empty($module)) {
-            $exportData = $this->languageKeywordModel->exportLanguageFile($module, $language);
-
-            // Return JSON response for download
-            return $this
-                ->response
-                ->setJSON($exportData)
-                ->setHeader('Content-Type', 'application/json')
-                ->setHeader('Content-Disposition', "attachment; filename=\"{$module}_{$language}.json\"");
-        }
-
-        $this->data['fixWrapper'] = 'fix-wrapper';
-        $this->data['template'] = 'backend/language/languagekeyword/export';
-        return view('backend/dashboard/layout/home', $this->data);
-    }
-
-    /**
      * AJAX search keywords
      *
      * @return \CodeIgniter\HTTP\Response
@@ -322,11 +240,10 @@ class LanguageKeyword extends BaseController
     public function ajaxSearch()
     {
         $keyword = $this->request->getGet('keyword');
-        $module = $this->request->getGet('module');
         $limit = (int) ($this->request->getGet('limit') ?: 10);
 
         if (!empty($keyword)) {
-            $results = $this->languageKeywordModel->searchKeywords($keyword, $module, $limit);
+            $results = $this->languageKeywordModel->searchKeywords($keyword, $limit);
             return $this->response->setJSON([
                 'success' => true,
                 'data' => $results
@@ -388,7 +305,7 @@ class LanguageKeyword extends BaseController
         helper(['text']);
 
         $store = [
-            'keyword' => validate_input($this->request->getPost('keyword')),
+            'keyword' => slug(validate_input($this->request->getPost('keyword'))),
             'en_translation' => validate_input($this->request->getPost('en_translation')),
             'vi_translation' => validate_input($this->request->getPost('vi_translation')),
             'description' => validate_input($this->request->getPost('description')),

@@ -40,7 +40,7 @@ class LanguageKeywordModel extends Model
      * 
      * @var bool
      */
-    protected $useSoftDeletes = true;
+    protected $useSoftDeletes = false;
 
     /**
      * Soft delete field
@@ -77,7 +77,6 @@ class LanguageKeywordModel extends Model
      */
     protected $allowedFields = [
         'keyword',
-        'module',
         'en_translation',
         'vi_translation',
         'description',
@@ -93,8 +92,7 @@ class LanguageKeywordModel extends Model
      * @var array
      */
     protected $validationRules = [
-        'keyword' => 'required|min_length[1]|max_length[255]|is_unique[language_keywords.keyword,id,{id}]',
-        'module' => 'required|min_length[1]|max_length[100]',
+        'keyword' => 'required|min_length[1]|max_length[255]',
         'en_translation' => 'required|min_length[1]|max_length[500]',
         'vi_translation' => 'required|min_length[1]|max_length[500]',
         'order' => 'permit_empty|integer',
@@ -112,11 +110,6 @@ class LanguageKeywordModel extends Model
             'min_length' => 'Keyword must be at least 1 character long',
             'max_length' => 'Keyword cannot exceed 255 characters',
             'is_unique' => 'Keyword must be unique'
-        ],
-        'module' => [
-            'required' => 'Module is required',
-            'min_length' => 'Module must be at least 1 character long',
-            'max_length' => 'Module cannot exceed 100 characters'
         ],
         'en_translation' => [
             'required' => 'English translation is required',
@@ -144,57 +137,36 @@ class LanguageKeywordModel extends Model
     protected $skipValidation = false;
 
     /**
-     * Search keywords using fulltext search
+     * Search keywords using LIKE for compatibility with all MySQL versions.
      * 
      * @param string $keyword Search keyword
-     * @param string|null $module Filter by module
      * @param int $limit Limit results
      * @param int $offset Offset for pagination
      * @return array Search results
      */
-    public function searchKeywords(string $keyword, ?string $module = null, int $limit = 10, int $offset = 0): array
+    public function searchKeywords(string $keyword = '', int $limit = 10, int $offset = 0): array
     {
         $builder = $this->builder();
-        
-        // Use MATCH AGAINST for fulltext search
-        $builder->where("MATCH(keyword, en_translation, vi_translation, description) AGAINST(? IN BOOLEAN MODE)", $keyword);
-        
-        // Filter by module if specified
-        if ($module !== null) {
-            $builder->where('module', $module);
+
+        // If keyword is not empty, search in multiple columns using LIKE
+        if (!empty($keyword)) {
+            $builder->groupStart();
+            $builder->like('keyword', $keyword);
+            $builder->orLike('en_translation', $keyword);
+            $builder->orLike('vi_translation', $keyword);
+            $builder->orLike('description', $keyword);
+            $builder->groupEnd();
         }
-        
+
         // Only get published keywords
         $builder->where('publish', 1);
-        
-        // Order by relevance and then by order field
-        $builder->orderBy("MATCH(keyword, en_translation, vi_translation, description) AGAINST(?) DESC", $keyword);
+
+        // Order by 'order' field
         $builder->orderBy('`order`', 'ASC');
-        
+
         // Apply limit and offset
         $builder->limit($limit, $offset);
-        
-        return $builder->get()->getResultArray();
-    }
 
-    /**
-     * Get keywords by module
-     * 
-     * @param string $module Module name
-     * @param bool $publishedOnly Whether to get only published keywords
-     * @return array Keywords for the module
-     */
-    public function getKeywordsByModule(string $module, bool $publishedOnly = true): array
-    {
-        $builder = $this->builder();
-        $builder->where('module', $module);
-        
-        if ($publishedOnly) {
-            $builder->where('publish', 1);
-        }
-        
-        $builder->orderBy('`order`', 'ASC');
-        
         return $builder->get()->getResultArray();
     }
 
@@ -254,75 +226,19 @@ class LanguageKeywordModel extends Model
     }
 
     /**
-     * Get keywords count by module
+     * Get keywords count by publish status
      * 
-     * @param string|null $module Module name or null for all
      * @param int|null $publish Publish status (0, 1, or null for all)
      * @return int Count of keywords
      */
-    public function getKeywordsCount(?string $module = null, ?int $publish = null): int
+    public function getKeywordsCount(?int $publish = null): int
     {
         $builder = $this->builder();
-        
-        if ($module !== null) {
-            $builder->where('module', $module);
-        }
         
         if ($publish !== null) {
             $builder->where('publish', $publish);
         }
         
         return $builder->countAllResults();
-    }
-
-    /**
-     * Bulk import keywords from language files
-     * 
-     * @param array $keywords Array of keywords with translations
-     * @param string $module Module name
-     * @return int Number of imported keywords
-     */
-    public function bulkImportKeywords(array $keywords, string $module): int
-    {
-        $imported = 0;
-        
-        foreach ($keywords as $keyword => $translations) {
-            if (is_array($translations) && isset($translations['en']) && isset($translations['vi'])) {
-                $data = [
-                    'keyword' => $keyword,
-                    'module' => $module,
-                    'en_translation' => $translations['en'],
-                    'vi_translation' => $translations['vi'],
-                    'description' => $translations['description'] ?? '',
-                    'order' => $translations['order'] ?? 0,
-                    'publish' => 1
-                ];
-                
-                if ($this->insert($data)) {
-                    $imported++;
-                }
-            }
-        }
-        
-        return $imported;
-    }
-
-    /**
-     * Export keywords to language file format
-     * 
-     * @param string $module Module name
-     * @param string $language Language code (en, vi)
-     * @return array Language file format array
-     */
-    public function exportLanguageFile(string $module, string $language): array
-    {
-        $keywords = $this->getKeywordsByModule($module, true);
-        $export = [];
-        
-        foreach ($keywords as $keyword) {
-            $export[$keyword['keyword']] = $keyword[$language . '_translation'];
-        }
-        
-        return $export;
     }
 }

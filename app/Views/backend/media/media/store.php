@@ -337,7 +337,7 @@
 									<div class="block clearfix">
 										<div class="i-checks mr30" style="width:100%;">
 											<span style="color:#000;" class="uk-flex uk-flex-middle"> 
-												<?php echo form_radio('tinhtrang', set_value('tinhtrang', 1), ((isset($_POST['tinhtrang']) && $_POST['tinhtrang'] == 1 || (isset($media['tinhtrang']) && $media['tinhtrang'] == 1)) ? true : (!isset($_POST['tinhtrang'])) ? true : false),'class=""  id="tinhtrang"  style="margin-top:0;margin-right:10px;" '); ?>
+												<?php echo form_radio('tinhtrang', set_value('tinhtrang', 1), ((isset($_POST['tinhtrang']) && $_POST['tinhtrang'] == 1 || (isset($media['tinhtrang']) && $media['tinhtrang'] == 1)) ? true : ((!isset($_POST['tinhtrang'])) ? true : false)),'class=\"\"  id=\"tinhtrang\"  style=\"margin-top:0;margin-right:10px;\" '); ?>
 												<label for="tinhtrang" style="margin:0;cursor:pointer;">Đang thi công</label>
 											</span>
 										</div>
@@ -384,7 +384,7 @@
 									<div class="block clearfix">
 										<div class="i-checks mr30" style="width:100%;">
 											<span style="color:#000;" class="uk-flex uk-flex-middle"> 
-												<?php echo form_radio('publish', set_value('publish', 1), ((isset($_POST['publish']) && $_POST['publish'] == 1 || (isset($media['publish']) && $media['publish'] == 1)) ? true : (!isset($_POST['publish'])) ? true : false),'class=""  id="publish"  style="margin-top:0;margin-right:10px;" '); ?>
+												<?php echo form_radio('publish', set_value('publish', 1), ((isset($_POST['publish']) && $_POST['publish'] == 1 || (isset($media['publish']) && $media['publish'] == 1)) ? true : ((!isset($_POST['publish'])) ? true : false)),'class=\"\"  id=\"publish\"  style=\"margin-top:0;margin-right:10px;\" '); ?>
 												<label for="publish" style="margin:0;cursor:pointer;"><?php echo translate('cms_lang.media.media_display_1', $language) ?></label>
 											</span>
 										</div>
