@@ -18,11 +18,11 @@ $languageList = $model->_get_where([
 	<div class="uk-flex uk-flex-right">
 		<div class="language-list uk-flex uk-flex-middle">
 			<a href="<?php echo BASE_URL ?>"   class="uk-flex uk-flex-middle">
-				<img src="/template/vn.png" alt="VN">
+				<img src="/upload/image/language/vn.png" alt="Vietnamese">
 				<span>VN</span>
 			</a>
 			<a href="<?php echo BASE_URL_LANG ?>"   class="uk-flex uk-flex-middle">
-				<img src="/template/england.jpg" alt="EN">
+				<img src="/upload/image/language/anh.png" alt="English">
 				<span>EN</span>
 			</a>
 		</div>

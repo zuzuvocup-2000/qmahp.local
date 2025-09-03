@@ -136,7 +136,7 @@
                                 <li class="<?php echo ($uriModule_name == 'language') ? 'active' : '' ?>"><a href="<?php echo base_url('backend/language/language/index') ?>"><?php echo translate('cms_lang.sidebar.sb_language', $language) ?></a></li> 
                             <?php } ?>
                             <?php if (in_array('backend/language/languagekeyword/index', $permission)) { ?>
-                                <li class="<?php echo ($uriModule_name == 'languagekeyword') ? 'active' : '' ?>"><a href="<?php echo base_url('backend/language/languagekeyword/index') ?>"><?php echo translate('cms_lang.sidebar.sb_languagekeyword', $language) ?></a></li> 
+                                <li class="<?php echo ($uriModule_name == 'languagekeyword') ? 'active' : '' ?>"><a href="<?php echo base_url('backend/language/languagekeyword/index') ?>">Quản lý từ khoá</a></li> 
                             <?php } ?>
                             <?php if (in_array('backend/slide/slide/index', $permission)) { ?>
                                 <li class="<?php echo ($uriModule_name == 'slide') ? 'active' : '' ?>"><a href="<?php echo base_url('backend/slide/slide/index') ?>"><?php echo translate('cms_lang.sidebar.sb_slide', $language) ?></a></li>
