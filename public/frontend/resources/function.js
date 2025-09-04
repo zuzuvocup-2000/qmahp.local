@@ -1576,7 +1576,7 @@ $(document).ready(function(){
             // HT.vote(),
             // HT.lazyLoad(),
             HT.slick_slide(),
-            HT.lazyLoad_body(),
+            // HT.lazyLoad_body(),
             // HT.niceSelect(),
 	        // HT.countUp(),
 	        HT.carousel();

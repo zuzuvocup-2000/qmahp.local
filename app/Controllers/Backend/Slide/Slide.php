@@ -94,10 +94,13 @@ class Slide extends BaseController{
 	 				]);
 
 	 				$store = $this->store(['method' => 'create', 'catalogueid' => $insertCatId]);
-	 				$insert_batch = $this->AutoloadModel->_create_batch([
-			 			'table' => 'slide',
-			 			'data'  => $store,
-			 		]);
+					 $insert_batch = 0;
+					if(isset($store) && is_array($store) && count($store)){
+						$insert_batch = $this->AutoloadModel->_create_batch([
+							'table' => 'slide',
+							'data'  => $store,
+						]);
+					}
 
 	 				if($insert_batch > 0){
 	 					$storeLang = $this->storeLanguage(count($store), $insertCatId);

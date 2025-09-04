@@ -9,3 +9,8 @@
 <link href="/public/frontend/resources/css/plugin.css" rel="stylesheet" />
 <link href="/public/frontend/resources/css/et-line.css" rel="stylesheet" />
 <link href="/public/frontend/resources/css/style.css" rel="stylesheet" />
+<link href="/public/frontend/resources/custom.css" rel="stylesheet" />
+
+<script src="/public/frontend/resources/library/js/jquery.js"></script>
+<script src="/public/backend/js/plugins/toastr/toastr.min.js"></script>
+<script src="/public/frontend/resources/uikit/js/uikit.min.js"></script>

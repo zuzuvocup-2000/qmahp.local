@@ -69,7 +69,7 @@ $language = $baseController->currentLanguage();
 								foreach ($_POST['album'] as $key => $value) {
 									$data[] = [
 										'image' => $value,
-										'order' => $_POST['order'][$key],
+										'order' => isset($_POST['order'][$key]) ? $_POST['order'][$key] : 0,
 									];
 								}
 							}else if(isset($slide)){

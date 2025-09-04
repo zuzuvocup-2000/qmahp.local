@@ -1,0 +1,152 @@
+.hd-logo {
+    width: 145px;
+}
+
+.wrap-header-pc {
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #000000C9 0%, #1D1D1D00 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.main-nav>.main-menu>li>a {
+    padding: 10px 20px;
+    border-right: 0;
+    margin-right: 20px;
+    color: #fff !important;
+}
+
+.pc-header.uk-active {
+    background: #fff;
+    padding: 10px 0;
+}
+
+.wrap-header-pc .upper {
+    padding: 20px 0;
+}
+
+.pc-header.uk-active .upper {
+    padding: 0;
+}
+
+.pc-header.uk-active .main-nav>.main-menu>li>a {
+    color: #333 !important;
+}
+
+.hide {
+    opacity: 0 !important;
+}
+
+/* Animation classes */
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.slideInDown {
+    animation-name: slideInDown;
+}
+
+.slideInLeft {
+    animation-name: slideInLeft;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Slide styling */
+.main-slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide-content {
+    position: relative;
+    height: 80vh;
+    min-height: 500px;
+}
+
+.slide-content .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-content .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide_title {
+    text-align: center;
+    color: white;
+}
+
+.slide_title h1 {
+    font-size: 5rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.slide_title p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.overlay-slide .slide_title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+
+.overlay-slide .slide_title h1 {
+    position: absolute;
+    left: 25%;
+    top: -10rem;
+}
+
+.overlay-slide .slide_title p {
+    position: absolute;
+    left: 50%;
+    top: -2rem;
+}

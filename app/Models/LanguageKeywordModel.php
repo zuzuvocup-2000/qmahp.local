@@ -194,16 +194,35 @@ class LanguageKeywordModel extends Model
     }
 
     /**
-     * Get all translations for a keyword
-     * 
-     * @param string $keyword Keyword to get translations for
-     * @return array|null Translations array
+     * Get translation(s) for a keyword and language
+     *
+     * @param string $keyword Keyword to get translation for (optional)
+     * @param string $language Language code ('en' or 'vi')
+     * @return array|string|null Translation(s) or null if not found
      */
-    public function getKeywordTranslations(string $keyword): ?array
+    public function getKeywordTranslations(string $keyword = "", string $language = "vi")
     {
-        return $this->where('keyword', $keyword)
-                    ->where('publish', 1)
-                    ->first();
+        $field = $language . '_translation';
+        $fields = ['keyword', $field];
+
+        if (!empty($keyword)) {
+            $result = $this->select($fields)
+                ->where('keyword', $keyword)
+                ->where('publish', 1)
+                ->first();
+
+            return $result ? [$result['keyword'] => $result[$field]] : null;
+        } else {
+            $results = $this->select($fields)
+                ->where('publish', 1)
+                ->findAll();
+
+            $translations = [];
+            foreach ($results as $row) {
+                $translations[$row['keyword']] = $row[$field];
+            }
+            return $translations;
+        }
     }
 
     /**

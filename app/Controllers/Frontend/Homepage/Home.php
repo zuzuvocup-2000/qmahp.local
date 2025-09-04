@@ -1,19 +1,23 @@
 <?php
 namespace App\Controllers\Frontend\Homepage;
 use App\Controllers\FrontendController;
+use App\Models\LanguageKeywordModel;
 
 class Home extends FrontendController{
 
 	public $data = [];
+	public $languageKeywordModel;
 
 	public function __construct(){
 		$this->data['module'] = 'home';
 		$this->data['language'] = $this->currentLanguage();
+		$this->languageKeywordModel = new LanguageKeywordModel();
 	}
 
 	public function index(){
         $session = session();
 		$this->data['general'] = $this->general;
+		$this->data['keywordList'] = $this->languageKeywordModel->getKeywordTranslations();
 		$this->data['meta_title'] = (isset($this->data['general']['seo_meta_title']) ? $this->data['general']['seo_meta_title'] : '');
 		$this->data['meta_description'] = (isset($this->data['general']['seo_meta_description']) ? $this->data['general']['seo_meta_description'] : '');
 		$this->data['og_type'] = 'website';

@@ -101,7 +101,7 @@ h6 {
 body {
     background-color: #fff;
     color: #616161;
-    font: 400 14px calibri, Roboto, sans-serif;
+    font: 400 14px Open Sans, Roboto, sans-serif;
     line-height: initial;
 }
 
@@ -323,13 +323,6 @@ body {
     background: 0 0;
 }
 
-.pc-header {
-    background: #fff;
-    z-index: 999;
-    -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-}
-
 .pc-header .topbar {
     position: relative;
     font-size: 13px;
@@ -385,7 +378,7 @@ body {
     display: inline-block;
     border-right: 1px solid #d8d8d8;
     border-right: none;
-    background: #ff7b3c;
+    background: #d55342;
     border-radius: 50px;
     color: #fff !important;
     padding: 9px 30px;
@@ -725,13 +718,9 @@ body {
 }
 
 .main-nav>.main-menu>li>a {
-    position: relative;
-    display: block;
-    padding: 0 20px;
-    font-size: 13px;
     line-height: 20px;
     text-transform: uppercase;
-    color: #232323;
+    color: #fff;
     cursor: pointer;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -744,18 +733,6 @@ body {
     text-transform: uppercase;
     display: inline-block;
     border-right: 1px solid #d8d8d8;
-}
-
-.main-nav>.main-menu>li>a:before {
-    content: "\f107";
-    display: block;
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    font-family: FontAwesome;
-    color: #363636;
-    font-size: 30px;
 }
 
 .main-nav>.main-menu>li>a>* {
@@ -820,6 +797,10 @@ body {
     width: 0;
 }
 
+.main-nav .children{
+    border-top: 2px #d55342 solid;
+}
+
 .main-nav .children li a {
     position: relative;
     display: block;
@@ -834,9 +815,9 @@ body {
     -webkit-transition: all 0.1s ease-in-out !important;
     text-align: left;
     text-transform: initial;
-    color: #fff;
+    color: #333;
     font-size: 14px;
-    background-color: #ff7b3c;
+    background-color: #fff;
 }
 
 .main-nav .children li:hover>a {
@@ -940,10 +921,6 @@ body {
     margin: 0 auto;
 }
 
-.overlay-slide .heading-1 {
-    margin-bottom: 30px;
-}
-
 .overlay-slide .heading-1>* {
     z-index: 5;
     font-size: 60px;
@@ -968,9 +945,10 @@ body {
 }
 
 .overlay-slide .description {
-    font-size: 16px;
+    font-size: 5rem;
+    position: relative;
+    z-index: 1;
     line-height: 2;
-    margin-bottom: 30px;
     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
     transform-origin: 50% 50% 0px;
 }
@@ -1077,7 +1055,7 @@ body {
 }
 
 .hd-menu-search .icon {
-    color: #232323;
+    color: #fff;
     font-size: 16px;
 }
 
@@ -3842,4 +3820,538 @@ mepage-student .panel-body .article:hover .content * {
 
 .d-none {
     display: none !important;
+}
+
+
+.language-list > * {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px solid #eee;
+}
+
+.language-list img {
+    max-width: 30px;
+    margin-right: 10px;
+}
+
+.language-list span {
+    color: #fff;
+}
+
+.pt10{
+    padding-top: 10px;
+}
+.pb10{
+    padding-bottom: 10px;
+}
+
+/* ================================================ About Us Section ============================================== */
+
+.about-us-section {
+    position: relative;
+    padding: 250px 0;
+    overflow: hidden;
+}
+
+.about-us-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.about-us-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.about-us-content-wrapper {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: -100px;
+}
+
+.about-us-header {
+    margin-bottom: 50px;
+}
+
+.about-us-title {
+    font-family: "calibri bold", Arial, sans-serif;
+    font-size: 48px;
+    color: #242a6f;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-us-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff7b3c, #ff6b35);
+    border-radius: 2px;
+}
+
+.about-us-subtitle {
+    font-family: "calibri light", Arial, sans-serif;
+    font-size: 20px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.about-us-divider {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff7b3c, transparent);
+    margin: 0 auto;
+    border-radius: 1px;
+}
+
+.about-us-description {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-us-description::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff7b3c, #ff6b35, #ff7b3c);
+}
+
+.about-us-description p {
+    margin-bottom: 20px;
+    text-indent: 30px;
+}
+
+.about-us-description p:last-child {
+    margin-bottom: 0;
+}
+
+.about-us-description strong {
+    color: #242a6f;
+    font-weight: 600;
+}
+
+.about-us-description em {
+    color: #ff7b3c;
+    font-style: italic;
+}
+
+/* Responsive Design for About Us */
+@media (max-width: 1200px) {
+    .about-us-title {
+        font-size: 42px;
+    }
+    
+    .about-us-subtitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 991px) {
+    .about-us-section {
+        padding: 80px 0;
+    }
+    
+    .about-us-title {
+        font-size: 36px;
+        letter-spacing: 1px;
+    }
+    
+    .about-us-subtitle {
+        font-size: 16px;
+    }
+    
+    .about-us-description {
+        padding: 30px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-us-section {
+        padding: 60px 0;
+    }
+    
+    .about-us-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .about-us-subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .about-us-description {
+        padding: 25px 20px;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
+    }
+    
+    .about-us-description p {
+        text-indent: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-section {
+        padding: 40px 0;
+    }
+    
+    .about-us-title {
+        font-size: 24px;
+    }
+    
+    .about-us-description {
+        padding: 20px 15px;
+        font-size: 13px;
+    }
+    
+    .about-us-description p {
+        text-indent: 15px;
+    }
+}
+
+/* ================================================ About Quỹ Section ============================================== */
+
+.about-quy-section {
+    position: relative;
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    overflow: hidden;
+}
+
+.about-quy-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ff7b3c" opacity="0.03"/><circle cx="75" cy="75" r="1" fill="%23242a6f" opacity="0.03"/><circle cx="50" cy="10" r="0.5" fill="%23ff7b3c" opacity="0.02"/><circle cx="10" cy="60" r="0.5" fill="%23242a6f" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    z-index: 1;
+}
+
+.about-quy-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.about-quy-title {
+    font-family: "calibri bold", Arial, sans-serif;
+    font-size: 42px;
+    color: #242a6f;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-quy-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff7b3c, #ff6b35);
+    border-radius: 2px;
+}
+
+.about-quy-subtitle {
+    font-family: "calibri light", Arial, sans-serif;
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-style: italic;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-quy-divider {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff7b3c, transparent);
+    margin: 0 auto;
+    border-radius: 1px;
+}
+
+.about-quy-content {
+    position: relative;
+    z-index: 2;
+}
+
+.about-quy-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 0;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    border: 1px solid rgba(255, 123, 60, 0.1);
+}
+
+.about-quy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.about-quy-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff7b3c, #ff6b35, #ff7b3c);
+    z-index: 1;
+}
+
+.about-quy-card-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.about-quy-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.about-quy-card:hover .about-quy-card-image img {
+    transform: scale(1.05);
+}
+
+.about-quy-card-content {
+    padding: 30px 25px;
+    position: relative;
+}
+
+.about-quy-card-title {
+    font-family: "calibri bold", Arial, sans-serif;
+    font-size: 22px;
+    color: #242a6f;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.about-quy-card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff7b3c, #ff6b35);
+    border-radius: 2px;
+}
+
+.about-quy-card-values {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.value-item {
+    background: linear-gradient(135deg, #ff7b3c, #ff6b35);
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 10px rgba(255, 123, 60, 0.3);
+    transition: all 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 123, 60, 0.4);
+}
+
+.about-quy-card-description {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.about-quy-card-description p {
+    margin-bottom: 15px;
+    text-indent: 20px;
+}
+
+.about-quy-card-description p:last-child {
+    margin-bottom: 0;
+}
+
+.about-quy-card-description strong {
+    color: #242a6f;
+    font-weight: 600;
+}
+
+.about-quy-card-description em {
+    color: #ff7b3c;
+    font-style: italic;
+}
+
+/* Responsive Design for About Quỹ */
+@media (max-width: 1200px) {
+    .about-quy-title {
+        font-size: 38px;
+    }
+    
+    .about-quy-subtitle {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 991px) {
+    .about-quy-section {
+        padding: 80px 0;
+    }
+    
+    .about-quy-title {
+        font-size: 32px;
+        letter-spacing: 1px;
+    }
+    
+    .about-quy-subtitle {
+        font-size: 15px;
+    }
+    
+    .about-quy-header {
+        margin-bottom: 60px;
+    }
+    
+    .about-quy-card-content {
+        padding: 25px 20px;
+    }
+    
+    .about-quy-card-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-quy-section {
+        padding: 60px 0;
+    }
+    
+    .about-quy-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .about-quy-subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .about-quy-header {
+        margin-bottom: 50px;
+    }
+    
+    .about-quy-card {
+        margin-bottom: 30px;
+    }
+    
+    .about-quy-card-image {
+        height: 180px;
+    }
+    
+    .about-quy-card-content {
+        padding: 20px 18px;
+    }
+    
+    .about-quy-card-title {
+        font-size: 18px;
+    }
+    
+    .about-quy-card-description {
+        font-size: 13px;
+        line-height: 1.6;
+        text-align: left;
+    }
+    
+    .about-quy-card-description p {
+        text-indent: 15px;
+    }
+    
+    .value-item {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-quy-section {
+        padding: 40px 0;
+    }
+    
+    .about-quy-title {
+        font-size: 24px;
+    }
+    
+    .about-quy-card-content {
+        padding: 18px 15px;
+    }
+    
+    .about-quy-card-description {
+        font-size: 12px;
+    }
+    
+    .about-quy-card-description p {
+        text-indent: 12px;
+    }
 }

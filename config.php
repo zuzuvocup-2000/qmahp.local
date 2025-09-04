@@ -10,7 +10,7 @@ define('ASSET_BACKEND', 'public/backend/');
 
 define('BASE_URL', 'http://qmahp.local/');
 define('BASE_URL_LANG', 'http://qmahp.local/en/');
-define('HTSUFFIX', '');
+define('HTSUFFIX', '.html');
 
 define('DEBUG', 0);
 define('COMPRESS', 0);

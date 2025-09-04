@@ -9,9 +9,13 @@
 					<?php 
 						$val['canonical'] = basename($val['canonical']);
 					?>
-					<li class="" data-url="<?php echo $val['canonical']; ?>"><a href="<?php echo $val['canonical']; ?>" title="<?php echo $val['title']; ?>">
-						<span><?php echo $val['title'] ?></span>
-					</a>
+					<li class="<?php echo (isset($val['children']) && is_array($val['children']) && count($val['children']) ? 'has-children' : '') ?>" data-url="<?php echo $val['canonical']; ?>">
+						<a href="<?php echo $val['canonical']; ?>" title="<?php echo $val['title']; ?>">
+							<span><?php echo $val['title'] ?></span>
+							<?php if(isset($val['children']) && is_array($val['children']) && count($val['children'])){ ?>
+								<i class="fa fa-chevron-down ml5"></i>
+							<?php } ?>
+						</a>
 						<?php if(isset($val['children']) && is_array($val['children']) && count($val['children'])){ ?>
 						<div class="dropdown-menu">
 							<ul class="uk-list children">
