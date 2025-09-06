@@ -1,4 +1,4 @@
-<?php $main_nav = get_menu(array('keyword' => 'main-menu','language' => 'vi', 'output' => 'array')); ?>
+<?php $main_nav = get_menu(array('keyword' => 'main-menu','language' => $language, 'output' => 'array')); ?>
 <?php if(isset($main_nav['data']) && is_array($main_nav['data']) && count($main_nav['data'])){ ?>
 <section class="lower">
 	<div class="uk-container uk-container-center">

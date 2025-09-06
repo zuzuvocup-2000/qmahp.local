@@ -102,72 +102,6 @@
     }
 
     /**
-     * Footer Link Hover Effects
-     * Adds smooth hover effects to footer links
-     */
-    function initFooterLinks() {
-        const footerLinks = document.querySelectorAll('.footer-link, .footer-link-bottom');
-        
-        footerLinks.forEach(function(link) {
-            link.addEventListener('mouseenter', function() {
-                this.style.paddingLeft = '10px';
-            });
-            
-            link.addEventListener('mouseleave', function() {
-                this.style.paddingLeft = '0';
-            });
-        });
-    }
-
-    /**
-     * Activity Item Hover Effects
-     * Adds hover effects to activity items in footer
-     */
-    function initActivityItems() {
-        const activityItems = document.querySelectorAll('.activity-item');
-        
-        activityItems.forEach(function(item) {
-            item.addEventListener('mouseenter', function() {
-                this.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
-                this.style.borderRadius = '8px';
-                this.style.padding = '10px';
-                this.style.margin = '5px -10px';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.backgroundColor = 'transparent';
-                this.style.borderRadius = '0';
-                this.style.padding = '0 0 15px 0';
-                this.style.margin = '0 0 15px 0';
-            });
-        });
-    }
-
-    /**
-     * Contact Item Hover Effects
-     * Adds hover effects to contact items
-     */
-    function initContactItems() {
-        const contactItems = document.querySelectorAll('.contact-item');
-        
-        contactItems.forEach(function(item) {
-            item.addEventListener('mouseenter', function() {
-                this.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
-                this.style.borderRadius = '6px';
-                this.style.padding = '8px';
-                this.style.margin = '7px -8px';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.style.backgroundColor = 'transparent';
-                this.style.borderRadius = '0';
-                this.style.padding = '0';
-                this.style.margin = '0 0 15px 0';
-            });
-        });
-    }
-
-    /**
      * Scroll Animation for Footer Elements
      * Adds fade-in animation when footer comes into view
      */
@@ -270,9 +204,6 @@
         
         // Footer enhancements
         initDonationButtons();
-        initFooterLinks();
-        initActivityItems();
-        initContactItems();
         
         // Advanced features
         initScrollAnimations();

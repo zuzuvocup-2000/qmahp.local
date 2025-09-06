@@ -1,7 +1,6 @@
 <?php
+$menuFooter = get_menu(array('keyword' => 'menu-footer','language' => $language, 'output' => 'array'));
 $model = new App\Models\AutoloadModel();
-
-
 
 // Get recent activities
 $recentActivities = $model->_get_where([
@@ -29,12 +28,11 @@ $recentActivities = $model->_get_where([
                 <div class="uk-width-medium-1-4 uk-width-small-1-2">
                     <div class="footer-section">
                         <div class="footer-logo">
-                            <img src="<?php echo $general['homepage_logo']; ?>" alt="Charity Organization Logo" class="logo-img">
+                            <img src="<?php echo $general['homepage_logo_ft']; ?>" alt="<?php echo $general['homepage_company']; ?>" class="logo-img">
                         </div>
-                        <h3 class="footer-title">Về Tổ Chức</h3>
+                        <h3 class="footer-title"><?php echo $keywordList['about-title']; ?></h3>
                         <p class="footer-description">
-                            Chúng tôi cam kết mang đến những giá trị tích cực cho cộng đồng thông qua các hoạt động thiện nguyện, 
-                            hỗ trợ những người có hoàn cảnh khó khăn và xây dựng một xã hội tốt đẹp hơn.
+                            <?php echo $general['homepage_ft']; ?>
                         </p>
                         <div class="social-links">
                             <a href="#" class="social-link facebook" title="Facebook">
@@ -56,15 +54,11 @@ $recentActivities = $model->_get_where([
                 <!-- Quick Links -->
                 <div class="uk-width-medium-1-4 uk-width-small-1-2">
                     <div class="footer-section">
-                        <h3 class="footer-title">Liên Kết Nhanh</h3>
+                        <h3 class="footer-title"><?php echo $keywordList['quick-links-title']; ?></h3>
                         <ul class="footer-links">
-                            <li><a href="<?php echo BASE_URL; ?>" class="footer-link">Trang Chủ</a></li>
-                            <li><a href="<?php echo BASE_URL; ?>gioi-thieu" class="footer-link">Giới Thiệu</a></li>
-                            <li><a href="<?php echo BASE_URL; ?>hoat-dong" class="footer-link">Hoạt Động</a></li>
-                            <li><a href="<?php echo BASE_URL; ?>du-an" class="footer-link">Dự Án</a></li>
-                            <li><a href="<?php echo BASE_URL; ?>tin-tuc" class="footer-link">Tin Tức</a></li>
-                            <li><a href="<?php echo BASE_URL; ?>chung-tay" class="footer-link">Chung Tay</a></li>
-                            <li><a href="<?php echo BASE_URL; ?>lien-he" class="footer-link">Liên Hệ</a></li>
+                            <?php foreach($menuFooter['data'] as $menu): ?>
+                                <li><a href="<?php echo BASE_URL . $menu['canonical'].HTSUFFIX; ?>" class="footer-link"><?php echo $menu['title']; ?></a></li>
+                            <?php endforeach; ?>
                         </ul>
                     </div>
                 </div>
@@ -72,7 +66,7 @@ $recentActivities = $model->_get_where([
                 <!-- Recent Activities -->
                 <div class="uk-width-medium-1-4 uk-width-small-1-2">
                     <div class="footer-section">
-                        <h3 class="footer-title">Hoạt Động Gần Đây</h3>
+                        <h3 class="footer-title"><?php echo $keywordList['recent-activities-title']; ?></h3>
                         <div class="recent-activities">
                             <?php if(isset($recentActivities) && is_array($recentActivities)): ?>
                                 <?php foreach($recentActivities as $activity): ?>
@@ -94,7 +88,7 @@ $recentActivities = $model->_get_where([
                                     </div>
                                 <?php endforeach; ?>
                             <?php else: ?>
-                                <p class="no-activities">Chưa có hoạt động nào</p>
+                                <p class="no-activities"><?php echo $keywordList['recent-activities-no-activities']; ?></p>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -103,45 +97,45 @@ $recentActivities = $model->_get_where([
                 <!-- Contact Info -->
                 <div class="uk-width-medium-1-4 uk-width-small-1-2">
                     <div class="footer-section">
-                        <h3 class="footer-title">Thông Tin Liên Hệ</h3>
+                        <h3 class="footer-title"><?php echo $keywordList['footer-contact-title']; ?></h3>
                         <div class="contact-info">
                             <div class="contact-item">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 <div class="contact-details">
-                                    <strong>Địa chỉ:</strong>
-                                    <span>123 Đường ABC, Quận XYZ, TP. Hồ Chí Minh</span>
+                                    <strong><?php echo $keywordList['footer-contact-address']; ?></strong>
+                                    <span><?php echo $general['contact_address']; ?></span>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                                 <div class="contact-details">
-                                    <strong>Điện thoại:</strong>
-                                    <span>+84 123 456 789</span>
+                                    <strong><?php echo $keywordList['footer-contact-phone']; ?></strong>
+                                    <span><?php echo $general['contact_phone']; ?></span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                                <div class="contact-details">
+                                    <strong>Hotline</strong>
+                                    <span><?php echo $general['contact_hotline']; ?></span>
                                 </div>
                             </div>
                             <div class="contact-item">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <div class="contact-details">
-                                    <strong>Email:</strong>
-                                    <span>info@charity.org.vn</span>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fa fa-clock-o" aria-hidden="true"></i>
-                                <div class="contact-details">
-                                    <strong>Giờ làm việc:</strong>
-                                    <span>Thứ 2 - Thứ 6: 8:00 - 17:00</span>
+                                    <strong>Email</strong>
+                                    <span><?php echo $general['contact_email']; ?></span>
                                 </div>
                             </div>
                         </div>
                         
                         <!-- Donation Call to Action -->
                         <div class="donation-cta">
-                            <h4 class="cta-title">Chung Tay Vì Cộng Đồng</h4>
-                            <p class="cta-description">Mỗi đóng góp của bạn đều có ý nghĩa</p>
+                            <h4 class="cta-title"><?php echo $keywordList['donation-title']; ?></h4>
+                            <p class="cta-description"><?php echo $keywordList['donation-description']; ?></p>
                             <a href="<?php echo BASE_URL; ?>chung-tay" class="donate-btn">
                                 <i class="fa fa-heart" aria-hidden="true"></i>
-                                Quyên Góp Ngay
+                                <?php echo $keywordList['donation-button']; ?>
                             </a>
                         </div>
                     </div>
@@ -155,12 +149,12 @@ $recentActivities = $model->_get_where([
         <div class="uk-container uk-container-center">
             <div class="uk-flex uk-flex-middle uk-flex-space-between">
                 <div class="copyright">
-                    <p>&copy; <?php echo date('Y'); ?> Tổ Chức Thiện Nguyện. Tất cả quyền được bảo lưu.</p>
+                    <p><?php echo $general['homepage_copyright']; ?></p>
                 </div>
                 <div class="footer-links-bottom">
-                    <a href="<?php echo BASE_URL; ?>dieu-khoan" class="footer-link-bottom">Điều Khoản</a>
-                    <a href="<?php echo BASE_URL; ?>chinh-sach" class="footer-link-bottom">Chính Sách</a>
-                    <a href="<?php echo BASE_URL; ?>bao-mat" class="footer-link-bottom">Bảo Mật</a>
+                    <a href="/" class="footer-link-bottom">Điều Khoản</a>
+                    <a href="/" class="footer-link-bottom">Chính Sách</a>
+                    <a href="/" class="footer-link-bottom">Bảo Mật</a>
                 </div>
             </div>
         </div>
