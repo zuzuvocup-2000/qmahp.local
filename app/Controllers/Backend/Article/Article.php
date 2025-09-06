@@ -173,7 +173,7 @@ class Article extends BaseController{
 
 		$id = (int)$id;
 		$this->data[$this->data['module']] = $this->AutoloadModel->_get_where([
-			'select' => 'tb1.id, tb4.title, tb4.canonical, tb4.description, tb4.content, tb4.meta_title, tb4.meta_description, tb1.catalogueid, tb1.image, tb1.album, tb1.publish, tb1.catalogue,tb1.video, tb4.router, tb4.icon,tb4.desc,tb4.price, tb4.dientich, tb4.template, tb4.sub_title, tb4.sub_content, tb1.productid, tb4.album_title, tb1.info, tb1.huong, tb1.namsinh, tb1.namxaydung, tb1.gender',
+			'select' => 'tb1.id, tb4.title, tb4.canonical, tb1.created_at, tb4.description, tb4.content, tb4.meta_title, tb4.meta_description, tb1.catalogueid, tb1.image, tb1.album, tb1.publish, tb1.catalogue,tb1.video, tb4.router, tb4.icon,tb4.desc,tb4.price, tb4.dientich, tb4.template, tb4.sub_title, tb4.sub_content, tb1.productid, tb4.album_title, tb1.info, tb1.huong, tb1.namsinh, tb1.namxaydung, tb1.gender',
 			'table' => $this->data['module'].' as tb1',
 			'join' => [
 					[
@@ -438,11 +438,10 @@ class Article extends BaseController{
  			'video' => $this->request->getPost('video'),
  			'album' => json_encode($this->request->getPost('album'), TRUE),
  			'publish' => $this->request->getPost('publish'),
+ 			'created_at' => $this->request->getPost('created_at'),
  		];
  		if($param['method'] == 'create' && isset($param['method'])){
- 			$store['created_at'] = $this->currentTime;
  			$store['userid_created'] = $this->auth['id'];
-
  		}else{
  			$store['updated_at'] = $this->currentTime;
  			$store['userid_updated'] = $this->auth['id'];

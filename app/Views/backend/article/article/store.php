@@ -303,15 +303,40 @@
 								<script>
 									var catalogue = '<?php echo (isset($_POST['catalogue'])) ? json_encode($_POST['catalogue']) : ((isset($article['catalogue']) && $article['catalogue'] != null) ? $article['catalogue'] : '');  ?>';
 								</script>
-								<div class="form-row mt20">
-										<label class="control-label text-left">
-											<span><?php echo translate('cms_lang.post.post_sub_cat', $language) ?></span>
-										</label>
+								<div class="form-row mt10">
+									<label class="control-label text-left">
+										<span><?php echo translate('cms_lang.post.post_sub_cat', $language) ?></span>
+									</label>
 
-										<div class="form-row">
-											<?php echo form_dropdown('catalogue[]', '', NULL, 'class="form-control selectMultiple" multiple="multiple" data-title="Nhập 2 kí tự để tìm kiếm..."  style="width: 100%;" data-join="'.$module.'_translate" data-module="'.$module.'_catalogue" data-select="title"'); ?>
-										</div>
+									<div class="form-row">
+										<?php echo form_dropdown('catalogue[]', '', NULL, 'class="form-control selectMultiple" multiple="multiple" data-title="Nhập 2 kí tự để tìm kiếm..."  style="width: 100%;" data-join="'.$module.'_translate" data-module="'.$module.'_catalogue" data-select="title"'); ?>
 									</div>
+								</div>
+								<div class="form-row mt10">
+									<label class="control-label text-left">
+										<span><?php echo translate('cms_lang.post.post_created_at', $language) ?></span>
+									</label>
+									<?php
+									    $createdAtValue = '';
+									    if (isset($article['created_at']) && !empty($article['created_at'])) {
+									        $createdAtValue = date('Y-m-d\TH:i', strtotime($article['created_at']));
+									    } else if (!empty(set_value('created_at'))) {
+									        $createdAtValue = date('Y-m-d\TH:i', strtotime(set_value('created_at')));
+									    } else {
+									        $createdAtValue = date('Y-m-d\TH:i');
+									    }
+									    echo form_input(
+									        [
+									            'name' => 'created_at',
+									            'value' => $createdAtValue,
+									            'class' => 'form-control',
+									            'type' => 'datetime-local',
+									            'placeholder' => '',
+									            'autocomplete' => 'off'
+									        ]
+									    );
+									?>
+								</div>
 							</div>
 						</div>
 					</div>
