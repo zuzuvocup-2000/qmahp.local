@@ -12,9 +12,16 @@ $languageList = $model->_get_where([
 	],
 ], true);
 
+
+$isHomePage = (current_url() === base_url() || current_url() === base_url('/') || current_url() === base_url('/').'/'|| current_url() === base_url('trang-chu.html'));
+$wrapHeaderClass = 'wrap-header-pc';
+if (!$isHomePage) {
+	$wrapHeaderClass .= ' is-not-home';
+}
+
 ?>
-<div class="wrap-header-pc">
-	<div class="uk-container uk-container-center pt10 pb10">
+<div class="<?php echo $wrapHeaderClass; ?> ">
+	<div class="uk-container uk-container-center pt10 pb10 line-header">
 		<div class="uk-flex uk-flex-right">
 			<div class="language-list uk-flex uk-flex-middle">
 				<a href="<?php echo BASE_URL ?>"   class="uk-flex uk-flex-middle">

@@ -7,7 +7,7 @@
 				<ul class="uk-navbar-nav uk-clearfix main-menu">
 					<?php foreach($main_nav['data'] as $key => $val){ ?>
 					<?php 
-						$val['canonical'] = basename($val['canonical']);
+						$val['canonical'] = basename($val['canonical'].HTSUFFIX);
 					?>
 					<li class="<?php echo (isset($val['children']) && is_array($val['children']) && count($val['children']) ? 'has-children' : '') ?>" data-url="<?php echo $val['canonical']; ?>">
 						<a href="<?php echo $val['canonical']; ?>" title="<?php echo $val['title']; ?>">
@@ -21,7 +21,7 @@
 							<ul class="uk-list children">
 								<?php foreach($val['children'] as $keyItem => $valItem){ ?>
 								<li>
-									<a href="<?php echo $valItem['canonical'] ?>" title="<?php echo $valItem['title'] ?>" class="">
+									<a href="<?php echo $valItem['canonical'].HTSUFFIX ?>" title="<?php echo $valItem['title'] ?>" class="">
 										<span><?php echo $valItem['title'] ?></span>
 									</a>
 								</li>

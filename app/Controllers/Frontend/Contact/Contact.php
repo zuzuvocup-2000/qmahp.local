@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers\Frontend\Contact;
 use App\Controllers\FrontendController;
+use App\Models\LanguageKeywordModel;
 
 class Contact extends FrontendController{
 
@@ -10,6 +11,7 @@ class Contact extends FrontendController{
         $this->data = [];
         $this->data['module'] = 'article_catalogue';
         $this->data['language'] = $this->currentLanguage();
+		$this->languageKeywordModel = new LanguageKeywordModel();
 	}
 
 	public function index($id = 0, $page = 1){
@@ -17,7 +19,7 @@ class Contact extends FrontendController{
         $id = (int)$id;
         $session = session();
         $module_extract = explode("_", $this->data['module']);
-
+        
         $this->data['meta_title'] = 'Liên hệ';
         $this->data['meta_description'] = 'Thông tin liên hệ';
         $this->data['meta_image'] = !empty( $this->data['detailCatalogue']['image'])?base_url( $this->data['detailCatalogue']['image']):'';
@@ -57,8 +59,9 @@ class Contact extends FrontendController{
             }
         }
 
-        $this->data['template'] = 'frontend/contact/contact/index';
+		$this->data['keywordList'] = $this->languageKeywordModel->getKeywordTranslations();
         $this->data['general'] = $this->general;
+        $this->data['template'] = 'frontend/contact/contact/index';
         return view('frontend/homepage/layout/home', $this->data);
 	}
 

@@ -62,6 +62,10 @@ $system = get_system();
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+		
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="<?php echo BASE_URL; ?>public/frontend/resources/custom.css?v=<?php echo time(); ?>">
+		
 		<?php echo view('frontend/homepage/common/head') ?>
 	</head>
 	<body class="canhcam homepage ">
@@ -97,39 +101,10 @@ $system = get_system();
 			if (isset($module) && $module == 'member') {
 				echo ' <script src="public/frontend/resources/login.js"></script>';
 			}
-			?>
-			<?php echo $system['general_script_bottom']['content'] ?>
-			<div id="fb-root"></div>
-		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
+		?>
+		<?php echo $system['general_script_bottom']['content'] ?>
 		
-		<a id="backtop" href="" title="Về đầu trang" style="bottom: 90px;"><i class="fa fa-angle-double-up"></i></a>
-
-		<script>
-			
-			$(window).scroll(function() {
-				if($(this).scrollTop() > 50){
-					$('#backtop').addClass('active');
-					// $('#backtop').stop().animate({ bottom: '30px' }, 0);
-				}else{
-					$('#backtop').removeClass('active');
-					// $('#backtop').stop().animate({ bottom: '-60px' }, 0);
-				} 
-			});
-			$(document).ready(function() {
-				$('#backtop').click(function(event) {
-					event.preventDefault();
-					$('.uk-slidenav-next').trigger('click');
-					$('html, body').animate({scrollTop: 0},500);
-				});
-
-				$(document).on('click', '.uk-slidenav-next', function(event) {
-					vh_init();
-				});	
-			});
-
-		</script>
-		<!-- <div id="fb-root"></div>
-		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0&appId=2980822832233231&autoLogAppEvents=1" nonce="C8FyezAO"></script> -->
+		<script src="<?php echo BASE_URL; ?>public/frontend/resources/custom.js?v=<?php echo time(); ?>"></script>
 		<?php echo view('frontend/homepage/common/script') ?>
 	</body>
 </html>

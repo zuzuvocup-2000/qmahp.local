@@ -21,17 +21,18 @@
 
 .pc-header.uk-active {
     background: #fff;
-    padding: 10px 0;
+}
+.is-not-home .upper,
+.pc-header.uk-active .upper{
+    padding: 10px 0 ;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .wrap-header-pc .upper {
     padding: 20px 0;
 }
 
-.pc-header.uk-active .upper {
-    padding: 0;
-}
-
+.is-not-home .main-nav>.main-menu>li>a,
 .pc-header.uk-active .main-nav>.main-menu>li>a {
     color: #333 !important;
 }
@@ -149,4 +150,578 @@
     position: absolute;
     left: 50%;
     top: -2rem;
+}
+
+.is-not-home {
+    background-color: #fff;
+    position: relative;
+    top: inherit;
+    left: inherit;
+    background-image: none;
+}
+
+.is-not-home .line-header {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.contact-body {
+    background: #fff;
+    min-height: 100vh;
+}
+
+/* Header section */
+.contact-body .contact-header {
+    padding: 40px 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+/* Company info section */
+.contact-body .contact-header .contact-info .welcome-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-body .contact-header .contact-info .company-title {
+    color: #d32f2f;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.contact-body .contact-header .contact-info .contact-details {
+    margin-top: 20px;
+}
+
+.contact-body .contact-header .contact-info .contact-details .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.contact-body .contact-header .contact-info .contact-details .contact-item i {
+    width: 20px;
+    margin-right: 10px;
+    color: #d32f2f;
+}
+
+/* Form invitation section */
+.contact-body .contact-header .form-invitation {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Contact form section */
+.contact-body .contact-form-section {
+    padding: 40px 0;
+    background: #f9f9f9;
+}
+
+.contact-body .contact-form-section .contact-form-wrapper {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.contact-body .contact-form-section .contact-form-wrapper .form-row {
+    margin-bottom: 20px;
+}
+
+.contact-body .contact-form-section .contact-form-wrapper .input-text,
+.contact-body .contact-form-section .contact-form-wrapper .form-textarea {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-body .contact-form-section .contact-form-wrapper .input-text:focus,
+.contact-body .contact-form-section .contact-form-wrapper .form-textarea:focus {
+    outline: none;
+    border-color: #d32f2f;
+    box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.2);
+}
+
+.contact-body .contact-form-section .contact-form-wrapper .form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-body .contact-form-section .contact-form-wrapper .btn-submit {
+    background: #ff6b35;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.contact-body .contact-form-section .contact-form-wrapper .btn-submit:hover {
+    background: #e55a2b;
+}
+
+/* Map section */
+.contact-body .contact-map-section {
+    margin-top: 0;
+}
+
+.contact-body .contact-map-section .site-map {
+    width: 100%;
+    height: 400px;
+}
+
+.contact-body .contact-map-section .site-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-body .contact-header .uk-grid,
+    .contact-body .contact-form-section .uk-grid {
+        margin: 0;
+    }
+    
+    .contact-body .contact-header .contact-info,
+    .contact-body .contact-header .form-invitation,
+    .contact-body .contact-form-section .contact-form-wrapper {
+        padding: 20px;
+    }
+    
+    .contact-body .contact-header .company-title {
+        font-size: 24px;
+    }
+    
+    .contact-body .contact-header .form-invitation {
+        margin-top: 20px;
+    }
+}
+
+.contact-map {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+
+/* ========================================
+   MAIN FOOTER CONTAINER
+   ======================================== */
+.charity-footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.charity-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #e74c3c, #f39c12, #e74c3c);
+}
+
+/* ========================================
+   FOOTER MAIN CONTENT
+   ======================================== */
+.charity-footer .footer-main {
+    padding: 60px 0 40px;
+    position: relative;
+}
+
+.charity-footer .footer-section {
+    margin-bottom: 30px;
+}
+
+/* ========================================
+   FOOTER LOGO SECTION
+   ======================================== */
+.charity-footer .footer-logo {
+    margin-bottom: 20px;
+}
+
+.charity-footer .footer-logo .logo-img {
+    max-height: 60px;
+    width: auto;
+}
+
+/* ========================================
+   FOOTER TITLES
+   ======================================== */
+.charity-footer .footer-title {
+    color: #ecf0f1;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.charity-footer .footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: #e74c3c;
+    border-radius: 2px;
+}
+
+.charity-footer .footer-description {
+    color: #bdc3c7;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* ========================================
+   SOCIAL LINKS SECTION
+   ======================================== */
+.charity-footer .social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.charity-footer .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.charity-footer .social-link:hover {
+    background: #e74c3c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+}
+
+/* ========================================
+   FOOTER NAVIGATION LINKS
+   ======================================== */
+.charity-footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.charity-footer .footer-links li {
+    margin-bottom: 12px;
+}
+
+.charity-footer .footer-link {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 14px;
+    display: block;
+    padding: 5px 0;
+}
+
+.charity-footer .footer-link:hover {
+    color: #e74c3c;
+    padding-left: 10px;
+}
+
+/* ========================================
+   RECENT ACTIVITIES SECTION
+   ======================================== */
+.charity-footer .recent-activities {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.charity-footer .activity-item {
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.charity-footer .activity-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.charity-footer .activity-image {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.charity-footer .activity-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.charity-footer .activity-content {
+    flex: 1;
+}
+
+.charity-footer .activity-title {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.charity-footer .activity-link {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.charity-footer .activity-link:hover {
+    color: #e74c3c;
+}
+
+.charity-footer .activity-date {
+    color: #95a5a6;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.charity-footer .no-activities {
+    color: #95a5a6;
+    font-style: italic;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* ========================================
+   CONTACT INFORMATION SECTION
+   ======================================== */
+.charity-footer .contact-info {
+    margin-bottom: 25px;
+}
+
+.charity-footer .contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.charity-footer .contact-item i {
+    color: #e74c3c;
+    width: 20px;
+    margin-right: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.charity-footer .contact-details {
+    flex: 1;
+}
+
+.charity-footer .contact-details strong {
+    display: block;
+    color: #ecf0f1;
+    margin-bottom: 2px;
+}
+
+.charity-footer .contact-details span {
+    color: #bdc3c7;
+    line-height: 1.4;
+}
+
+/* ========================================
+   DONATION CALL TO ACTION
+   ======================================== */
+.charity-footer .donation-cta {
+    background: rgba(231, 76, 60, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.charity-footer .cta-title {
+    color: #e74c3c;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.charity-footer .cta-description {
+    color: #bdc3c7;
+    font-size: 13px;
+    margin: 0 0 15px 0;
+}
+
+.charity-footer .donate-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #e74c3c;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.charity-footer .donate-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+}
+
+/* ========================================
+   FOOTER BOTTOM SECTION
+   ======================================== */
+.charity-footer .footer-bottom {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.charity-footer .copyright p {
+    margin: 0;
+    color: #95a5a6;
+    font-size: 14px;
+}
+
+.charity-footer .footer-links-bottom {
+    display: flex;
+    gap: 20px;
+}
+
+.charity-footer .footer-link-bottom {
+    color: #95a5a6;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.charity-footer .footer-link-bottom:hover {
+    color: #e74c3c;
+}
+
+/* ========================================
+   BACK TO TOP BUTTON
+   ======================================== */
+.charity-footer .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #e74c3c;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.charity-footer .back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.charity-footer .back-to-top:hover {
+    background: #c0392b;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+}
+
+/* ========================================
+   FOOTER RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet and Mobile */
+@media (max-width: 768px) {
+    .charity-footer .footer-main {
+        padding: 40px 0 30px;
+    }
+    
+    .charity-footer .footer-section {
+        margin-bottom: 40px;
+    }
+    
+    .charity-footer .footer-title {
+        font-size: 18px;
+    }
+    
+    .charity-footer .footer-bottom .uk-flex {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .charity-footer .footer-links-bottom {
+        justify-content: center;
+    }
+    
+    .charity-footer .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Mobile Only */
+@media (max-width: 480px) {
+    .charity-footer .social-links {
+        justify-content: center;
+    }
+    
+    .charity-footer .activity-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .charity-footer .activity-image {
+        margin: 0 auto 10px;
+    }
+    
+    .charity-footer .contact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .charity-footer .contact-item i {
+        margin: 0 auto 5px;
+    }
 }

@@ -80,5 +80,16 @@
             </div>
         </section>
     <?php } ?>
-    
+
+    <?php if(isset($album) && is_array($album) && count($album)){ ?>
+        <section class="album-section">
+            <div class="uk-container uk-container-center">
+                <div class="album-header">
+                    <h2 class="album-title">
+                        <?php echo $album[0]['cat_title']; ?>
+                    </h2>
+                </div>
+            </div>
+        </section>
+    <?php } ?>
 </div>

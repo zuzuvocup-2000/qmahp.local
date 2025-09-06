@@ -1,34 +1,73 @@
 <section class="contact-body">
-    <div class="site-map">
-        <?php echo $general['contact_map'] ?>
-    </div>
-    <div class="uk-container-center uk-container">
-        <div class="contact-form">
-            <div class="contact-company">
-                <h2><?php echo $general['homepage_company'] ?></h2>
+    <!-- Header Section -->
+    <div class="contact-header">
+        <div class="uk-container uk-container-center">
+            <div class="uk-grid uk-grid-width-large-1-2">
+                <!-- Left side - Company info -->
+                <div class="contact-info">
+                    <p class="welcome-text"><?php echo $keywordList['contact-welcome'] ?></p>
+                    <h1 class="company-title"><?php echo $general['homepage_company'] ?></h1>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fa fa-phone"></i>
+                            <span>Phone: <?php echo $general['contact_phone'] ?></span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa fa-phone"></i>
+                            <span>Hotline: <?php echo $general['contact_hotline'] ?></span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa fa-envelope"></i>
+                            <span><?php echo $general['contact_email'] ?></span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa fa-home"></i>
+                            <span><?php echo $general['contact_address'] ?></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right side - Form invitation -->
+                <div class="form-invitation">
+                    <p><?php echo $keywordList['contact-description'] ?></p>
+                </div>
             </div>
-            <form action="frontend/contact/contact/index" method="post" class="uk-form form form-contact">
-                <div class="uk-grid  uk-grid-width-small-1-1 uk-grid-width-large-1-2">
-                    <div class="form-row mb20">
-                        <input type="text" name="fullname" class="uk-width-1-1 input-text" placeholder="Họ &amp; tên *">
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="contact-form-section">
+        <div class="uk-container uk-container-center">
+            <div class="wrap-contact">
+                <div class="wrap-form uk-grid uk-grid-large">
+                    <div class="uk-width-large-1-2">
+                        <div class="contact-map"><?php echo $general['contact_map'] ?></div> 
                     </div>
-                    <div class="form-row mb20">
-                        <input type="text" name="email" class="uk-width-1-1 input-text" placeholder="Email *">
+                    <div class="uk-width-large-1-2">
+                        <div class="contact-form-wrapper">
+                            <form action="frontend/contact/contact/index" method="post" class="uk-form form form-contact">
+                                <div class="form-row">
+                                    <input type="text" name="fullname" class="uk-width-1-1 input-text" placeholder="<?php echo $keywordList['contact-fullname']; ?>" required>
+                                </div>
+                                <div class="form-row">
+                                    <input type="email" name="email" class="uk-width-1-1 input-text" placeholder="Email *" required>
+                                </div>
+                                <div class="form-row">
+                                    <input type="tel" name="phone" class="uk-width-1-1 input-text" placeholder="<?php echo $keywordList['contact-phone']; ?>" required>
+                                </div>
+                                <div class="form-row">
+                                    <input type="text" name="subject" class="uk-width-1-1 input-text" placeholder="<?php echo $keywordList['contact-title']; ?>" required>
+                                </div>
+                                <div class="form-row">
+                                    <textarea name="message" class="uk-width-1-1 form-textarea" placeholder="<?php echo $keywordList['contact-content']; ?>" rows="5" required></textarea>
+                                </div>
+                                <div class="form-row">
+                                    <input type="submit" name="create" class="btn-submit" value="<?php echo $keywordList['contact-send']; ?>">
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="form-row mb20">
-                        <input type="text" name="phone" class="uk-width-1-1 input-text" placeholder="Phone *">
-                    </div>
-                    <div class="form-row mb20">
-                        <input type="text" name="address" class="uk-width-1-1 input-text" placeholder="Địa chỉ *">
-                    </div>
-                </div><!-- .uk-grid -->
-                <div class="form-row mb20">
-                    <textarea name="message" class="uk-width-1-1 form-textarea" placeholder="Nội dung *"></textarea>
                 </div>
-                <div class="form-row ">
-                    <input type="submit" name="create" class="btn-submit" value="Gửi đi">
-                </div>
-            </form><!-- .form -->
-        </div><!-- .contact-form -->
+           </div>
+        </div>
     </div>
 </section>
