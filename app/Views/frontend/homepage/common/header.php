@@ -56,7 +56,7 @@ if (!$isHomePage) {
 					<div class="uk-flex uk-flex-middle">
 						<?php echo view('frontend/homepage/common/navigation') ?>
 						 <div class="hd-btn">
-							 <a href="chung-tay" title="" class=""><?php echo $keywordList['hd_chung_tay']; ?></a>
+							 <a href="<?php echo $language == 'vi' ? BASE_URL . 'chung-tay'.HTSUFFIX : BASE_URL . 'en/join-hands'.HTSUFFIX; ?>" title="" class=""><?php echo $keywordList['hd-chung-tay']; ?></a>
 						 </div>
 						 <div class="hd-menu-search ml20">
 							<a class="open-search icon no-hover" title="Tìm kiếm"><i class="fa fa-search" aria-hidden="true"></i></a>

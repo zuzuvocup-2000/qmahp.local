@@ -133,7 +133,7 @@ $recentActivities = $model->_get_where([
                         <div class="donation-cta">
                             <h4 class="cta-title"><?php echo $keywordList['donation-title']; ?></h4>
                             <p class="cta-description"><?php echo $keywordList['donation-description']; ?></p>
-                            <a href="<?php echo BASE_URL; ?>chung-tay" class="donate-btn">
+                            <a href="<?php echo $language == 'vi' ? BASE_URL . 'chung-tay'.HTSUFFIX : BASE_URL . 'en/join-hands'.HTSUFFIX; ?>" class="donate-btn">
                                 <i class="fa fa-heart" aria-hidden="true"></i>
                                 <?php echo $keywordList['donation-button']; ?>
                             </a>

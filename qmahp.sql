@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: MySQL-5.6
--- Generation Time: Sep 07, 2025 at 03:24 AM
+-- Generation Time: Sep 08, 2025 at 03:05 AM
 -- Server version: 5.6.51
 -- PHP Version: 7.3.33
 
@@ -73,9 +73,19 @@ INSERT INTO `article` (`id`, `catalogueid`, `productid`, `catalogue`, `album`, `
 (11, 9, '', 'null', 'null', '', 0, '/upload/image/tin-tuc/bg4.jpg', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2022-08-06 21:02:17', '0000-00-00 00:00:00', 1, 1, 23, 0),
 (12, 7, '', 'null', 'null', '', 0, '/upload/image/tin-tuc/avtar-1.jpg', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2022-08-06 21:02:50', '0000-00-00 00:00:00', 1, 1, 23, 0),
 (13, 7, '', 'null', 'null', '', 0, '/upload/image/tin-tuc/avtar-3.jpg', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2022-08-06 21:03:13', '0000-00-00 00:00:00', 1, 1, 23, 0),
-(14, 7, '', 'null', 'null', '', 0, '/upload/image/2.jpg', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2022-08-06 21:03:36', '2023-01-14 03:34:25', 0, 1, 23, 29),
+(14, 7, '', 'null', 'null', '', 0, '/upload/image/2.jpg', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2022-08-06 21:03:36', '2023-01-14 03:34:25', 1, 1, 23, 29),
 (15, 9, '', 'null', 'null', '', 0, '/upload/image/tin-tuc/art2.jpg', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2022-08-06 21:04:01', '0000-00-00 00:00:00', 1, 1, 23, 0),
-(16, 9, '', 'null', 'null', '', 0, '/upload/image/tin-tuc/art1.jpg', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2022-08-06 21:04:22', '0000-00-00 00:00:00', 1, 1, 23, 0);
+(16, 9, '', 'null', 'null', '', 0, '/upload/image/tin-tuc/art1.jpg', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2022-08-06 21:04:22', '0000-00-00 00:00:00', 1, 1, 23, 0),
+(17, 11, '', 'null', 'null', '', 0, '', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2025-09-07 11:00:00', '0000-00-00 00:00:00', 0, 1, 33, 0),
+(18, 11, '', 'null', 'null', '', 0, '', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2025-09-07 11:01:00', '0000-00-00 00:00:00', 0, 1, 33, 0),
+(19, 11, '', 'null', 'null', '', 0, '', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2025-09-07 11:01:00', '0000-00-00 00:00:00', 0, 1, 33, 0),
+(20, 11, '', 'null', 'null', '', 0, '', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2025-09-07 11:01:00', '0000-00-00 00:00:00', 0, 1, 33, 0),
+(21, 11, '', 'null', 'null', '', 1, '', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2025-09-07 23:36:46', '0000-00-00 00:00:00', 0, 1, 33, 0),
+(22, 12, '', 'null', 'null', '', 0, '', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2025-09-07 11:02:00', '0000-00-00 00:00:00', 0, 1, 33, 0),
+(23, 12, '', 'null', 'null', '', 0, '', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2025-09-07 11:02:00', '0000-00-00 00:00:00', 0, 1, 33, 0),
+(24, 12, '', 'null', 'null', '', 0, '', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2025-09-07 11:02:00', '0000-00-00 00:00:00', 0, 1, 33, 0),
+(25, 12, '', 'null', 'null', '', 0, '', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2025-09-07 11:02:00', '0000-00-00 00:00:00', 0, 1, 33, 0),
+(26, 12, '', 'null', 'null', '', 0, '', '', 0, '{\"sl\":\"\",\"address\":\"\",\"time\":\"\"}', 0, 0, 0, 0, 0, '', 0, '', '2025-09-07 11:02:00', '0000-00-00 00:00:00', 0, 1, 33, 0);
 
 -- --------------------------------------------------------
 
@@ -114,9 +124,12 @@ INSERT INTO `article_catalogue` (`id`, `parentid`, `lft`, `rgt`, `level`, `album
 (4, 0, 2, 3, 1, 'null', 0, '', 0, '', '2022-05-19 08:09:25', '0000-00-00 00:00:00', 1, 1, 1, 23, 0),
 (5, 0, 2, 3, 1, 'null', 0, '', 0, '', '2022-05-21 16:21:12', '0000-00-00 00:00:00', 1, 1, 1, 23, 0),
 (6, 0, 2, 3, 1, 'null', 0, '', 0, '', '2022-05-21 16:22:16', '0000-00-00 00:00:00', 1, 1, 1, 23, 0),
-(7, 0, 4, 5, 1, 'null', 0, '', 0, '', '2022-08-05 22:48:44', '0000-00-00 00:00:00', 0, 1, 1, 23, 0),
-(8, 0, 6, 7, 1, 'null', 0, '/upload/image/post_category/combine1.png', 0, '', '2022-08-05 22:50:57', '0000-00-00 00:00:00', 0, 1, 1, 23, 0),
-(9, 0, 2, 3, 1, 'null', 0, '', 0, '', '2022-08-05 22:51:07', '0000-00-00 00:00:00', 0, 1, 1, 23, 0);
+(7, 0, 8, 9, 1, 'null', 0, '', 0, '', '2022-08-05 22:48:44', '0000-00-00 00:00:00', 1, 1, 1, 23, 0),
+(8, 0, 2, 3, 1, 'null', 0, '/upload/image/post_category/combine1.png', 0, '', '2022-08-05 22:50:57', '0000-00-00 00:00:00', 1, 1, 1, 23, 0),
+(9, 0, 4, 5, 1, 'null', 0, '', 0, '', '2022-08-05 22:51:07', '0000-00-00 00:00:00', 1, 1, 1, 23, 0),
+(10, 0, 2, 7, 1, 'null', 0, '', 0, '', '2025-09-07 22:32:16', '0000-00-00 00:00:00', 0, 1, 1, 33, 0),
+(11, 10, 3, 4, 2, 'null', 0, '/upload/image/vanhoaxahoi/takewondo.jpg', 0, '', '2025-09-07 22:32:25', '2025-09-07 23:21:13', 0, 1, 1, 33, 33),
+(12, 10, 5, 6, 2, 'null', 0, '/upload/image/vanhoaxahoi/cssk2.png', 0, '', '2025-09-07 22:53:07', '0000-00-00 00:00:00', 0, 1, 1, 33, 0);
 
 -- --------------------------------------------------------
 
@@ -184,7 +197,20 @@ INSERT INTO `article_translate` (`id`, `objectid`, `language`, `module`, `title`
 (22, 13, 'vi', 'article', 'Smith Hulk', 'smith-hulk', 'Smith Hulk', '', '', '', 0, 'PHA+UmVzdG8gY3VzdG9tZXI8L3A+DQo=', '', 'null', '', '\\App\\Controllers\\Frontend\\Article\\Article::index', 'frontend/article/article/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
 (23, 14, 'vi', 'article', 'Nail salon', 'john-doe', 'John Doe', '', '', '', 0, '', 'PHA+WzwvcD4NCg==', 'null', '', '\\App\\Controllers\\Frontend\\Article\\Article::index', 'frontend/article/article/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
 (24, 15, 'vi', 'article', 'BOOK A TABLE NOW', 'book-a-table-now', 'BOOK A TABLE NOW', '', '', '', 0, 'PHA+TWFrZSBhIHJlc2VydmF0aW9uPC9wPg0K', 'PHAgc3R5bGU9InRleHQtYWxpZ246IGNlbnRlcjsiPkxvcmVtIGlwc3VtIGRvbG9yIHNpdCBhbWV0LCBjb25zZWN0ZXR1ZXIgYWRpcGlzY2luZyBlbGl0LiBBZW5lYW4gY29tbW9kbyBsaWd1bGEgZWdldCBkb2xvci4gQWVuZWFuIG1hc3NhLiBDdW0gc29jaWlzIG5hdG9xdWUgcGVuYXRpYnVzIGV0IG1hZ25pcyBkaXMgcGFydHVyaWVudCBtb250ZXMsIG5hc2NldHVyIHJpZGljdWx1cyBtdXMuIERvbmVjIHF1YW0gZmVsaXMsIHVsdHJpY2llcyBuZWMsIHBlbGxlbnRlc3F1ZSBldSwgcHJldGl1bSBxdWlzLCBzZW0uPC9wPg0K', 'null', '', '\\App\\Controllers\\Frontend\\Article\\Article::index', 'frontend/article/article/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
-(25, 16, 'vi', 'article', 'Rolf Baumann', 'rolf-baumann', 'Rolf Baumann', '', '', '', 0, '', 'PHA+JnF1b3Q7IENvb2tpbmcgZXZlcnl0aGluZyB3aXRoIHJlc3BlY3Qgd2lsbCBsZWFkIHRvIGFtYXppbmcgdGFzdGluZyBleHBlcmllbmNlcyAmcXVvdDs8L3A+DQo=', 'null', '', '\\App\\Controllers\\Frontend\\Article\\Article::index', 'frontend/article/article/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', '');
+(25, 16, 'vi', 'article', 'Rolf Baumann', 'rolf-baumann', 'Rolf Baumann', '', '', '', 0, '', 'PHA+JnF1b3Q7IENvb2tpbmcgZXZlcnl0aGluZyB3aXRoIHJlc3BlY3Qgd2lsbCBsZWFkIHRvIGFtYXppbmcgdGFzdGluZyBleHBlcmllbmNlcyAmcXVvdDs8L3A+DQo=', 'null', '', '\\App\\Controllers\\Frontend\\Article\\Article::index', 'frontend/article/article/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
+(26, 10, 'vi', 'article_catalogue', 'Các lĩnh vực hoạt động', 'cac-linh-vuc-hoat-dong', 'Các lĩnh vực hoạt động', '', '', '', 0, '', '', '', '', '\\App\\Controllers\\Frontend\\Article\\Catalogue::index', 'frontend/article/catalogue/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
+(27, 11, 'vi', 'article_catalogue', 'Văn hoá - Giáo dục', 'van-hoa-giao-duc', 'Văn hoá - Giáo dục', '', '', '', 0, 'PHA+QuG7kkkgRMav4bugTkcgVCZBZ3JhdmU7SSBOxIJORyAtIExBTiBU4buOQSBOSOG7rk5HIEdJJkFhY3V0ZTsgVFLhu4ogU+G7kE5HIFThu5BUIMSQ4bq4UDwvcD4NCg==', 'PHA+VuG7m2kgbW9uZyBtdeG7kW4gxJFlbSB04bubaSBjxqEgaOG7mWkgZ2kmYWFjdXRlO28gZOG7pWMgYyZvY2lyYztuZyBi4bqxbmcsIGPGoSBo4buZaSBwaCZhYWN1dGU7dCB0cmnhu4NuIHjhu6luZyDEkSZhYWN1dGU7bmcgY2hvIG5o4buvbmcgdCZhZ3JhdmU7aSBuxINuZyB0xrDGoW5nIGxhaSwgUXXhu7kgTSZhYWN1dGU7aSDhuqRtIEjhuqFuaCBQaCZ1YWN1dGU7YyBoeSB24buNbmcgxJFlbSB04bubaSBuZ3Xhu5NuIMSR4buZbmcgdmkmZWNpcmM7biB24buBIGPhuqMgduG6rXQgY2jhuqV0IGzhuqtuIHRpbmggdGjhuqduIC4uLjwvcD4NCg==', '', '', '\\App\\Controllers\\Frontend\\Article\\Catalogue::index', 'frontend/article/catalogue/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
+(28, 12, 'vi', 'article_catalogue', 'Chăm sóc sức khỏe cộng đồng', 'cham-soc-suc-khoe-cong-dong', 'Chăm sóc sức khỏe cộng đồng', '', '', '', 0, 'PHA+VHJhbyB04bq3bmcga2luaCBwaCZpYWN1dGU7IGNo4buvYSBi4buHbmggY2hvIG5o4buvbmcgYuG7h25oIG5oJmFjaXJjO24gYyZvYWN1dGU7IGhvJmFncmF2ZTtuIGPhuqNuaCBraCZvYWN1dGU7IGtoxINuPC9wPg0K', 'PHA+UXXhu7kgTSZhYWN1dGU7aSDhuqRtIEjhuqFuaCBQaCZ1YWN1dGU7YyB04buVIGNo4bupYyBuaGnhu4F1IGNoxrDGoW5nIHRyJmlncmF2ZTtuaCB0aMSDbSBo4buPaSwgxJHhu5luZyB2aSZlY2lyYztuIG5o4buvbmcgYuG7h25oIG5oJmFjaXJjO24gaGnhu4NtIG5naCZlZ3JhdmU7byDEkWFuZyDEkWnhu4F1IHRy4buLIHThuqFpIGMmYWFjdXRlO2MgYuG7h25oIHZp4buHbjwvcD4NCg==', '', '', '\\App\\Controllers\\Frontend\\Article\\Catalogue::index', 'frontend/article/catalogue/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
+(29, 17, 'vi', 'article', 'QUỸ MÁI ẤM HẠNH PHÚC MANG HƠI ẤM ĐẾN HỌC SINH VÙNG CAO HUYỆN MƯỜNG NHÉ, ĐIỆN BIÊN', 'quy-mai-am-hanh-phuc-mang-hoi-am-den-hoc-sinh-vung-cao-huyen-muong-nhe-dien-bien', 'QUỸ MÁI ẤM HẠNH PHÚC MANG HƠI ẤM ĐẾN HỌC SINH VÙNG CAO HUYỆN MƯỜNG NHÉ, ĐIỆN BIÊN', '', '', '', 0, '', '', 'null', '', '\\App\\Controllers\\Frontend\\Article\\Article::index', 'frontend/article/article/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
+(30, 18, 'vi', 'article', 'QUỸ MÁI ẤM HẠNH PHÚC TRAO TẶNG YÊU THƯƠNG ĐẾN NGÔI NHÀ BÌNH YÊN: HÀNH TRANG CHO MỘT TƯƠNG LAI TƯƠI SÁNG', 'quy-mai-am-hanh-phuc-trao-tang-yeu-thuong-den-ngoi-nha-binh-yen-hanh-trang-cho-mot-tuong-lai-tuoi-sang', 'QUỸ MÁI ẤM HẠNH PHÚC TRAO TẶNG YÊU THƯƠNG ĐẾN NGÔI NHÀ BÌNH YÊN: HÀNH TRANG CHO MỘT TƯƠNG LAI TƯƠI SÁNG', '', '', '', 0, '', '', 'null', '', '\\App\\Controllers\\Frontend\\Article\\Article::index', 'frontend/article/article/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
+(31, 19, 'vi', 'article', 'THÔNG BÁO KHẨN', 'thong-bao-khan', 'THÔNG BÁO KHẨN', '', '', '', 0, '', '', 'null', '', '\\App\\Controllers\\Frontend\\Article\\Article::index', 'frontend/article/article/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
+(32, 20, 'vi', 'article', 'QUỸ MÁI ẤM HẠNH PHÚC “CÙNG EM TỚI TRƯỜNG” HỖ TRỢ 7.500 HỌC SINH KON TUM', 'quy-mai-am-hanh-phuc-cung-em-toi-truong-ho-tro-7-500-hoc-sinh-kon-tum', 'QUỸ MÁI ẤM HẠNH PHÚC “CÙNG EM TỚI TRƯỜNG” HỖ TRỢ 7.500 HỌC SINH KON TUM', '', '', '', 0, '', '', 'null', '', '\\App\\Controllers\\Frontend\\Article\\Article::index', 'frontend/article/article/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
+(33, 21, 'vi', 'article', 'CÁC HOẠT ĐỘNG TỪ THIỆN PHỔ BIẾN TẠI VIỆT NAM', 'cac-hoat-dong-tu-thien-pho-bien-tai-viet-nam', 'CÁC HOẠT ĐỘNG TỪ THIỆN PHỔ BIẾN TẠI VIỆT NAM', '', '', '', 0, '', '', 'null', '', '\\App\\Controllers\\Frontend\\Article\\Article::index', 'frontend/article/article/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
+(34, 22, 'vi', 'article', 'KHỞI ĐỘNG CHƯƠNG TRÌNH MỔ TIM CHO EM MÁI ẤM HẠNH PHÚC TRAO 50 TRIỆU ĐỒNG GIÚP CHÁU BÉ DÂN TỘC THÁI MỔ TIM KỊP THỜI', 'khoi-dong-chuong-trinh-mo-tim-cho-em-mai-am-hanh-phuc-trao-50-trieu-dong-giup-chau-be-dan-toc-thai-mo-tim-kip-thoi', 'KHỞI ĐỘNG CHƯƠNG TRÌNH MỔ TIM CHO EM MÁI ẤM HẠNH PHÚC TRAO 50 TRIỆU ĐỒNG GIÚP CHÁU BÉ DÂN TỘC THÁI MỔ TIM KỊP THỜI', '', '', '', 0, '', '', 'null', '', '\\App\\Controllers\\Frontend\\Article\\Article::index', 'frontend/article/article/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
+(35, 23, 'vi', 'article', 'QUỸ MÁI ẤM HẠNH PHÚC TRAO QUÀ TẾT ẤT TỴ CHO NGƯỜI DÂN CÓ HOÀN CẢNH KHÓ KHĂN TRÊN ĐỊA BÀN TỈNH BẾN TRE', 'quy-mai-am-hanh-phuc-trao-qua-tet-at-ty-cho-nguoi-dan-co-hoan-canh-kho-khan-tren-dia-ban-tinh-ben-tre', 'QUỸ MÁI ẤM HẠNH PHÚC TRAO QUÀ TẾT ẤT TỴ CHO NGƯỜI DÂN CÓ HOÀN CẢNH KHÓ KHĂN TRÊN ĐỊA BÀN TỈNH BẾN TRE', '', '', '', 0, '', '', 'null', '', '\\App\\Controllers\\Frontend\\Article\\Article::index', 'frontend/article/article/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
+(36, 24, 'vi', 'article', '\"TRAO YÊU THƯƠNG TẾT ẤT TỴ 2025\" QUỸ MÁI ẤM HẠNH PHÚC TRAO TẶNG 200 PHẦN QUÀ TẾT CHO NGƯỜI BỆNH TẠI BỆNH VIỆN K - TÂN TRIỀU', 'trao-yeu-thuong-tet-at-ty-2025-quy-mai-am-hanh-phuc-trao-tang-200-phan-qua-tet-cho-nguoi-benh-tai-benh-vien-k-tan-trieu', '\"TRAO YÊU THƯƠNG TẾT ẤT TỴ 2025\" QUỸ MÁI ẤM HẠNH PHÚC TRAO TẶNG 200 PHẦN QUÀ TẾT CHO NGƯỜI BỆNH TẠI BỆNH VIỆN K - TÂN TRIỀU', '', '', '', 0, '', '', 'null', '', '\\App\\Controllers\\Frontend\\Article\\Article::index', 'frontend/article/article/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
+(37, 25, 'vi', 'article', 'TRAO QUÀ TẠI BỆNH VIỆN HUYẾT HỌC TRUNG ƯƠNG NHÂN DỊP THÁNG THIẾU NHI', 'trao-qua-tai-benh-vien-huyet-hoc-trung-uong-nhan-dip-thang-thieu-nhi', 'TRAO QUÀ TẠI BỆNH VIỆN HUYẾT HỌC TRUNG ƯƠNG NHÂN DỊP THÁNG THIẾU NHI', '', '', '', 0, '', '', 'null', '', '\\App\\Controllers\\Frontend\\Article\\Article::index', 'frontend/article/article/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', ''),
+(38, 26, 'vi', 'article', 'TÀI TRỢ CHO TRẺ EM KHUYẾT TẬT VÀ CÓ HOÀN CẢNH KHÓ KHĂN TRẢI NGHIỆM XEM XIẾC \"CHUYẾN DU HÀNH KỲ THÚ\"', 'tai-tro-cho-tre-em-khuyet-tat-va-co-hoan-canh-kho-khan-trai-nghiem-xem-xiec-chuyen-du-hanh-ky-thu', 'TÀI TRỢ CHO TRẺ EM KHUYẾT TẬT VÀ CÓ HOÀN CẢNH KHÓ KHĂN TRẢI NGHIỆM XEM XIẾC \"CHUYẾN DU HÀNH KỲ THÚ\"', '', '', '', 0, '', '', 'null', '', '\\App\\Controllers\\Frontend\\Article\\Article::index', 'frontend/article/article/index', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -618,7 +644,7 @@ CREATE TABLE `language` (
 
 INSERT INTO `language` (`id`, `title`, `canonical`, `image`, `description`, `order`, `default`, `created_at`, `updated_at`, `deleted_at`, `publish`, `userid_created`, `userid_updated`) VALUES
 (2, 'Việt Nam', 'vi', '/upload/image/language/vn.png', 'PHA+VGnhur9uZyBWaeG7h3QgMTIxMzwvcD4NCg==', 0, 1, '2020-08-17 15:11:03', '2021-11-20 20:59:16', 0, 1, 8, 23),
-(3, 'English', 'en', '/upload/image/language/anh.png', '', 0, 0, '2021-07-27 11:29:38', '2021-11-20 20:59:26', 0, 0, 23, 23);
+(3, 'English', 'en', '/upload/image/language/anh.png', '', 0, 0, '2021-07-27 11:29:38', '2021-11-20 20:59:26', 0, 1, 23, 23);
 
 -- --------------------------------------------------------
 
@@ -646,7 +672,7 @@ CREATE TABLE `language_keywords` (
 --
 
 INSERT INTO `language_keywords` (`id`, `keyword`, `en_translation`, `vi_translation`, `description`, `order`, `publish`, `userid_created`, `userid_updated`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'hd_chung_tay', 'Join hand', 'Chung tay', '', 1, 1, 33, 33, '2025-09-01 03:12:09', '2025-09-01 04:10:02', NULL),
+(1, 'hd-chung-tay', 'Join hand', 'Chung tay', '', 1, 1, 33, 33, '2025-09-01 03:12:09', '2025-09-07 15:02:01', NULL),
 (2, 'chung-tay-ket-noi', 'Chung tay kết nối', 'Chung tay kết nối', '', 0, 1, 33, NULL, '2025-09-01 04:15:57', '2025-09-01 04:15:57', NULL),
 (3, 'banner-slogane', 'Together for a Loving Home\r\nTogether for Happiness', 'Mái ấm chung tay\r\nDựng xây Hạnh phúc', '', 0, 1, 33, NULL, '2025-09-03 09:14:43', '2025-09-03 09:14:43', NULL),
 (4, 'contact-fullname', 'Fullname *', 'Họ & tên *', '', 0, 1, 33, NULL, '2025-09-06 11:57:21', '2025-09-06 11:57:21', NULL),
@@ -665,7 +691,11 @@ INSERT INTO `language_keywords` (`id`, `keyword`, `en_translation`, `vi_translat
 (17, 'recent-activities-no-activities', 'No activity found.', 'Chưa có hoạt động nào', '', 0, 1, 33, NULL, '2025-09-06 15:21:21', '2025-09-06 15:21:21', NULL),
 (18, 'footer-contact-title', 'Contact Information', 'Thông Tin Liên Hệ', '', 0, 1, 33, NULL, '2025-09-06 15:21:49', '2025-09-06 15:21:49', NULL),
 (19, 'footer-contact-address', 'Address', 'Địa chỉ', '', 0, 1, 33, NULL, '2025-09-06 15:22:05', '2025-09-06 15:22:05', NULL),
-(20, 'footer-contact-phone', 'Phone', 'Điện thoại', '', 0, 1, 33, NULL, '2025-09-06 15:22:19', '2025-09-06 15:22:19', NULL);
+(20, 'footer-contact-phone', 'Phone', 'Điện thoại', '', 0, 1, 33, NULL, '2025-09-06 15:22:19', '2025-09-06 15:22:19', NULL),
+(21, 'donate-now', 'Donate Now', 'Đóng góp ngay', '', 0, 1, 33, NULL, '2025-09-07 14:42:43', '2025-09-07 14:42:43', NULL),
+(22, 'view-activities', 'View activities', 'Xem hoạt động', '', 0, 1, 33, NULL, '2025-09-07 14:43:19', '2025-09-07 14:43:19', NULL),
+(23, 'chung-tay-title', 'Join hands to connect - Share love | Happy Home Fund', 'Chung tay kết nối - Chia sẻ yêu thương | Quỹ Mái Ấm Hạnh Phúc', '', 0, 1, 33, NULL, '2025-09-07 14:50:24', '2025-09-07 14:50:24', NULL),
+(24, 'chung-tay-description', 'Join in sharing love with Happy Roof Fund. Support building houses, giving warm winter blankets to people in mountainous areas.', 'Tham gia chia sẻ yêu thương cùng Quỹ Mái Ấm Hạnh Phúc. Hỗ trợ xây dựng nhà ở, trao chăn ấm mùa đông cho đồng bào miền núi.', '', 0, 1, 33, NULL, '2025-09-07 14:50:47', '2025-09-07 14:50:47', NULL);
 
 -- --------------------------------------------------------
 
@@ -1308,7 +1338,17 @@ INSERT INTO `object_relationship` (`id`, `objectid`, `catalogueid`, `module`) VA
 (282, 182, 58, 'product'),
 (283, 183, 58, 'product'),
 (284, 184, 58, 'product'),
-(285, 185, 58, 'product');
+(285, 185, 58, 'product'),
+(286, 17, 11, 'article'),
+(287, 18, 11, 'article'),
+(288, 19, 11, 'article'),
+(289, 20, 11, 'article'),
+(290, 21, 11, 'article'),
+(291, 22, 12, 'article'),
+(292, 23, 12, 'article'),
+(293, 24, 12, 'article'),
+(294, 25, 12, 'article'),
+(295, 26, 12, 'article');
 
 -- --------------------------------------------------------
 
@@ -1434,13 +1474,14 @@ INSERT INTO `panel` (`id`, `keyword`, `locate`, `module`, `type_data`, `default`
 (12, 'news', 'home', 'article_catalogue', '[\"only_post\",\"only_cat\"]', 0, '', '[\"1\",\"3\"]', '0000-00-00 00:00:00', '2022-05-20 00:05:36', '2022-05-20 00:17:27', 1, 23, 23),
 (13, 'product', 'home', 'product_catalogue', '[\"only_post\",\"only_cat\"]', 0, '', '[\"5\",\"4\",\"9\",\"8\"]', '0000-00-00 00:00:00', '2022-05-20 00:06:14', '0000-00-00 00:00:00', 1, 23, 0),
 (14, 'aside-cat-prd', 'aside_home', 'product_catalogue', '[\"only_cat\"]', 0, '', '[\"18\",\"19\"]', '0000-00-00 00:00:00', '2022-05-25 22:46:13', '2022-05-25 22:49:15', 1, 23, 23),
-(15, 'menu-top', 'home', 'product_catalogue', '[\"normal\"]', 0, '', '[\"29\",\"26\",\"32\",\"33\",\"31\",\"30\",\"27\",\"36\",\"35\",\"37\",\"34\",\"28\"]', '0000-00-00 00:00:00', '2022-08-10 01:08:44', '2022-08-11 22:44:23', 0, 23, 23),
-(16, 'layout-1', '0', 'article_catalogue', '[\"only_post\"]', 0, '', '[\"8\"]', '0000-00-00 00:00:00', '2022-08-11 21:47:29', '2022-08-11 22:56:35', 0, 23, 23),
-(17, 'layout-2', 'home', 'product_catalogue', '[\"only_post\",\"only_cat\"]', 0, '', '[\"29\",\"26\",\"32\",\"33\",\"31\",\"30\",\"27\",\"36\",\"35\",\"37\",\"34\",\"28\"]', '0000-00-00 00:00:00', '2022-08-11 21:51:10', '2022-08-11 22:56:26', 0, 23, 23),
-(18, 'layout-3', '0', 'article_catalogue', '[\"only_post\"]', 0, '', '[\"7\"]', '0000-00-00 00:00:00', '2022-08-11 21:51:57', '2022-08-11 22:56:44', 0, 23, 23),
-(19, 'layout-4', '0', 'article', 'null', 0, '', '[\"16\"]', '0000-00-00 00:00:00', '2022-08-11 21:52:57', '2022-08-11 22:56:47', 0, 23, 23),
-(20, 'layout-5', '0', 'article', 'null', 0, '', '[\"11\"]', '0000-00-00 00:00:00', '2022-08-11 21:53:23', '2022-08-11 22:56:50', 0, 23, 23),
-(21, 'layout-6', '0', 'article', 'null', 0, '', '[\"15\"]', '0000-00-00 00:00:00', '2022-08-11 21:53:40', '2022-08-11 22:56:54', 0, 23, 23);
+(15, 'menu-top', 'home', 'product_catalogue', '[\"normal\"]', 0, '', '[\"29\",\"26\",\"32\",\"33\",\"31\",\"30\",\"27\",\"36\",\"35\",\"37\",\"34\",\"28\"]', '0000-00-00 00:00:00', '2022-08-10 01:08:44', '2022-08-11 22:44:23', 1, 23, 23),
+(16, 'layout-1', '0', 'article_catalogue', '[\"only_post\"]', 0, '', '[\"8\"]', '0000-00-00 00:00:00', '2022-08-11 21:47:29', '2022-08-11 22:56:35', 1, 23, 23),
+(17, 'layout-2', 'home', 'product_catalogue', '[\"only_post\",\"only_cat\"]', 0, '', '[\"29\",\"26\",\"32\",\"33\",\"31\",\"30\",\"27\",\"36\",\"35\",\"37\",\"34\",\"28\"]', '0000-00-00 00:00:00', '2022-08-11 21:51:10', '2022-08-11 22:56:26', 1, 23, 23),
+(18, 'layout-3', '0', 'article_catalogue', '[\"only_post\"]', 0, '', '[\"7\"]', '0000-00-00 00:00:00', '2022-08-11 21:51:57', '2022-08-11 22:56:44', 1, 23, 23),
+(19, 'layout-4', '0', 'article', 'null', 0, '', '[\"16\"]', '0000-00-00 00:00:00', '2022-08-11 21:52:57', '2022-08-11 22:56:47', 1, 23, 23),
+(20, 'layout-5', '0', 'article', 'null', 0, '', '[\"11\"]', '0000-00-00 00:00:00', '2022-08-11 21:53:23', '2022-08-11 22:56:50', 1, 23, 23),
+(21, 'layout-6', '0', 'article', 'null', 0, '', '[\"15\"]', '0000-00-00 00:00:00', '2022-08-11 21:53:40', '2022-08-11 22:56:54', 1, 23, 23),
+(22, 'field', 'home', 'article_catalogue', '[\"only_post\",\"only_cat\"]', 0, '', '[\"10\"]', '0000-00-00 00:00:00', '2025-09-07 22:59:23', '0000-00-00 00:00:00', 0, 33, 0);
 
 -- --------------------------------------------------------
 
@@ -1482,7 +1523,8 @@ INSERT INTO `panel_translate` (`id`, `objectid`, `language`, `title`, `descripti
 (18, 18, 'vi', 'CUSTOMER', '', ''),
 (19, 19, 'vi', 'UPPER MENU PRODUCT', '', ''),
 (20, 20, 'vi', 'CHEF', '', ''),
-(21, 21, 'vi', 'BOOK', '', '');
+(21, 21, 'vi', 'BOOK', '', ''),
+(22, 22, 'vi', 'Các lĩnh vực hoạt động', '', 'cac-linh-vuc-hoat-dong-html');
 
 -- --------------------------------------------------------
 
@@ -2503,9 +2545,6 @@ INSERT INTO `router` (`id`, `objectid`, `language`, `module`, `canonical`, `view
 (86, 22, 'vi', 'product_catalogue', '', '\\App\\Controllers\\Frontend\\Product\\Catalogue::index'),
 (87, 23, 'vi', 'product_catalogue', '', '\\App\\Controllers\\Frontend\\Product\\Catalogue::index'),
 (88, 24, 'vi', 'product_catalogue', '', '\\App\\Controllers\\Frontend\\Product\\Catalogue::index'),
-(90, 7, 'vi', 'article_catalogue', 'what-they-say', '\\App\\Controllers\\Frontend\\Article\\Catalogue::index'),
-(91, 8, 'vi', 'article_catalogue', 'our-little-story', '\\App\\Controllers\\Frontend\\Article\\Catalogue::index'),
-(92, 9, 'vi', 'article_catalogue', 'general', '\\App\\Controllers\\Frontend\\Article\\Catalogue::index'),
 (105, 36, 'vi', 'product', '', '\\App\\Controllers\\Frontend\\Product\\Product::index'),
 (106, 37, 'vi', 'product', '', '\\App\\Controllers\\Frontend\\Product\\Product::index'),
 (107, 38, 'vi', 'product', '', '\\App\\Controllers\\Frontend\\Product\\Product::index'),
@@ -2565,7 +2604,6 @@ INSERT INTO `router` (`id`, `objectid`, `language`, `module`, `canonical`, `view
 (172, 103, 'vi', 'product', '', '\\App\\Controllers\\Frontend\\Product\\Product::index'),
 (173, 104, 'vi', 'product', '', '\\App\\Controllers\\Frontend\\Product\\Product::index'),
 (174, 105, 'vi', 'product', '', '\\App\\Controllers\\Frontend\\Product\\Product::index'),
-(178, 14, 'vi', 'article', 'john-doe', '\\App\\Controllers\\Frontend\\Article\\Article::index'),
 (183, 107, 'vi', 'product', '', '\\App\\Controllers\\Frontend\\Product\\Product::index'),
 (184, 108, 'vi', 'product', '', '\\App\\Controllers\\Frontend\\Product\\Product::index'),
 (185, 109, 'vi', 'product', '', '\\App\\Controllers\\Frontend\\Product\\Product::index'),
@@ -2650,7 +2688,20 @@ INSERT INTO `router` (`id`, `objectid`, `language`, `module`, `canonical`, `view
 (278, 182, 'vi', 'product', 'brow-wax', '\\App\\Controllers\\Frontend\\Product\\Product::index'),
 (279, 183, 'vi', 'product', 'brow-threading', '\\App\\Controllers\\Frontend\\Product\\Product::index'),
 (280, 184, 'vi', 'product', 'fill-in', '\\App\\Controllers\\Frontend\\Product\\Product::index'),
-(281, 185, 'vi', 'product', 'classic-full-set', '\\App\\Controllers\\Frontend\\Product\\Product::index');
+(281, 185, 'vi', 'product', 'classic-full-set', '\\App\\Controllers\\Frontend\\Product\\Product::index'),
+(282, 10, 'vi', 'article_catalogue', 'cac-linh-vuc-hoat-dong', '\\App\\Controllers\\Frontend\\Article\\Catalogue::index'),
+(283, 11, 'vi', 'article_catalogue', 'van-hoa-giao-duc', '\\App\\Controllers\\Frontend\\Article\\Catalogue::index'),
+(284, 12, 'vi', 'article_catalogue', 'cham-soc-suc-khoe-cong-dong', '\\App\\Controllers\\Frontend\\Article\\Catalogue::index'),
+(285, 17, 'vi', 'article', 'quy-mai-am-hanh-phuc-mang-hoi-am-den-hoc-sinh-vung-cao-huyen-muong-nhe-dien-bien', '\\App\\Controllers\\Frontend\\Article\\Article::index'),
+(286, 18, 'vi', 'article', 'quy-mai-am-hanh-phuc-trao-tang-yeu-thuong-den-ngoi-nha-binh-yen-hanh-trang-cho-mot-tuong-lai-tuoi-sang', '\\App\\Controllers\\Frontend\\Article\\Article::index'),
+(287, 19, 'vi', 'article', 'thong-bao-khan', '\\App\\Controllers\\Frontend\\Article\\Article::index'),
+(288, 20, 'vi', 'article', 'quy-mai-am-hanh-phuc-cung-em-toi-truong-ho-tro-7-500-hoc-sinh-kon-tum', '\\App\\Controllers\\Frontend\\Article\\Article::index'),
+(289, 21, 'vi', 'article', 'cac-hoat-dong-tu-thien-pho-bien-tai-viet-nam', '\\App\\Controllers\\Frontend\\Article\\Article::index'),
+(290, 22, 'vi', 'article', 'khoi-dong-chuong-trinh-mo-tim-cho-em-mai-am-hanh-phuc-trao-50-trieu-dong-giup-chau-be-dan-toc-thai-mo-tim-kip-thoi', '\\App\\Controllers\\Frontend\\Article\\Article::index'),
+(291, 23, 'vi', 'article', 'quy-mai-am-hanh-phuc-trao-qua-tet-at-ty-cho-nguoi-dan-co-hoan-canh-kho-khan-tren-dia-ban-tinh-ben-tre', '\\App\\Controllers\\Frontend\\Article\\Article::index'),
+(292, 24, 'vi', 'article', 'trao-yeu-thuong-tet-at-ty-2025-quy-mai-am-hanh-phuc-trao-tang-200-phan-qua-tet-cho-nguoi-benh-tai-benh-vien-k-tan-trieu', '\\App\\Controllers\\Frontend\\Article\\Article::index'),
+(293, 25, 'vi', 'article', 'trao-qua-tai-benh-vien-huyet-hoc-trung-uong-nhan-dip-thang-thieu-nhi', '\\App\\Controllers\\Frontend\\Article\\Article::index'),
+(294, 26, 'vi', 'article', 'tai-tro-cho-tre-em-khuyet-tat-va-co-hoan-canh-kho-khan-trai-nghiem-xem-xiec-chuyen-du-hanh-ky-thu', '\\App\\Controllers\\Frontend\\Article\\Article::index');
 
 -- --------------------------------------------------------
 
@@ -2707,7 +2758,16 @@ INSERT INTO `slide` (`id`, `catalogueid`, `language`, `image`, `order`, `created
 (150, 12, 'vi', '/upload/image/an-sinh-xh/z6549524715235-7f6a9c426b9f0c4336d86219e47ea965.jpg', 0, '2025-09-05 01:43:56', '0000-00-00 00:00:00', 0, 33, 0),
 (151, 12, 'vi', '/upload/image/an-sinh-xh/z6549539996126-4dbb9f2dee26b172de6b0b396edf2674.jpg', 0, '2025-09-05 01:43:56', '0000-00-00 00:00:00', 0, 33, 0),
 (152, 12, 'vi', '/upload/image/an-sinh-xh/z6550280424011-1034f5a5df4e88b771957eb549cd4058.jpg', 0, '2025-09-05 01:43:56', '0000-00-00 00:00:00', 0, 33, 0),
-(153, 12, 'vi', '/upload/image/an-sinh-xh/z6552245322978-86675c36c3f8d4136a991095da76309a.jpg', 0, '2025-09-05 01:43:56', '0000-00-00 00:00:00', 0, 33, 0);
+(153, 12, 'vi', '/upload/image/an-sinh-xh/z6552245322978-86675c36c3f8d4136a991095da76309a.jpg', 0, '2025-09-05 01:43:56', '0000-00-00 00:00:00', 0, 33, 0),
+(189, 13, 'vi', '/upload/image/hoatdongtuthien/anh-11.jpg', 0, '2025-09-07 22:22:34', '0000-00-00 00:00:00', 0, 33, 0),
+(190, 13, 'vi', '/upload/image/hoatdongtuthien/anh-2-chan-am.jpg', 0, '2025-09-07 22:22:34', '0000-00-00 00:00:00', 0, 33, 0),
+(191, 13, 'vi', '/upload/image/hoatdongtuthien/daklak3.jpg', 0, '2025-09-07 22:22:34', '0000-00-00 00:00:00', 0, 33, 0),
+(192, 13, 'vi', '/upload/image/hoatdongtuthien/na1.jpg', 0, '2025-09-07 22:22:34', '0000-00-00 00:00:00', 0, 33, 0),
+(193, 13, 'vi', '/upload/image/hoatdongtuthien/quang-nam-1.jpg', 0, '2025-09-07 22:22:34', '0000-00-00 00:00:00', 0, 33, 0),
+(194, 13, 'vi', '/upload/image/hoatdongtuthien/tht-3.jpg', 0, '2025-09-07 22:22:34', '0000-00-00 00:00:00', 0, 33, 0),
+(195, 13, 'vi', '/upload/image/hoatdongtuthien/tht-4.jpg', 0, '2025-09-07 22:22:34', '0000-00-00 00:00:00', 0, 33, 0),
+(196, 13, 'vi', '/upload/image/hoatdongtuthien/xh1.jpg', 0, '2025-09-07 22:22:34', '0000-00-00 00:00:00', 0, 33, 0),
+(198, 14, 'vi', '/upload/image/banner/joining-hands-header.webp', 0, '2025-09-08 02:40:52', '0000-00-00 00:00:00', 0, 33, 0);
 
 -- --------------------------------------------------------
 
@@ -2742,7 +2802,9 @@ INSERT INTO `slide_catalogue` (`id`, `keyword`, `publish`, `created_at`, `update
 (9, 'about-us', 1, '2025-09-04 01:47:36', '0000-00-00 00:00:00', 1, 33, 0),
 (10, 'about-us', 1, '2025-09-04 01:47:49', '2025-09-04 02:01:23', 0, 33, 33),
 (11, 'about-quy', 1, '2025-09-04 02:12:23', '2025-09-04 02:30:23', 0, 33, 33),
-(12, 'album', 1, '2025-09-05 01:16:15', '2025-09-05 01:43:56', 0, 33, 33);
+(12, 'album', 1, '2025-09-05 01:16:15', '2025-09-05 01:43:56', 0, 33, 33),
+(13, 'gallery', 1, '2025-09-07 21:48:55', '2025-09-07 22:22:34', 0, 33, 33),
+(14, 'chung-tay-banner', 1, '2025-09-08 02:40:23', '2025-09-08 02:40:52', 0, 33, 33);
 
 -- --------------------------------------------------------
 
@@ -2816,7 +2878,18 @@ INSERT INTO `slide_translate` (`id`, `module`, `objectid`, `catalogueid`, `langu
 (162, 'slide', 150, 12, 'vi', '', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0),
 (163, 'slide', 151, 12, 'vi', '', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0),
 (164, 'slide', 152, 12, 'vi', '', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0),
-(165, 'slide', 153, 12, 'vi', '', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0);
+(165, 'slide', 153, 12, 'vi', '', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0),
+(166, 'slide_catalogue', 13, 0, 'vi', 'Hình ảnh thiện nguyện', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0),
+(202, 'slide', 189, 13, 'vi', '', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0),
+(203, 'slide', 190, 13, 'vi', '', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0),
+(204, 'slide', 191, 13, 'vi', '', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0),
+(205, 'slide', 192, 13, 'vi', '', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0),
+(206, 'slide', 193, 13, 'vi', '', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0),
+(207, 'slide', 194, 13, 'vi', '', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0),
+(208, 'slide', 195, 13, 'vi', '', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0),
+(209, 'slide', 196, 13, 'vi', '', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0),
+(210, 'slide_catalogue', 14, 0, 'vi', 'Chung tay banner', '', '', '', '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0),
+(212, 'slide', 198, 14, 'vi', 'Chung tay kết nối', '', '', 'Chia sẻ yêu thương', '\"Tham gia chia sẻ yêu thương!\"', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -2868,52 +2941,6 @@ CREATE TABLE `system_translate` (
 --
 
 INSERT INTO `system_translate` (`id`, `language`, `keyword`, `content`, `created_at`, `updated_at`, `deleted_at`, `userid_created`, `userid_updated`) VALUES
-(4904, 'en', 'homepage_company', 'Sen Decor', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4905, 'en', 'homepage_brand', 'SEN DECOR', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4906, 'en', 'homepage_slogan', 'SEN DECOR', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4907, 'en', 'homepage_iso', '/upload/image/logo/iso30.jpg', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4908, 'en', 'homepage_logo', '/upload/image/logo/logo.png', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4909, 'en', 'homepage_loading', '/upload/image/logo/loadding.gif', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4910, 'en', 'homepage_logo_footer', '/upload/image/logo/logo.png', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4911, 'en', 'homepage_favicon', '/upload/image/logo/iso30.jpg', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4912, 'en', 'homepage_copyright', '<p>We are not only the ID contractor but also the partner whom you can trust...</p>\r\n', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4913, 'en', 'homepage_general', '<p>VIPAL ALUMINUM JOINT STOCK COMPANY</p>\r\n\r\n<p>Address : Phu Thi Small and Medium Industrial Park - Gia Lam - Hanoi</p>\r\n\r\n<p>Phone number: 024 3678 5445</p>\r\n\r\n<p>Hotline: 1900 0399 -&nbsp;0932363443</p>\r\n\r\n<p>Email: info@grando.vn</p>\r\n\r\n<p>Hours of Operation: 8&nbsp;a.m - 5&nbsp;p.m</p>\r\n', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4914, 'en', 'contact_address_detail', 'Small and medium industrial park Phu Thi - Gia Lam - Hanoi', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4915, 'en', 'contact_address', 'Small and medium industrial park Phu Thi - Gia Lam - Hanoi', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4916, 'en', 'contact_hotline', '0769896373', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4917, 'en', 'contact_phone', ' 0909 635 191', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4918, 'en', 'contact_email', 'info@grando.vn', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4919, 'en', 'contact_website', ' www.sendecor.com', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4920, 'en', 'contact_map', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14898.948583091553!2d105.8031246!3d21.0031712!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa2f3e62f63464fe4!2zQ8O0bmcgdHkgY-G7lSBwaOG6p24gcGjDoXQgdHJp4buDbiBu4buZaSB0aOG6pXQgVG_DoG4gQ-G6p3U!5e0!3m2!1sen!2s!4v1627507529912!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4921, 'en', 'contact_map_link', 'https://www.google.com/search?hl=vi&authuser=0&tbs=lf:1,lf_ui:2&tbm=lcl&q=C%C3%B4ng+ty+C%E1%BB%94+PH%E1%BA%A6N+Trang+TR%C3%8D+n%E1%BB%99i+th%E1%BA%A5t+T%C3%ADn+Trung&rflfq=1&num=10&ved=2ahUKEwjqnavGlrj1AhVeTWwGHVaoC9YQtgN6BAgPEAQ', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4922, 'en', 'another_banner_contact', '/upload/image/banner/cover.jpg', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4923, 'en', 'another_contact_1', '<h3><strong>Headquarters</strong></h3>\r\n\r\n<p>Tower B, Floor 1, Orient Building, No. 331 Ben Van Don, Ward 1, District 4, City. Ho Chi Minh, Vietnam.<br />\r\nTel: (028) 3945 0089</p>\r\n', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4924, 'en', 'another_contact_2', '<h3><strong>Factory</strong></h3>\r\n\r\n<p>31/18 Binh Phuoc B neighborhood, Binh Chuan ward, Thuan An town, Binh Duong province, Vietnam<br />\r\nTel: (027) 4363 9700</p>\r\n', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4925, 'en', 'translate_chudautu', 'Investor', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4926, 'en', 'translate_vitri', 'Location', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4927, 'en', 'translate_hangmuc', 'Category of work', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4928, 'en', 'translate_giatri', 'Contract value', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4929, 'en', 'translate_tinhtrang', 'Status', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4930, 'en', 'seo_meta_title', 'Home - Vipal', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4931, 'en', 'seo_meta_description', 'Description of Vipal\'s homepage', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4932, 'en', 'analytic_google_analytic', '', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4933, 'en', 'facebook_facebook_pixel', '', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4934, 'en', 'script_facebook_pixel', '', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4935, 'en', 'social_facebook', 'https://www.facebook.com/ttdecor.noithat', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4936, 'en', 'social_google', '', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4937, 'en', 'social_youtube', 'https://www.youtube.com/channel/UCVx1KxpoHYvM77qhG2v9icQ', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4938, 'en', 'social_twitter', '', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4939, 'en', 'social_link', '', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4940, 'en', 'social_insta', '', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4941, 'en', 'social_skype', '', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4942, 'en', 'social_zalo', 'https://zalo.me/0937459336', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4943, 'en', 'social_whatsapp', '', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4944, 'en', 'social_pinterest', 'https://www.pinterest.com/ttdecornoithat/_created/', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4945, 'en', 'social_tiktok', '', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4946, 'en', 'website_status', '0', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4947, 'en', 'website_index', '1', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4948, 'en', 'website_canonical', 'normal', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
-(4949, 'en', 'website_language', 'vi', '0000-00-00 00:00:00', '2022-04-11 23:06:26', 0, 0, 23),
 (8605, 'vi', 'homepage_company', 'Quỹ Mái Ấm Hạnh Phúc', '0000-00-00 00:00:00', '2025-09-07 03:10:49', 0, 0, 33),
 (8606, 'vi', 'homepage_brand', 'Quỹ Mái Ấm Hạnh Phúc', '0000-00-00 00:00:00', '2025-09-07 03:10:49', 0, 0, 33),
 (8607, 'vi', 'homepage_color', '#ff7b3c', '0000-00-00 00:00:00', '2025-09-07 03:10:49', 0, 0, 33),
@@ -2955,7 +2982,49 @@ INSERT INTO `system_translate` (`id`, `language`, `keyword`, `content`, `created
 (8643, 'vi', 'website_status', '0', '0000-00-00 00:00:00', '2025-09-07 03:10:49', 0, 0, 33),
 (8644, 'vi', 'website_index', '1', '0000-00-00 00:00:00', '2025-09-07 03:10:49', 0, 0, 33),
 (8645, 'vi', 'website_canonical', 'normal', '0000-00-00 00:00:00', '2025-09-07 03:10:49', 0, 0, 33),
-(8646, 'vi', 'website_language', 'vi', '0000-00-00 00:00:00', '2025-09-07 03:10:49', 0, 0, 33);
+(8646, 'vi', 'website_language', 'vi', '0000-00-00 00:00:00', '2025-09-07 03:10:49', 0, 0, 33),
+(8647, 'en', 'homepage_company', 'Happy Home Fund', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8648, 'en', 'homepage_brand', 'Happy Home Fund', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8649, 'en', 'homepage_color', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8650, 'en', 'homepage_slogan', 'Joining hands with the Happy Home Fund: Together, we unite to take action, offering support to those facing hardship in society and creating many other positive impacts.', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8651, 'en', 'homepage_logo', '/upload/image/logo/logo-qmahp.png', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8652, 'en', 'homepage_logo_ft', '/upload/image/logo/logo-white.png', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8653, 'en', 'homepage_pickup', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8654, 'en', 'homepage_ft', 'We are committed to bringing positive values ​​to the community through volunteer activities, supporting people in difficult circumstances and building a better society.', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8655, 'en', 'homepage_copyright', 'Website designed by CVG Ltd.., © 2025 Copyright belongs to Happy Home Fund', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8656, 'en', 'homepage_copyright_link', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8657, 'en', 'homepage_favicon', '/upload/image/favicon.png', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8658, 'en', 'homepage_time', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8659, 'en', 'homepage_book', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8660, 'en', 'homepage_book_link', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8661, 'en', 'contact_address_detail', 'House NV21 BT 12 – LIDECO Urban Area – Hoai Duc – Hanoi', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8662, 'en', 'contact_address', 'House NV21 BT 12 – LIDECO Urban Area – Hoai Duc – Hanoi', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8663, 'en', 'contact_hotline', '0947087898', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8664, 'en', 'contact_mst', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8665, 'en', 'contact_phone', '0912056561', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8666, 'en', 'contact_email', 'nguyentoquyen_68@yahoo.com', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8667, 'en', 'contact_website', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8668, 'en', 'contact_map', '<iframe src=\"https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14898.948583091553!2d105.8031246!3d21.0031712!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa2f3e62f63464fe4!2zQ8O0bmcgdHkgY-G7lSBwaOG6p24gcGjDoXQgdHJp4buDbiBu4buZaSB0aOG6pXQgVG_DoG4gQ-G6p3U!5e0!3m2!1sen!2s!4v1627507529912!5m2!1sen!2s\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\"></iframe>', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8669, 'en', 'contact_map_link', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8670, 'en', 'seo_meta_title', 'Happy Home Fund', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8671, 'en', 'seo_meta_description', 'Joining hands with the Happy Home Fund: Together, we unite to take action, offering support to those facing hardship in society and creating many other positive impacts.', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8672, 'en', 'analytic_google_analytic', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8673, 'en', 'facebook_facebook_pixel', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8674, 'en', 'script_facebook_pixel', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8675, 'en', 'social_facebook', 'https://www.facebook.com/ttdecor.noithat', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8676, 'en', 'social_google', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8677, 'en', 'social_youtube', 'https://www.youtube.com/channel/UCVx1KxpoHYvM77qhG2v9icQ', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8678, 'en', 'social_twitter', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8679, 'en', 'social_link', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8680, 'en', 'social_insta', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8681, 'en', 'social_skype', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8682, 'en', 'social_telegram', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8683, 'en', 'social_whatsapp', '', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8684, 'en', 'social_pinterest', 'https://www.pinterest.com/ttdecornoithat/_created/', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8685, 'en', 'website_status', '0', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8686, 'en', 'website_index', '1', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8687, 'en', 'website_canonical', 'normal', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33),
+(8688, 'en', 'website_language', 'vi', '0000-00-00 00:00:00', '2025-09-08 01:59:59', 0, 0, 33);
 
 -- --------------------------------------------------------
 
@@ -3150,7 +3219,7 @@ INSERT INTO `user` (`id`, `catalogueid`, `email`, `password`, `salt`, `fullname`
 (30, 5, 'vanhdemo@gmail.com', 'a35fe731c33d7f4cc7e5fb6ea03b0fb2', 'MLuTA28hrQE7oBkY6oDp0znilnBKX9hOQIn17seMCtC3IvsEaHVq4CJM9RuJwrZehDYTGodyrxSHm2bOl4lcp4btjLxtYR5BfDbequyU67fKKLg3fXZvqvATRN6GG8dXxPZmy0FV30SAsOUpiVgQHj8adFIPk2ccwaW5NFJm', 'Vanh', '', 0, '', '0', '0', '0', '', '', '', '', '', '118.71.224.192', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36', '', '0000-00-00 00:00:00', '2022-08-20 13:33:14', '0000-00-00 00:00:00', 1, '2022-08-26 09:49:57', 1, 23, 0),
 (31, 5, 'kenvin@gmail.com', '345dda4b3b3b0aab2ca9257f1ce091cc', '5lO0SanhnUGs2gvVLxu2RvMt4DkR6FYNKaC7EMCI1iTFCMHc8WYJO1lrzawgnit4AgdB9o6umkSxbAplK8GvPN2fefqfoQpRtuwYDLVPBNzAcZ39wTx5Qskdrq3QjH0GsToEI87dizX5yr3IDjWXbpHyWmJJUeebSVXBLUh9', 'kevin', '', 0, '', '0', '0', '0', '', '', '', '', '', '42.119.103.237', 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_6_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Mobile/15E148 Safari/604.1', '', '0000-00-00 00:00:00', '2022-08-27 17:25:42', '2022-10-02 16:14:36', 1, '2022-10-02 19:36:39', 1, 27, 27),
 (32, 7, 'chutiem1@gmail.com', 'b20ec25f1f4bfb57cdf0c51eb8e991d2', 'KWdoxJDM15h4m8HBN7tsgOb9abfOPI7clDeilGpk0VUzCwtc3zPJINfCV2xppExRGi8Sn2WJ66XPTITl8wBBGTLdvdon7u0gZaXwv3vFmrashW9X44ej2HuerLkZLRAoSscbmyR6NKAFMz5VEqFqhyYj5gZqQYjUftY3KHry', 'Chủ tiệm 1', '', 1, '', '0', '0', '0', '', '', '', '', '', '42.117.149.112', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36', '', '0000-00-00 00:00:00', '2022-09-30 00:05:32', '0000-00-00 00:00:00', 1, '2022-09-30 21:13:48', 1, 23, 0),
-(33, 1, 'cvg.ltd.tech@gmail.com', 'db154bda00dab1fa14914640469b6544', '8UvsBQGN2pOgqSvmiXNc6STD9uX7z5jbWfg25Ku4It2NOLaFepLly8qeQ6PoiRHM9KadbntVBzo1Eu3UAWEkWXDceJQdZ0JVmwaPTFHG0Df4zkhlY7C1ObxHrZno3TIfrkpRrYAC1cEhAg7hlYxy8Jwdq3F9VSnLi0UR5y4C', 'CVG', '', 1, '', '0', '0', '0', '', '', '', '', '', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36', '', '0000-00-00 00:00:00', '2022-12-22 15:49:39', '0000-00-00 00:00:00', 0, '2025-09-06 23:02:40', 1, 23, 0),
+(33, 1, 'cvg.ltd.tech@gmail.com', 'db154bda00dab1fa14914640469b6544', '8UvsBQGN2pOgqSvmiXNc6STD9uX7z5jbWfg25Ku4It2NOLaFepLly8qeQ6PoiRHM9KadbntVBzo1Eu3UAWEkWXDceJQdZ0JVmwaPTFHG0Df4zkhlY7C1ObxHrZno3TIfrkpRrYAC1cEhAg7hlYxy8Jwdq3F9VSnLi0UR5y4C', 'CVG', '', 1, '', '0', '0', '0', '', '', '', '', '', '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36', '', '0000-00-00 00:00:00', '2022-12-22 15:49:39', '0000-00-00 00:00:00', 0, '2025-09-08 01:55:48', 1, 23, 0),
 (35, 1, 'lvnailsbar975@gmail.com', 'f5d509de84689642ea0f75d05b0f0d6d', '8usx9Y0LVpDOsapo4Qv06vZRWGFdXfPtmEkMdBkjhqTnSo2X1oMeCz7yAnrrbiui0IlKgx355cFYVqe8EORbwyOwSICKqgSRN8JmYpTc4vKePyBNDd4lVL6wUa1AcGzHklHa953tFH2Agt7jPUTQj7LxIhGNsJfWXDU6uQrE', 'lvnailsbar975', '', 1, '', '0', '0', '0', '', '', '', '', '', '171.251.239.184', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36', '', '0000-00-00 00:00:00', '2023-01-01 22:29:10', '2023-01-01 22:40:37', 1, '2023-01-26 10:38:45', 1, 33, 35);
 
 -- --------------------------------------------------------
@@ -3177,7 +3246,7 @@ CREATE TABLE `user_catalogue` (
 --
 
 INSERT INTO `user_catalogue` (`id`, `title`, `permission`, `description`, `created_at`, `updated_at`, `deleted_at`, `publish`, `userid_created`, `userid_updated`) VALUES
-(1, 'Quản trị viên', '[\"backend\\/product\\/catalogue\\/index\",\"backend\\/product\\/catalogue\\/create\",\"backend\\/product\\/catalogue\\/update\",\"backend\\/product\\/catalogue\\/delete\",\"change_image\",\"backend\\/product\\/product\\/index\",\"backend\\/product\\/product\\/preview\",\"backend\\/product\\/product\\/create\",\"backend\\/product\\/product\\/update\",\"backend\\/product\\/product\\/delete\",\"backend\\/article\\/catalogue\\/index\",\"backend\\/article\\/catalogue\\/create\",\"backend\\/article\\/catalogue\\/update\",\"backend\\/article\\/catalogue\\/delete\",\"backend\\/article\\/article\\/index\",\"backend\\/article\\/article\\/create\",\"backend\\/article\\/article\\/update\",\"backend\\/article\\/article\\/delete\",\"backend\\/user\\/catalogue\\/index\",\"backend\\/user\\/catalogue\\/create\",\"backend\\/user\\/catalogue\\/update\",\"backend\\/user\\/catalogue\\/delete\",\"backend\\/user\\/user\\/index\",\"backend\\/user\\/user\\/create\",\"backend\\/user\\/user\\/update\",\"backend\\/user\\/user\\/delete\",\"backend\\/menu\\/menu\\/index\",\"backend\\/menu\\/menu\\/listmenu\",\"backend\\/menu\\/menu\\/createmenu\",\"backend\\/menu\\/menu\\/create\",\"backend\\/promotion\\/promotion\\/index\",\"backend\\/promotion\\/promotion\\/create\",\"backend\\/promotion\\/promotion\\/update\",\"backend\\/promotion\\/promotion\\/delete\",\"backend\\/slide\\/slide\\/index\",\"backend\\/slide\\/slide\\/create\",\"backend\\/slide\\/slide\\/update\",\"backend\\/slide\\/slide\\/delete\",\"backend\\/system\\/general\\/index\",\"backend\\/system\\/general\\/translator\",\"backend\\/language\\/language\\/index\",\"backend\\/language\\/language\\/create\",\"backend\\/language\\/language\\/update\",\"backend\\/language\\/language\\/delete\",\"backend\\/language\\/languagekeyword\\/index\",\"backend\\/language\\/languagekeyword\\/create\",\"backend\\/language\\/languagekeyword\\/update\",\"backend\\/language\\/languagekeyword\\/delete\",\"backend\\/language\\/languagekeyword\\/import\",\"backend\\/language\\/languagekeyword\\/export\",\"backend\\/slide\\/translate\\/translate\",\"backend\\/translate\\/translate\\/translateobject\",\"backend\\/translate\\/translate\\/translateproduct\",\"All\",\"folderView\",\"folderCreate\",\"folderRename\",\"folderDelete\",\"fileView\",\"fileUpload\",\"fileRename\",\"fileDelete\"]', '', '0000-00-00 00:00:00', '2025-08-31 03:40:44', 0, 1, 0, 33),
+(1, 'Quản trị viên', '[\"backend\\/product\\/catalogue\\/index\",\"backend\\/product\\/catalogue\\/create\",\"backend\\/product\\/catalogue\\/update\",\"backend\\/product\\/catalogue\\/delete\",\"change_image\",\"backend\\/product\\/product\\/index\",\"backend\\/product\\/product\\/preview\",\"backend\\/product\\/product\\/create\",\"backend\\/product\\/product\\/update\",\"backend\\/product\\/product\\/delete\",\"backend\\/article\\/catalogue\\/index\",\"backend\\/article\\/catalogue\\/create\",\"backend\\/article\\/catalogue\\/update\",\"backend\\/article\\/catalogue\\/delete\",\"backend\\/article\\/article\\/index\",\"backend\\/article\\/article\\/create\",\"backend\\/article\\/article\\/update\",\"backend\\/article\\/article\\/delete\",\"backend\\/user\\/catalogue\\/index\",\"backend\\/user\\/catalogue\\/create\",\"backend\\/user\\/catalogue\\/update\",\"backend\\/user\\/catalogue\\/delete\",\"backend\\/user\\/user\\/index\",\"backend\\/user\\/user\\/create\",\"backend\\/user\\/user\\/update\",\"backend\\/user\\/user\\/delete\",\"backend\\/menu\\/menu\\/index\",\"backend\\/menu\\/menu\\/listmenu\",\"backend\\/menu\\/menu\\/createmenu\",\"backend\\/menu\\/menu\\/create\",\"backend\\/promotion\\/promotion\\/index\",\"backend\\/promotion\\/promotion\\/create\",\"backend\\/promotion\\/promotion\\/update\",\"backend\\/promotion\\/promotion\\/delete\",\"backend\\/panel\\/panel\\/index\",\"backend\\/panel\\/panel\\/create\",\"backend\\/panel\\/panel\\/update\",\"backend\\/panel\\/panel\\/delete\",\"backend\\/slide\\/slide\\/index\",\"backend\\/slide\\/slide\\/create\",\"backend\\/slide\\/slide\\/update\",\"backend\\/slide\\/slide\\/delete\",\"backend\\/system\\/general\\/index\",\"backend\\/system\\/general\\/translator\",\"backend\\/language\\/language\\/index\",\"backend\\/language\\/language\\/create\",\"backend\\/language\\/language\\/update\",\"backend\\/language\\/language\\/delete\",\"backend\\/language\\/languagekeyword\\/index\",\"backend\\/language\\/languagekeyword\\/create\",\"backend\\/language\\/languagekeyword\\/update\",\"backend\\/language\\/languagekeyword\\/delete\",\"backend\\/language\\/languagekeyword\\/import\",\"backend\\/language\\/languagekeyword\\/export\",\"backend\\/slide\\/translate\\/translate\",\"backend\\/translate\\/translate\\/translateobject\",\"backend\\/translate\\/translate\\/translateproduct\",\"All\",\"folderView\",\"folderCreate\",\"folderRename\",\"folderDelete\",\"fileView\",\"fileUpload\",\"fileRename\",\"fileDelete\"]', '', '0000-00-00 00:00:00', '2025-09-07 22:57:45', 0, 1, 0, 33),
 (2, 'Thành viên', '[\"backend\\/product\\/catalogue\\/index\",\"backend\\/product\\/catalogue\\/create\",\"backend\\/product\\/catalogue\\/update\",\"backend\\/product\\/catalogue\\/delete\",\"change_image\",\"backend\\/product\\/product\\/index\",\"backend\\/product\\/product\\/preview\",\"backend\\/product\\/product\\/create\",\"backend\\/product\\/product\\/update\",\"backend\\/product\\/product\\/delete\",\"backend\\/article\\/catalogue\\/index\",\"backend\\/article\\/catalogue\\/create\",\"backend\\/article\\/catalogue\\/update\",\"backend\\/article\\/catalogue\\/delete\",\"backend\\/article\\/article\\/index\",\"backend\\/article\\/article\\/create\",\"backend\\/article\\/article\\/update\",\"backend\\/article\\/article\\/delete\",\"backend\\/menu\\/menu\\/index\",\"backend\\/menu\\/menu\\/listmenu\",\"backend\\/menu\\/menu\\/createmenu\",\"backend\\/menu\\/menu\\/create\",\"backend\\/slide\\/slide\\/index\",\"backend\\/slide\\/slide\\/create\",\"backend\\/slide\\/slide\\/update\",\"backend\\/slide\\/slide\\/delete\",\"backend\\/system\\/general\\/index\",\"backend\\/system\\/general\\/translator\",\"backend\\/language\\/language\\/index\",\"backend\\/language\\/language\\/create\",\"backend\\/language\\/language\\/update\",\"backend\\/language\\/language\\/delete\",\"backend\\/slide\\/translate\\/translate\",\"backend\\/translate\\/translate\\/translateobject\",\"backend\\/translate\\/translate\\/translateproduct\",\"All\",\"folderView\",\"folderCreate\",\"folderRename\",\"folderDelete\",\"fileView\",\"fileUpload\",\"fileRename\",\"fileDelete\"]', '', '0000-00-00 00:00:00', '2022-09-10 09:59:45', 0, 1, 0, 23),
 (3, 'Cộng tác viên', '', '', '0000-00-00 00:00:00', '2020-07-31 16:11:53', 0, 0, 0, 8),
 (4, 'Thực tập', '', '', '2020-07-31 16:15:32', '0000-00-00 00:00:00', 1, 1, 8, 0),
@@ -161357,19 +161426,19 @@ ALTER TABLE `website_widget`
 -- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `article_catalogue`
 --
 ALTER TABLE `article_catalogue`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `article_translate`
 --
 ALTER TABLE `article_translate`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `attribute`
@@ -161483,7 +161552,7 @@ ALTER TABLE `language`
 -- AUTO_INCREMENT for table `language_keywords`
 --
 ALTER TABLE `language_keywords`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `location`
@@ -161573,7 +161642,7 @@ ALTER TABLE `menu_translate`
 -- AUTO_INCREMENT for table `object_relationship`
 --
 ALTER TABLE `object_relationship`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=286;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=296;
 
 --
 -- AUTO_INCREMENT for table `page`
@@ -161597,13 +161666,13 @@ ALTER TABLE `page_translate`
 -- AUTO_INCREMENT for table `panel`
 --
 ALTER TABLE `panel`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `panel_translate`
 --
 ALTER TABLE `panel_translate`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `price`
@@ -161663,25 +161732,25 @@ ALTER TABLE `promotion_relationship`
 -- AUTO_INCREMENT for table `router`
 --
 ALTER TABLE `router`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=282;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=295;
 
 --
 -- AUTO_INCREMENT for table `slide`
 --
 ALTER TABLE `slide`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=154;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=199;
 
 --
 -- AUTO_INCREMENT for table `slide_catalogue`
 --
 ALTER TABLE `slide_catalogue`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `slide_translate`
 --
 ALTER TABLE `slide_translate`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=166;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=213;
 
 --
 -- AUTO_INCREMENT for table `store`
@@ -161693,7 +161762,7 @@ ALTER TABLE `store`
 -- AUTO_INCREMENT for table `system_translate`
 --
 ALTER TABLE `system_translate`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8647;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8689;
 
 --
 -- AUTO_INCREMENT for table `tag_relationship`

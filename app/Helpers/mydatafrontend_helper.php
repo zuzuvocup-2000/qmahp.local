@@ -143,12 +143,13 @@ if (! function_exists('check_voucher')){
 if(!function_exists('logo')){
     function logo(){
         $model = new AutoloadModel();
+        $lang = currentLanguage();
         $actual_link = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         $system = get_general();
         if($actual_link == BASE_URL){
-            $logo = '<h1 class="hd-logo" ><a href="." title="'.$system['seo_meta_title'].'"><img src="'.$system['homepage_logo'].'" alt="'.$system['seo_meta_title'].'"  class="lazyloading" /></a><span class="uk-hidden">'.$system['seo_meta_title'].'</span></h1>';
+            $logo = '<h1 class="hd-logo" ><a href="'.($lang == 'vi' ? '' : '/'.$lang).'" title="'.$system['seo_meta_title'].'"><img src="'.$system['homepage_logo'].'" alt="'.$system['seo_meta_title'].'"  class="lazyloading" /></a><span class="uk-hidden">'.$system['seo_meta_title'].'</span></h1>';
         }else{
-            $logo = '<div class="hd-logo" ><a  href="." title="'.$system['seo_meta_title'].'"><img src="'.$system['homepage_logo'].'" alt="'.$system['seo_meta_title'].'" class="lazyloading" /></a></div>';
+            $logo = '<div class="hd-logo" ><a  href="'.($lang == 'vi' ? '' : '/'.$lang).'" title="'.$system['seo_meta_title'].'"><img src="'.$system['homepage_logo'].'" alt="'.$system['seo_meta_title'].'" class="lazyloading" /></a></div>';
         }
         return $logo;
     }
