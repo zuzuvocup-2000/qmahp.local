@@ -1,6 +1,7 @@
 <?php
     $aboutUs = get_slide(['keyword' => 'about-us', 'language' => $language]);
     $aboutQuy = get_slide(['keyword' => 'about-quy', 'language' => $language]);
+    $gallery = get_slide(['keyword' => 'gallery', 'language' => $language]);
     $model = new App\Models\AutoloadModel();
 ?>
 <div id="homepage" class="page-body">
@@ -92,4 +93,72 @@
             </div>
         </section>
     <?php } ?>
+    <?php if(isset($gallery) && is_array($gallery) && count($gallery)){ ?>
+    <section class="gallery-wrap">
+        <div class="uk-container uk-container-center">
+            <div class="gallery-header uk-text-center mb30">
+                <h2 class="about-quy-title"><?php echo $gallery[0]['cat_title']; ?></h2>
+            </div>
+            <div class="gallery-content">
+                <div class="grid grid-cols-3 auto-rows-[minmax(0,1fr)] gap-2 xs:gap-4 [grid-auto-flow:dense]">
+                    <?php 
+                    $pattern = [
+                        ['col' =>
+                    2, 'row' => 1], ['col' => 1, 'row' => 2], ['col' => 1, 'row' => 1], ['col' => 1, 'row' => 1], ['col' => 1, 'row' => 2], ['col' => 2, 'row' => 1], ['col' => 1, 'row' => 1], ['col' => 1, 'row' => 1], ]; foreach ($gallery as $i
+                    => $image) { $layout = $pattern[$i % 8]; $col = (int)$layout['col']; $row = (int)$layout['row']; ?>
+                    <div class="col-span-<?php echo $col; ?> row-span-<?php echo $row; ?>">
+                        <a class="img-cover block h-full" href="<?php echo base_url($image['image']); ?>" data-lightbox="gallery">
+                            <img class="w-full h-full object-cover" src="<?php echo base_url($image['image']); ?>" alt="<?php echo !empty($image['title']) ? $image['title'] : $image['cat_title']; ?>" />
+                        </a>
+                    </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php } ?>
+    <?php if(isset($panel['field']) && is_array($panel['field']) && count($panel['field'])){ ?>
+    <section class="service-section">
+        <div class="uk-container uk-container-center">
+            <div class="service-header uk-text-center mb30">
+                <h2 class="about-quy-title">
+                    <?php echo $panel['field']['title']; ?>
+                </h2>
+            </div>
+            <div class="service-content">
+                <?php foreach($panel['field']['data'] as $key => $val){ ?>
+                <?php if($key === 0){ continue; } ?>
+                <div class="uk-grid uk-grid-medium <?php echo $key % 2 == 0 ? 'uk-flex-row-reverse' : ''; ?>">
+                    <div class="uk-width-small-1-1 uk-width-medium-2-5">
+                        <div class="thumb">
+                            <a href="" class="img-cover">
+                                <img src="<?php echo base_url($val['image']); ?>" alt="<?php echo $val['title']; ?>" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="uk-width-small-1-1 uk-width-medium-3-5">
+                        <div class="content">
+                            <h3 class="title"><span><?php echo $val['title']; ?></span></h3>
+                            <h4 class="sub-title"><span><?php echo base64_decode($val['description']); ?></span></h4>
+                            <div class="description">
+                                <?php echo base64_decode($val['content']); ?>
+                            </div>
+                           <ul class="uk-list uk-clearfix">
+                            <?php if(isset($val['post']) && is_array($val['post']) && count($val['post'])){ ?>
+                            <?php foreach($val['post'] as $keyChild => $valChild){ ?>
+                                <li>
+                                    <a href="<?php echo base_url($valChild['canonical'].HTSUFFIX); ?>">
+                                        <?php echo $valChild['title']; ?>
+                                    </a>
+                                </li>
+                            <?php }} ?>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
+    </section>
+    <?php } ?>  
 </div>

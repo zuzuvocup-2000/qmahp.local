@@ -1,15 +1,18 @@
 <?php
 namespace App\Controllers\Frontend\Article;
 use App\Controllers\FrontendController;
+use App\Models\LanguageKeywordModel;
 
 class Article extends FrontendController{
 
     protected $data;
+    protected $languageKeywordModel;
 
     public function __construct(){
         $this->data = [];
         $this->data['module'] = 'article';
         $this->data['language'] = $this->currentLanguage();
+        $this->languageKeywordModel = new LanguageKeywordModel();
     }
 
     public function index($id = 0, $page = 1){
@@ -17,6 +20,7 @@ class Article extends FrontendController{
         $id = (int)$id;
 
         $session = session();
+        $this->data['keywordList'] = $this->languageKeywordModel->getKeywordTranslations();
         $module_extract = explode("_", $this->data['module']);
         $keyword = $this->condition_keyword();
         $this->data['object'] = $this->AutoloadModel->_get_where([

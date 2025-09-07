@@ -19,6 +19,7 @@ class Panel extends BaseController{
 	}
 
 	public function index($language = ''){
+		$session = session();
 		$flag = $this->authentication->check_permission([
 			'routes' => 'backend/panel/panel/index'
 		]);
