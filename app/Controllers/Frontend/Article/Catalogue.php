@@ -18,7 +18,7 @@ class Catalogue extends FrontendController{
         helper(['mypagination']);
         $id = (int)$id;
         $session = session();
-        $this->data['keywordList'] = $this->languageKeywordModel->getKeywordTranslations();
+        $this->data['keywordList'] = $this->languageKeywordModel->getKeywordTranslations($this->data['language']);
         $module_extract = explode("_", $this->data['module']);
         $this->data['detailCatalogue'] = $this->AutoloadModel->_get_where([
             'select' => ' tb1.id,tb1.lft, tb1.rgt, tb1.level, tb1.parentid, tb1.image,  tb2.title, tb2.canonical,  tb2.content, tb2.description, tb2.meta_title, tb2.meta_description, tb1.login, tb2.template',

@@ -20,7 +20,7 @@ class Article extends FrontendController{
         $id = (int)$id;
 
         $session = session();
-        $this->data['keywordList'] = $this->languageKeywordModel->getKeywordTranslations();
+        $this->data['keywordList'] = $this->languageKeywordModel->getKeywordTranslations($this->data['language']);
         $module_extract = explode("_", $this->data['module']);
         $keyword = $this->condition_keyword();
         $this->data['object'] = $this->AutoloadModel->_get_where([

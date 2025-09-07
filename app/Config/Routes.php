@@ -31,6 +31,12 @@ $routes->get('/','Frontend\Homepage\Home::index');
 $routes->get('home.html','Frontend\Homepage\Home::index');
 $routes->get('trang-chu.html','Frontend\Homepage\Home::index');
 
+// English routes
+$routes->get('en','Frontend\Homepage\Home::index');
+$routes->get('en/home.html','Frontend\Homepage\Home::index');
+$routes->get('en/trang-chu.html','Frontend\Homepage\Home::index');
+
+// Vietnamese routes (default - no prefix needed)
 $routes->match(['get','post'],'dat-lich-tu-van'.HTSUFFIX, 'Frontend\Contact\Contact::datlich');
 $routes->match(['get','post'],'gio-hang'.HTSUFFIX, 'Frontend\Product\Cart::index');
 $routes->match(['get','post'],'dat-hang'.HTSUFFIX, 'Frontend\Product\Cart::pay');
@@ -38,7 +44,16 @@ $routes->match(['get','post'],'dat-hang-thanh-cong'.HTSUFFIX, 'Frontend\Product\
 $routes->match(['get','post'],'wishlist'.HTSUFFIX, 'Frontend\Homepage\Home::wishlist');
 $routes->get('thong-tin-don-hang'.HTSUFFIX, 'Frontend\Product\Cart::method');
 
+// English versions
+$routes->match(['get','post'],'en/dat-lich-tu-van'.HTSUFFIX, 'Frontend\Contact\Contact::datlich');
+$routes->match(['get','post'],'en/gio-hang'.HTSUFFIX, 'Frontend\Product\Cart::index');
+$routes->match(['get','post'],'en/dat-hang'.HTSUFFIX, 'Frontend\Product\Cart::pay');
+$routes->match(['get','post'],'en/dat-hang-thanh-cong'.HTSUFFIX, 'Frontend\Product\Cart::method');
+$routes->match(['get','post'],'en/wishlist'.HTSUFFIX, 'Frontend\Homepage\Home::wishlist');
+$routes->get('en/thong-tin-don-hang'.HTSUFFIX, 'Frontend\Product\Cart::method');
 
+
+// Vietnamese routes (default - no prefix needed)
 $routes->get('tag'.HTSUFFIX, 'Frontend\Tag\Tag::index');
 $routes->get('login'.HTSUFFIX, 'Frontend\Auth\Auth::login',['filter' => 'login_frontend' ]);
 $routes->get('signup'.HTSUFFIX, 'Frontend\Auth\Auth::signup',['filter' => 'login_frontend' ]);
@@ -49,6 +64,18 @@ $routes->get('tai-khoan.html', 'Frontend\Auth\DetailUser::update',['filter' => '
 $routes->get('don-hang-cua-toi.html', 'Frontend\Auth\DetailUser::bill',['filter' => 'auth_frontend']);
 $routes->get('logout'.HTSUFFIX, 'Frontend\Auth\Auth::logout',['filter' => 'auth_frontend' ]);
 
+// English versions
+$routes->get('en/tag'.HTSUFFIX, 'Frontend\Tag\Tag::index');
+$routes->get('en/login'.HTSUFFIX, 'Frontend\Auth\Auth::login',['filter' => 'login_frontend' ]);
+$routes->get('en/signup'.HTSUFFIX, 'Frontend\Auth\Auth::signup',['filter' => 'login_frontend' ]);
+$routes->get('en/forgot'.HTSUFFIX, 'Frontend\Auth\Auth::forgot');
+$routes->get('en/verify'.HTSUFFIX, 'Frontend\Auth\Auth::verify');
+$routes->get('en/thong-tin-chi-tiet'.HTSUFFIX, 'Frontend\Auth\DetailUser::index',['filter' => 'auth_frontend']);
+$routes->get('en/tai-khoan.html', 'Frontend\Auth\DetailUser::update',['filter' => 'auth_frontend']);
+$routes->get('en/don-hang-cua-toi.html', 'Frontend\Auth\DetailUser::bill',['filter' => 'auth_frontend']);
+$routes->get('en/logout'.HTSUFFIX, 'Frontend\Auth\Auth::logout',['filter' => 'auth_frontend' ]);
+
+// Vietnamese routes (default - no prefix needed)
 $routes->get('thuong-hieu'.HTSUFFIX, 'Frontend\Homepage\Router::list/$1');
 $routes->get('thuong-hieu/trang-([0-9]+)'.HTSUFFIX, 'Frontend\Homepage\Router::list/$1/$2');
 
@@ -59,10 +86,28 @@ $routes->get(HTSEARCH.'/trang-([0-9]+)/([a-zA-Z0-9-]+)'.HTSUFFIX, 'Frontend\Home
 $routes->get('lien-he'.HTSUFFIX, 'Frontend\Contact\Contact::index');
 $routes->get('contact-us'.HTSUFFIX, 'Frontend\Contact\Contact::index');
 
+// English versions
+$routes->get('en/thuong-hieu'.HTSUFFIX, 'Frontend\Homepage\Router::list/$1');
+$routes->get('en/thuong-hieu/trang-([0-9]+)'.HTSUFFIX, 'Frontend\Homepage\Router::list/$1/$2');
+
+$routes->get('en/'.HTSEARCH.HTSUFFIX, 'Frontend\Homepage\Router::search/$1');
+$routes->get('en/'.HTSEARCH.'/trang-([0-9]+)'.HTSUFFIX, 'Frontend\Homepage\Router::search/$1/$2');
+$routes->get('en/'.HTSEARCH.'/trang-([0-9]+)/([a-zA-Z0-9-]+)'.HTSUFFIX, 'Frontend\Homepage\Router::search/$1/$2/$3');
+
+$routes->get('en/lien-he'.HTSUFFIX, 'Frontend\Contact\Contact::index');
+$routes->get('en/contact-us'.HTSUFFIX, 'Frontend\Contact\Contact::index');
+
 $routes->get('/admin', 'Backend/Authentication/Auth::login',['filter' => 'login' ]);
+
+// Dynamic routes for Vietnamese (default - no prefix needed)
 $routes->get('([a-zA-Z0-9-]+)'.HTSUFFIX, 'Frontend\Homepage\Router::index/$1');
 $routes->get('([a-zA-Z0-9-]+)/trang-([0-9]+)'.HTSUFFIX, 'Frontend\Homepage\Router::index/$1/$2');
 $routes->get('([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)'.HTSUFFIX, 'Frontend\Homepage\Router::silo/$1/$2');
+
+// Dynamic routes for English
+$routes->get('en/([a-zA-Z0-9-]+)'.HTSUFFIX, 'Frontend\Homepage\Router::index/$1');
+$routes->get('en/([a-zA-Z0-9-]+)/trang-([0-9]+)'.HTSUFFIX, 'Frontend\Homepage\Router::index/$1/$2');
+$routes->get('en/([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)'.HTSUFFIX, 'Frontend\Homepage\Router::silo/$1/$2');
 
 $routes->get(BACKEND_DIRECTORY, 'Backend/Authentication/Auth::login', ['filter' => 'login' ]);
 $routes->get('backend/authentication/auth/forgot', 'Backend/Authentication/Auth::forgot', ['filter' => 'login' ]);

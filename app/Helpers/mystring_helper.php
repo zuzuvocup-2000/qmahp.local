@@ -54,8 +54,13 @@ if(!function_exists('month_number_ago')){
 if(!function_exists('translate')){
 	function translate(string $string = '', string $language = '', array $param = []){
 
+		// If no language specified, get from URL
+		if(empty($language)){
+			$language = get_current_language();
+		}
+
 		if(in_array($language, ['vi','en']) == false){
-			$language = 'en';
+			$language = 'vi';
 		}
 
 		return lang($string, $param, $language);

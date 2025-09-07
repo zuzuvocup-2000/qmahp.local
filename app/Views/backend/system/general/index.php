@@ -50,7 +50,7 @@
             </li>
             <li class="active"><strong>Cấu hình hệ thống</strong></li>
         </ol>
-        <div class="uk-flex uk-flex-middle uk-hidden" >
+        <div class="uk-flex uk-flex-middle " >
             <?php if(isset($languageList) && is_array($languageList) && count($languageList)){ ?>
                 <?php foreach($languageList as $key => $val){ ?>
                     <a href="<?php echo base_url('backend/system/general/translator/'.$val['canonical'].'') ?>" class="mr10" title="<?php echo $val['canonical'] ?>">

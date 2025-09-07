@@ -200,7 +200,7 @@ class LanguageKeywordModel extends Model
      * @param string $language Language code ('en' or 'vi')
      * @return array|string|null Translation(s) or null if not found
      */
-    public function getKeywordTranslations(string $keyword = "", string $language = "vi")
+    public function getKeywordTranslations(string $language = "vi", string $keyword = "")
     {
         $field = $language . '_translation';
         $fields = ['keyword', $field];

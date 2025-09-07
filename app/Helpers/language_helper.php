@@ -56,20 +56,6 @@ if (!function_exists('lang_keyword_exists')) {
     }
 }
 
-if (!function_exists('lang_keyword_all')) {
-    /**
-     * Get all translations for a keyword
-     * 
-     * @param string $keyword Keyword to get translations for
-     * @return array|null Translations array or null if not found
-     */
-    function lang_keyword_all(string $keyword): ?array
-    {
-        $model = new \App\Models\LanguageKeywordModel();
-        return $model->getKeywordTranslations($keyword);
-    }
-}
-
 if (!function_exists('lang_keyword_search')) {
     /**
      * Search for keywords

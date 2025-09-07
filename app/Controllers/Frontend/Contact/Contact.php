@@ -59,7 +59,7 @@ class Contact extends FrontendController{
             }
         }
 
-		$this->data['keywordList'] = $this->languageKeywordModel->getKeywordTranslations();
+		$this->data['keywordList'] = $this->languageKeywordModel->getKeywordTranslations($this->data['language']);
         $this->data['general'] = $this->general;
         $this->data['template'] = 'frontend/contact/contact/index';
         return view('frontend/homepage/layout/home', $this->data);

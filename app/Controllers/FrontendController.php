@@ -8,7 +8,7 @@ use App\Libraries\Mobile_Detect;
 class FrontendController extends Controller
 {
 
-	protected $helpers = ['mystring','mydatafrontend','renderdata','myurl','form','mypanel','mydata','url','myauthentication','mypagination'];
+	protected $helpers = ['mystring','mydatafrontend','renderdata','myurl','form','mypanel','mydata','url','myauthentication','mypagination','url_language'];
 	public $currentTime;
 	public $AutoloadModel;
 	public $client;
@@ -53,12 +53,18 @@ class FrontendController extends Controller
 	}
 
 	public function currentLanguage(){
-		$language = (isset($this->general['website_language']) ? $this->general['website_language'] : 'vi');
-		if(!isset($_COOKIE['language']) || $_COOKIE['language'] == ''){
-			setcookie('language', $language , time() + 1*24*3600, "/");
-		}else{
-			$language = $_COOKIE['language'];
+		helper('url_language');
+		// Get language from URL first
+		$language = get_current_language();
+		
+		// If no English in URL, use default from general settings
+		if ($language === 'vi' && !is_language_route()) {
+			$language = (isset($this->general['website_language']) ? $this->general['website_language'] : 'vi');
 		}
+		
+		// Set language in session for consistency
+		set_language_session($language);
+		
 		return $language;
 	}
 }
