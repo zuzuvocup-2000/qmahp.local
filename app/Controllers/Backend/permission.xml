@@ -591,7 +591,7 @@
 			<description>Xóa</description>
 		</item>
 	</permissions>
-	<!-- <permissions>
+	<permissions>
 		<title>Quản lý - [Giao diện]</title>
 		<item>
 			<param>backend/panel/panel/index</param>
@@ -609,7 +609,7 @@
 			<param>backend/panel/panel/delete</param>
 			<description>Xóa</description>
 		</item>
-	</permissions> -->
+	</permissions>
 	<permissions>
 		<title>Slide</title>
 		<item>

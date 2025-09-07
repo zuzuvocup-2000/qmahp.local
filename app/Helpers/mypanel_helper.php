@@ -296,7 +296,7 @@ if (! function_exists('only_cat')){
             $param['select_cat'].= 'tb1.landing_link';
         }
         $child = $model->_get_where([
-            'select' => 'tb1.id,  tb2.title, tb2.canonical, tb1.image, tb2.description, tb2.icon, tb1.parentid, '.$param['select_cat'],
+            'select' => 'tb1.id,  tb2.title, tb2.canonical, tb1.image, tb2.description, tb2.icon, tb1.parentid, tb2.content, '.$param['select_cat'],
             'table' => $param['module'][0].'_catalogue as tb1',
             'join' =>[
                 [
