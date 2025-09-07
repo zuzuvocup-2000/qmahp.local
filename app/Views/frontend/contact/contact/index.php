@@ -46,22 +46,25 @@
                         <div class="contact-form-wrapper">
                             <form action="frontend/contact/contact/index" method="post" class="uk-form form form-contact">
                                 <div class="form-row">
-                                    <input type="text" name="fullname" class="uk-width-1-1 input-text" placeholder="<?php echo $keywordList['contact-fullname']; ?>" required>
+                                    <input type="text" name="fullname" class="va-fullname-contact-2 uk-width-1-1 input-text" placeholder="<?php echo $keywordList['contact-fullname']; ?>" required>
                                 </div>
                                 <div class="form-row">
-                                    <input type="email" name="email" class="uk-width-1-1 input-text" placeholder="Email *" required>
+                                    <input type="email" name="email" class="va-email-contact-2 uk-width-1-1 input-text" placeholder="Email *" required>
                                 </div>
                                 <div class="form-row">
-                                    <input type="tel" name="phone" class="uk-width-1-1 input-text" placeholder="<?php echo $keywordList['contact-phone']; ?>" required>
+                                    <input type="tel" name="phone" class="va-phone-contact-2 uk-width-1-1 input-text" placeholder="<?php echo $keywordList['contact-phone']; ?>" required>
                                 </div>
                                 <div class="form-row">
-                                    <input type="text" name="subject" class="uk-width-1-1 input-text" placeholder="<?php echo $keywordList['contact-title']; ?>" required>
+                                    <input type="text" name="subject" class="va-title-contact-2 uk-width-1-1 input-text" placeholder="<?php echo $keywordList['contact-title']; ?>" required>
                                 </div>
                                 <div class="form-row">
-                                    <textarea name="message" class="uk-width-1-1 form-textarea" placeholder="<?php echo $keywordList['contact-content']; ?>" rows="5" required></textarea>
+                                    <textarea name="message" class="va-message-contact-2 uk-width-1-1 form-textarea" placeholder="<?php echo $keywordList['contact-content']; ?>" rows="5" required></textarea>
                                 </div>
                                 <div class="form-row">
-                                    <input type="submit" name="create" class="btn-submit" value="<?php echo $keywordList['contact-send']; ?>">
+                                    <input type="submit" name="create" class="btn-submit submit-form-contact-2" value="<?php echo $keywordList['contact-send']; ?>">
+                                </div>
+                                <div class="loader" style="display: none;">
+                                    <div class="css-spinner clickable"><div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
                                 </div>
                             </form>
                         </div>

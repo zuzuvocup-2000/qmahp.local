@@ -1170,27 +1170,47 @@ $(document).ready(function(){
 		let fullname = $('.va-fullname-contact-2').val()
 		let email = $('.va-email-contact-2').val()
 		let phone = $('.va-phone-contact-2').val()
-		let theloai = $('.va-theloai-contact-2').find('option:selected').val()
+		let title = $('.va-title-contact-2').val()
 		let message = $('.va-message-contact-2').val()
+		var loader = $('.loader');
 		let check = 0;
+		loader.show();
 		if (fullname.length == 0) {
-    		toastr.error('Họ và tên không được để trống!','Xin vui lòng thử lại!');
+			setTimeout(() => {
+				loader.hide();
+					toastr.error('Họ và tên không được để trống!','Xin vui lòng thử lại!');
+				}, "2000")
         } else if(IsEmail(email) == false) {
-    		toastr.error('Định dạng Email không hợp lệ!','Xin vui lòng thử lại!');
+			setTimeout(() => {
+				loader.hide();
+					toastr.error('Định dạng Email không hợp lệ!','Xin vui lòng thử lại!');
+				}, "2000")
         }else if(phone.length == 0) {
-    		toastr.error('Số điện thoại không hợp lệ!','Xin vui lòng thử lại!');
+			setTimeout(() => {
+				loader.hide();
+					toastr.error('Số điện thoại không hợp lệ!','Xin vui lòng thử lại!');
+				}, "2000")
         }else if(message.length < 10){
-    		toastr.error('Nội dung cần gửi tối thiểu 10 kí tự!','Xin vui lòng thử lại!');
+			setTimeout(() => {
+				loader.hide();
+					toastr.error('Nội dung cần gửi tối thiểu 10 kí tự!','Xin vui lòng thử lại!');
+				}, "2000")
         }else{
         	let form_URL = 'ajax/frontend/action/contact_full_2';
 			$.post(form_URL, {
-				email : email,fullname : fullname,phone : phone,message : message,theloai : theloai
+				email : email,fullname : fullname,phone : phone,message : message,title : title
 			},
 			function(data){
 				if(data.trim() == 'success'){
-					toastr.success('Thành công','Bạn đã gửi yêu cầu thành công, chúng tôi sẽ liên hệ với bạn sớm nhất!');
+					setTimeout(() => {
+						loader.hide();
+						toastr.success('Thành công','Bạn đã gửi yêu cầu thành công, chúng tôi sẽ liên hệ với bạn sớm nhất!');
+					}, "2000")
 				}else{
-					toastr.error('An error occurred!','Xin vui lòng thử lại!');
+					setTimeout(() => {
+						loader.hide();
+						toastr.error('An error occurred!','Xin vui lòng thử lại!');
+					}, "2000")
 				}
 			});
         }

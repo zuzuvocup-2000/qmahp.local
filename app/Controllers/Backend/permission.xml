@@ -392,7 +392,25 @@
 			<description>Xóa</description>
 		</item>
 	</permissions>
-
+	<permissions>
+		<title>Quản lý - [Liên hệ]</title>
+		<item>
+			<param>backend/contact/contact/index</param>
+			<description>Xem</description>
+		</item>
+		<item>
+			<param>backend/contact/contact/create</param>
+			<description>Thêm</description>
+		</item>
+		<item>
+			<param>backend/contact/contact/update</param>
+			<description>Sửa</description>
+		</item>
+		<item>
+			<param>backend/contact/contact/delete</param>
+			<description>Xóa</description>
+		</item>
+	</permissions>
 	<!-- <permissions>
 		<title>Nhóm - [Người dùng]</title>
 		<item>
@@ -515,25 +533,7 @@
 			<description>Xóa</description>
 		</item>
 	</permissions>
-	<permissions>
-		<title>Quản lý - [Liên hệ]</title>
-		<item>
-			<param>backend/contact/contact/index</param>
-			<description>Xem</description>
-		</item>
-		<item>
-			<param>backend/contact/contact/create</param>
-			<description>Thêm</description>
-		</item>
-		<item>
-			<param>backend/contact/contact/update</param>
-			<description>Sửa</description>
-		</item>
-		<item>
-			<param>backend/contact/contact/delete</param>
-			<description>Xóa</description>
-		</item>
-	</permissions>
+	
 	<permissions>
 		<title>Quản lý - [Comment]</title>
 		<item>
