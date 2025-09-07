@@ -276,14 +276,14 @@ class Action extends FrontendController{
         $email = $this->request->getPost('email');
         $fullname = $this->request->getPost('fullname');
         $message = $this->request->getPost('message');
-        $theloai = $this->request->getPost('theloai');
+        $title = $this->request->getPost('title');
         $phone = $this->request->getPost('phone');
         $type = $this->contact_configbie->select();
         $store = [
             'email' => $email,
             'fullname' => $fullname,
             'phone' => $phone,
-            'theloai' => $theloai,
+            'theloai' => $title,
             'content' => $message,
             'title' => 'Liên hệ với tôi',
             'contactid' => $this->contact_id_generator(),
