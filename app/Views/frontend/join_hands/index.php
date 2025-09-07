@@ -80,45 +80,55 @@
 <section id="donation-form" class="donation-section">
     <div class="uk-container uk-container-center">
         <div class="donation-content">
-            <div class="donation-info">
-                <h2 class="section-title">Chung tay cùng chúng tôi</h2>
-                <p class="section-description">
-                    Hãy chia sẻ thông tin của những hoàn cảnh khó khăn mà Quỹ Mái Ấm Hạnh Phúc có thể san sẻ và giúp đỡ
-                </p>
-                
-                <div class="contact-info">
-                    <h3>Thông tin liên hệ</h3>
-                    <div class="contact-item">
-                        <i class="icon-location"></i>
-                        <div>
-                            <p><?= $contact_info['address1'] ?></p>
-                            <p><?= $contact_info['address2'] ?></p>
+            <div class="contact-info">
+                <h3>Về Quỹ Mái Ấm Hạnh Phúc</h3>
+                <div class="info-content">
+                    <p>Quỹ Mái Ấm Hạnh Phúc được thành lập với mục tiêu hỗ trợ những hoàn cảnh khó khăn, mang đến mái ấm và hạnh phúc cho những người cần giúp đỡ.</p>
+                    
+                    <div class="info-highlights">
+                        <div class="highlight-item">
+                            <i class="icon-heart"></i>
+                            <div>
+                                <h4>Mục tiêu</h4>
+                                <p>Xây dựng mái ấm cho những gia đình có hoàn cảnh khó khăn</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="icon-phone"></i>
-                        <div>
-                            <p><?= $contact_info['phone1'] ?></p>
-                            <p><?= $contact_info['phone2'] ?></p>
+                        
+                        <div class="highlight-item">
+                            <i class="icon-handshake"></i>
+                            <div>
+                                <h4>Cam kết</h4>
+                                <p>Minh bạch trong mọi hoạt động và sử dụng đúng mục đích</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="icon-email"></i>
-                        <p><?= $contact_info['email'] ?></p>
+                        
+                        <div class="highlight-item">
+                            <i class="icon-community"></i>
+                            <div>
+                                <h4>Tầm nhìn</h4>
+                                <p>Lan tỏa yêu thương và tạo nên cộng đồng nhân ái</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="bank-info">
-                    <h3>Thông tin tài khoản</h3>
-                    <div class="bank-details">
-                        <p><strong>Số tài khoản:</strong> <?= $contact_info['bank_account'] ?></p>
-                        <p><strong>Ngân hàng:</strong> <?= $contact_info['bank_name'] ?></p>
-                        <p><strong>Chủ tài khoản:</strong> <?= $contact_info['account_holder'] ?></p>
-                        <p class="bank-note">
-                            <strong>Nội dung chuyển khoản:</strong><br>
-                            "Tổ chức A/cá nhân A đóng góp cho Quỹ Mái Ấm Hạnh Phúc"
-                        </p>
+                <h3>Thông tin liên hệ</h3>
+                <div class="contact-item">
+                    <i class="icon-location"></i>
+                    <div>
+                        <p><?= $contact_info['address1'] ?></p>
+                        <p><?= $contact_info['address2'] ?></p>
                     </div>
+                </div>
+                <div class="contact-item">
+                    <i class="icon-phone"></i>
+                    <div>
+                        <p><?= $contact_info['phone1'] ?></p>
+                        <p><?= $contact_info['phone2'] ?></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="icon-email"></i>
+                    <p><?= $contact_info['email'] ?></p>
                 </div>
             </div>
 
