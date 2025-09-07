@@ -97,6 +97,14 @@ $routes->get('en/'.HTSEARCH.'/trang-([0-9]+)/([a-zA-Z0-9-]+)'.HTSUFFIX, 'Fronten
 $routes->get('en/lien-he'.HTSUFFIX, 'Frontend\Contact\Contact::index');
 $routes->get('en/contact-us'.HTSUFFIX, 'Frontend\Contact\Contact::index');
 
+// Join Hands routes
+$routes->get('chung-tay'.HTSUFFIX, 'Frontend\JoinHands\JoinHands::index');
+$routes->match(['get','post'],'chung-tay/submit-donation'.HTSUFFIX, 'Frontend\JoinHands\JoinHands::submitDonation');
+
+// English versions
+$routes->get('en/chung-tay'.HTSUFFIX, 'Frontend\JoinHands\JoinHands::index');
+$routes->match(['get','post'],'en/chung-tay/submit-donation'.HTSUFFIX, 'Frontend\JoinHands\JoinHands::submitDonation');
+
 $routes->get('/admin', 'Backend/Authentication/Auth::login',['filter' => 'login' ]);
 
 // Dynamic routes for Vietnamese (default - no prefix needed)

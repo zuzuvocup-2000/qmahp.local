@@ -1,0 +1,463 @@
+/* Join Hands Page Styles - Optimized with Parent Selectors */
+
+/* Hero Section */
+.chung-tay-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.chung-tay-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.3;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+}
+
+.chung-tay-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.chung-tay-hero .hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.chung-tay-hero .hero-subtitle {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: #f8f9fa;
+}
+
+.chung-tay-hero .hero-description {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    color: #e9ecef;
+}
+
+.chung-tay-hero .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background: #ff6b6b;
+    color: white;
+    border-color: #ff6b6b;
+}
+
+.btn-primary:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border-color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #667eea;
+}
+
+.btn-lg {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+}
+
+/* Activities Section */
+.activities-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.activities-section .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.activities-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.activities-section .section-description {
+    font-size: 1.2rem;
+    color: #6c757d;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.activities-section .activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.activities-section .activity-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activities-section .activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.activities-section .activity-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.activities-section .activity-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.activities-section .activity-card:hover .activity-image img {
+    transform: scale(1.05);
+}
+
+.activities-section .activity-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 107, 107, 0.9);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.activities-section .activity-content {
+    padding: 25px;
+}
+
+.activities-section .activity-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.activities-section .activity-location {
+    color: #6c757d;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.activities-section .activity-description {
+    color: #495057;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.activities-section .activity-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #e9ecef;
+}
+
+.activities-section .activity-amount {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #28a745;
+}
+
+/* Impact Section */
+.impact-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.impact-section .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.impact-section .impact-item {
+    padding: 20px;
+}
+
+.impact-section .impact-number {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ff6b6b;
+}
+
+.impact-section .impact-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Donation Section */
+.donation-section {
+    padding: 80px 0;
+    background: white;
+}
+
+.donation-section .donation-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.donation-section .donation-info h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.donation-section .contact-info, 
+.donation-section .bank-info {
+    margin-top: 40px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.donation-section .contact-info h3, 
+.donation-section .bank-info h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.donation-section .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.donation-section .contact-item i {
+    color: #ff6b6b;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.donation-section .bank-details p {
+    margin-bottom: 10px;
+    color: #495057;
+}
+
+.donation-section .bank-note {
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* Form Styles */
+.donation-form {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.donation-form h3 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.donation-form .form-group {
+    margin-bottom: 25px;
+}
+
+.donation-form .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #495057;
+}
+
+.donation-form .form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.donation-form .form-control:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta-section .cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cta-section .cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Alert Styles */
+.alert {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.alert-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.alert ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chung-tay-hero .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .chung-tay-hero .hero-subtitle {
+        font-size: 1.8rem;
+    }
+    
+    .chung-tay-hero .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .activities-section .activities-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .donation-section .donation-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .impact-section .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .impact-section .impact-number {
+        font-size: 2rem;
+    }
+    
+    .cta-section .cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-section .cta-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .chung-tay-hero .hero-title {
+        font-size: 2rem;
+    }
+    
+    .chung-tay-hero .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    .activities-section .section-title {
+        font-size: 2rem;
+    }
+    
+    .donation-form {
+        padding: 20px;
+    }
+    
+    .impact-section .impact-grid {
+        grid-template-columns: 1fr;
+    }
+}
