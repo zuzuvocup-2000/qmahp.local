@@ -364,6 +364,15 @@
 									</span>
 								</div>
 							</div>
+							<div class="block clearfix">
+								<div class="i-checks" style="width:100%;">
+									<span style="color:#000;" class="uk-flex uk-flex-middle">
+										<?php echo form_radio('template', set_value('template', 'frontend/article/article/about_us'), ((isset($_POST['template']) && $_POST['template'] == 'frontend/article/article/about_us' || (isset($article['template']) && $article['template'] == 'frontend/article/article/about_us')) ? true : false),'class=""   id="about_us" style="margin-top:0;margin-right:10px;" '); ?>
+
+										<label for="about_us" style="margin:0;cursor:pointer;">Giao diện Về chúng tôi</label>
+									</span>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

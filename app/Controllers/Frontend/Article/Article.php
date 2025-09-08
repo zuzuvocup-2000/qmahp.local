@@ -135,12 +135,10 @@ class Article extends FrontendController{
         $this->data['general'] = $this->general;
 
         $catalogue = $this->condition_catalogue($this->data['detailCatalogue']['id']);
-
         $this->data['articleRelate'] = $this->AutoloadModel->_get_where([
             'select' => 'tb1.id,tb1.viewed, tb1.image,tb4.title as cat_title,tb1.catalogue, tb4.canonical as cat_canonical, tb3.title, tb3.canonical, tb3.meta_title,tb1.info, tb3.meta_description,tb3.icon, tb3.viewed, tb3.description, tb3.content, tb1.created_at',
             'table' => $module_extract[0].' as tb1',
             'where' => [
-                'tb1.id != ' => $this->data['object']['id'],
                 'tb1.deleted_at' => 0,
                 'tb1.publish' => 1
             ],
@@ -158,7 +156,7 @@ class Article extends FrontendController{
                 ]
             ],
             'limit' => 10,
-            'order_by'=> 'tb1.created_at desc',
+            'order_by'=> 'tb1.order desc',
             'group_by' => 'tb1.id'
         ], TRUE);
 

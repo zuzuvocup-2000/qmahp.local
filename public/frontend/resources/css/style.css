@@ -4603,3 +4603,421 @@ mepage-student .panel-body .article:hover .content * {
       opacity: 0;
     }
   }
+
+/* ========================================
+   Banner Styles
+   ======================================== */
+
+.bg-banner-top-new {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.bg-banner-top-new::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.bg-banner-top-new .wrap-breadcum {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+}
+
+.bg-banner-top-new .heading-2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bg-banner-top-new .uk-breadcrumb {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg-banner-top-new .uk-breadcrumb>li:not(.uk-active)>span,
+.bg-banner-top-new  .uk-breadcrumb>li+li:before {
+    color: #fff;
+}
+
+
+.bg-banner-top-new .uk-breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bg-banner-top-new .uk-breadcrumb a:hover {
+    color: #ff7b3c;
+}
+
+.bg-banner-top-new .uk-breadcrumb span {
+    color: #ff7b3c;
+}
+
+/* Responsive Banner */
+@media (max-width: 768px) {
+    .bg-banner-top-new {
+        min-height: 300px;
+    }
+    
+    .bg-banner-top-new .heading-2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bg-banner-top-new {
+        min-height: 250px;
+    }
+    
+    .bg-banner-top-new .heading-2 {
+        font-size: 24px;
+    }
+    
+    .bg-banner-top-new .uk-breadcrumb {
+        font-size: 14px;
+    }
+}
+
+/* ========================================
+   About Us Page Styles
+   ======================================== */
+
+/* About Page Container */
+#about-page .about-sidebar {
+    position: sticky;
+    top: 20px;
+}
+
+#about-page .sidebar-panel {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+#about-page .main-side-header {
+    background: linear-gradient(135deg, #ff7b3c, #ff6b35);
+    padding: 15px 20px;
+    margin: 0;
+}
+
+#about-page .main-side-header .heading {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+#about-page .about-nav {
+    margin: 0;
+    padding: 0;
+}
+
+#about-page .about-nav-item {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+#about-page .about-nav-item:last-child {
+    border-bottom: none;
+}
+
+#about-page .about-nav-link {
+    display: block;
+    padding: 15px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+#about-page .about-nav-link:hover {
+    background: #f8f9fa;
+    color: #ff7b3c;
+    text-decoration: none;
+}
+
+#about-page .about-nav-item.active .about-nav-link {
+    background: #ff7b3c;
+    color: #fff;
+}
+
+#about-page .about-content {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+#about-page .about-section {
+    display: none;
+    padding: 40px;
+}
+
+#about-page .about-section.active {
+    display: block;
+}
+
+#about-page .section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#about-page .section-title {
+    font-size: 32px;
+    color: #242a6f;
+    font-family: "calibri bold";
+    margin: 0 0 15px 0;
+}
+
+#about-page .section-divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(135deg, #ff7b3c, #ff6b35);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+#about-page .content-wrapper {
+    line-height: 1.8;
+}
+
+/* Vision Section */
+#about-page .vision-image {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#about-page .vision-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#about-page .vision-text h3 {
+    color: #242a6f;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: "calibri bold";
+}
+
+#about-page .vision-text p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+#about-page .vision-text h4 {
+    color: #242a6f;
+    font-size: 20px;
+    margin: 30px 0 15px 0;
+    font-family: "calibri bold";
+}
+
+#about-page .vision-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#about-page .vision-list li {
+    padding: 10px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+#about-page .vision-list li i {
+    color: #ff7b3c;
+    margin-right: 10px;
+}
+
+/* Mission Section */
+#about-page .mission-values {
+    margin-top: 30px;
+}
+
+#about-page .value-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#about-page .value-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+#about-page .value-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff7b3c, #ff6b35);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+#about-page .value-icon i {
+    color: #fff;
+    font-size: 24px;
+}
+
+#about-page .value-content h4 {
+    color: #242a6f;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    font-family: "calibri bold";
+}
+
+#about-page .value-content p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* History Section */
+#about-page .history-timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+#about-page .history-timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(135deg, #ff7b3c, #ff6b35);
+}
+
+#about-page .timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 40px;
+}
+
+#about-page .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    background: #ff7b3c;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 3px #ff7b3c;
+}
+
+#about-page .timeline-year {
+    position: absolute;
+    left: -80px;
+    top: 5px;
+    background: #ff7b3c;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+#about-page .timeline-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-left: 4px solid #ff7b3c;
+}
+
+#about-page .timeline-content h4 {
+    color: #242a6f;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+    font-family: "calibri bold";
+}
+
+#about-page .timeline-content p {
+    color: #666;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Responsive Design for About Page */
+@media (max-width: 959px) {
+    #about-page .about-sidebar {
+        position: static;
+        margin-bottom: 30px;
+    }
+    
+    #about-page .about-section {
+        padding: 20px;
+    }
+    
+    #about-page .section-title {
+        font-size: 24px;
+    }
+    
+    #about-page .timeline-year {
+        position: static;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+    
+    #about-page .timeline-item {
+        padding-left: 20px;
+    }
+    
+    #about-page .value-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #about-page .value-icon {
+        margin: 0 auto 15px auto;
+    }
+}
+
+@media (max-width: 640px) {
+    #about-page .about-section {
+        padding: 15px;
+    }
+    
+    #about-page .section-title {
+        font-size: 20px;
+    }
+    
+    #about-page .vision-text h3 {
+        font-size: 20px;
+    }
+}
+
+.pt50{
+    padding-top: 50px;
+}
+.pb50{
+    padding-bottom: 50px;
+}
