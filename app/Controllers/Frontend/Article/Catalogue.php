@@ -78,7 +78,7 @@ class Catalogue extends FrontendController{
         $this->data['child'] =[];
         if(isset($this->data['breadcrumb']) && is_array($this->data['breadcrumb']) && count($this->data['breadcrumb'])){
             $this->data['child'] = $this->AutoloadModel->_get_where([
-                'select' => 'tb1.lft, tb1.rgt, tb1.id, tb1.parentid,  tb2.title, tb2.canonical, tb2.description, tb2.content, tb1.image',
+                'select' => 'tb1.lft, tb1.rgt, tb1.id, tb1.parentid,  tb2.title, tb2.canonical, tb2.description, tb2.content, tb1.image, tb1.created_at',
                 'table' => $this->data['module'].' as tb1',
                 'join' => [
                     [
