@@ -947,7 +947,7 @@ body {
 }
 
 .overlay-slide .description {
-    font-size: 5rem;
+    font-size: 8rem;
     position: relative;
     z-index: 1;
     line-height: 2;
@@ -4182,13 +4182,15 @@ mepage-student .panel-body .article:hover .content * {
     text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
+    text-align: center;
 }
 
 .about-quy-card-title::after {
     content: '';
     position: absolute;
     bottom: -8px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 40px;
     height: 3px;
     background: linear-gradient(90deg, #ff7b3c, #ff6b35);
@@ -4199,6 +4201,7 @@ mepage-student .panel-body .article:hover .content * {
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 8px;
 }
 
@@ -4230,7 +4233,6 @@ mepage-student .panel-body .article:hover .content * {
 
 .about-quy-card-description p {
     margin-bottom: 15px;
-    text-indent: 20px;
 }
 
 .about-quy-card-description p:last-child {
@@ -5291,16 +5293,6 @@ mepage-student .panel-body .article:hover .content * {
     text-decoration: none;
 }
 
-.article-description {
-    color: #6c757d;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
 .article-footer {
     text-align: right;
 }
@@ -5881,4 +5873,26 @@ mepage-student .panel-body .article:hover .content * {
     .comment-date {
         margin-top: 5px;
     }
+}
+
+.pc-header .hd-logo .logo-hd-white {
+    display: block;
+}
+
+.pc-header .hd-logo .logo-hd-black {
+    display: none;
+}
+
+.is-not-home .hd-logo .logo-hd-white ,
+.pc-header.uk-active .hd-logo .logo-hd-white {
+    display: none;
+}
+
+.is-not-home .hd-logo .logo-hd-black ,
+.pc-header.uk-active .hd-logo .logo-hd-black {
+    display: block;
+}
+
+.is-not-home .language-list span{
+    color:#000;
 }

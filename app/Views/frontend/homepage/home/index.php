@@ -127,7 +127,6 @@
             </div>
             <div class="service-content">
                 <?php foreach($panel['field']['data'] as $key => $val){ ?>
-                <?php if($key === 0){ continue; } ?>
                 <div class="uk-grid uk-grid-medium <?php echo $key % 2 == 0 ? 'uk-flex-row-reverse' : ''; ?>">
                     <div class="uk-width-small-1-1 uk-width-medium-2-5">
                         <div class="thumb">
