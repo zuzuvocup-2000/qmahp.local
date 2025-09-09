@@ -5698,6 +5698,7 @@ mepage-student .panel-body .article:hover .content * {
     .categories-sidebar {
         flex: none;
         order: 2;
+        width: 100%;
     }
     
     .articles-main {
@@ -5717,6 +5718,7 @@ mepage-student .panel-body .article:hover .content * {
 @media (max-width: 480px) {
     .categories-sidebar {
         padding: 15px;
+        width: 100%;
     }
     
     .article-content {
