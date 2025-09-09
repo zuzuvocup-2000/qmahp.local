@@ -532,7 +532,7 @@
 			<param>backend/attribute/attribute/delete</param>
 			<description>Xóa</description>
 		</item>
-	</permissions>
+	</permissions> -->
 	
 	<permissions>
 		<title>Quản lý - [Comment]</title>
@@ -552,7 +552,7 @@
 			<param>backend/comment/comment/delete</param>
 			<description>Xóa</description>
 		</item>
-	</permissions> -->
+	</permissions>
 	<permissions>
 		<title>Quản lý - [Menu]</title>
 		<item>

@@ -125,7 +125,7 @@
                     <a href="index.html"><i class="fa fa-id-card" aria-hidden="true"></i> <span class="nav-label">QL Liên hệ</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li class="<?php echo ($uriModule_name == 'contact') ? 'active' : '' ?>"><a href="<?php echo base_url('backend/contact/contact/index') ?>"><?php echo translate('cms_lang.sidebar.sb_contact', $language) ?></a></li>
-                        <!-- <li class="<?php echo ($uriModule_name == 'comment') ? 'active' : '' ?>"><a href="<?php echo base_url('backend/comment/comment/index') ?>">QL Comment</a></li> -->
+                        <li class="<?php echo ($uriModule_name == 'comment') ? 'active' : '' ?>"><a href="<?php echo base_url('backend/comment/comment/index') ?>">QL Comment</a></li>
                     </ul>
                 </li>
                 <?php if (in_array('backend/language/language/index', $permission) || in_array('backend/slide/slide/index', $permission) || in_array('backend/panel/panel/index', $permission) || in_array('backend/system/general/index', $permission) || in_array('backend/widget/widget/index', $permission) || in_array('backend/menu/menu/listmenu', $permission) || in_array('backend/system/system/store', $permission)) { ?>

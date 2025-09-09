@@ -302,6 +302,66 @@ class Action extends FrontendController{
         }
     }
 
+    public function comment_full(){
+        $email = $this->request->getPost('email');
+        $fullname = $this->request->getPost('fullname');
+        $message = $this->request->getPost('message');
+        $phone = $this->request->getPost('phone');
+        $url = $this->request->getPost('url');
+        
+        // Bad words filter
+        $badWords = [
+            'địt', 'đụ', 'đéo', 'đĩ', 'đù', 'đù má', 'đù mẹ', 'đù má mày', 'đù mẹ mày',
+            'fuck', 'shit', 'damn', 'bitch', 'asshole', 'cunt', 'piss', 'crap',
+            'chó', 'lợn', 'heo', 'súc vật', 'đồ chó', 'đồ lợn', 'đồ heo',
+            'ngu', 'ngu dốt', 'ngu si', 'đần', 'đần độn', 'khùng', 'điên',
+            'chết tiệt', 'chết bầm', 'chết mẹ', 'chết cha', 'chết bà',
+            'cút', 'cút đi', 'biến đi', 'đi chết', 'chết đi', 'cút xéo',
+            'mẹ mày', 'cha mày', 'bà mày', 'ông mày', 'tổ mẹ mày', 'tổ cha mày',
+            'vãi', 'vãi lồn', 'vãi đái', 'vãi cứt', 'vãi lúa', 'vãi chưởng',
+            'lồn', 'buồi', 'cặc', 'cứt', 'đái', 'ỉa', 'địt mẹ', 'đụ mẹ',
+            'con mẹ', 'con đĩ', 'con chó', 'con lợn', 'con heo', 'con súc vật'
+        ];
+        
+        // Check for bad words
+        $containsBadWords = false;
+        $lowerFullname = strtolower($fullname);
+        $lowerMessage = strtolower($message);
+        
+        foreach($badWords as $badWord) {
+            if(strpos($lowerFullname, strtolower($badWord)) !== false || 
+               strpos($lowerMessage, strtolower($badWord)) !== false) {
+                $containsBadWords = true;
+                break;
+            }
+        }
+        
+        if($containsBadWords) {
+            return 'bad_words';
+        }
+        
+        $store = [
+            'email' => $email,
+            'fullname' => $fullname,
+            'phone' => $phone,
+            'comment' => base64_encode($message),
+            'module' => 'article',
+            'url' => $url,
+            'language' => 'vi',
+            'deleted_at' => 0,
+            'created_at' => $this->currentTime
+        ];
+        $insert = $this->AutoloadModel->_insert([
+            'table' => 'comment',
+            'data' => $store
+        ]);
+        if($insert > 0){
+            return 'success';
+        }else{
+            return 'error';
+        }
+    }
+
     public function contact_full_3(){
         $email = $this->request->getPost('email');
         $fullname = $this->request->getPost('fullname');

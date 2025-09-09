@@ -1217,6 +1217,91 @@ $(document).ready(function(){
 		return false;
 	})
 
+	$(document).on('click','.submit-form-comment', function(){
+		let fullname = $('.minh-fullname-comment').val()
+		let email = $('.minh-email-comment').val()
+		let phone = $('.minh-phone-comment').val()
+		let message = $('.minh-content-comment').val()
+		var loader = $('.loader');
+		loader.show();
+		
+		// List of inappropriate words (bad words filter)
+		const badWords = [
+			'địt', 'đụ', 'đéo', 'đĩ', 'đù', 'đù má', 'đù mẹ', 'đù má mày', 'đù mẹ mày',
+			'fuck', 'shit', 'damn', 'bitch', 'asshole', 'cunt', 'piss', 'crap',
+			'chó', 'lợn', 'heo', 'súc vật', 'đồ chó', 'đồ lợn', 'đồ heo',
+			'ngu', 'ngu dốt', 'ngu si', 'đần', 'đần độn', 'khùng', 'điên',
+			'chết tiệt', 'chết bầm', 'chết mẹ', 'chết cha', 'chết bà',
+			'cút', 'cút đi', 'biến đi', 'đi chết', 'chết đi', 'cút xéo',
+			'mẹ mày', 'cha mày', 'bà mày', 'ông mày', 'tổ mẹ mày', 'tổ cha mày',
+			'vãi', 'vãi lồn', 'vãi đái', 'vãi cứt', 'vãi lúa', 'vãi chưởng',
+			'lồn', 'buồi', 'cặc', 'cứt', 'đái', 'ỉa', 'địt mẹ', 'đụ mẹ',
+			'con mẹ', 'con đĩ', 'con chó', 'con lợn', 'con heo', 'con súc vật'
+		];
+		
+		// Function to check for bad words
+		function containsBadWords(text) {
+			const lowerText = text.toLowerCase();
+			return badWords.some(word => lowerText.includes(word.toLowerCase()));
+		}
+		
+		if (fullname.length == 0) {
+			setTimeout(() => {
+				loader.hide();
+					toastr.error('Họ và tên không được để trống!','Xin vui lòng thử lại!');
+				}, "2000")
+        } else if(IsEmail(email) == false) {
+			setTimeout(() => {
+				loader.hide();
+					toastr.error('Định dạng Email không hợp lệ!','Xin vui lòng thử lại!');
+				}, "2000")
+        }else if(phone.length == 0) {
+			setTimeout(() => {
+				loader.hide();
+					toastr.error('Số điện thoại không hợp lệ!','Xin vui lòng thử lại!');
+				}, "2000")
+        }else if(message.length < 10){
+			setTimeout(() => {
+				loader.hide();
+					toastr.error('Nội dung cần gửi tối thiểu 10 kí tự!','Xin vui lòng thử lại!');
+				}, "2000")
+        }else if(containsBadWords(fullname) || containsBadWords(message)){
+			setTimeout(() => {
+				loader.hide();
+					toastr.error('Nội dung bình luận chứa từ ngữ không phù hợp!','Vui lòng sử dụng ngôn ngữ lịch sự!');
+				}, "2000")
+        }else{
+        	let form_URL = 'ajax/frontend/action/comment_full';
+			$.post(form_URL, {
+				email : email,fullname : fullname,phone : phone,message : message,url : url
+			},
+			function(data){
+				if(data.trim() == 'success'){
+					setTimeout(() => {
+						loader.hide();
+						toastr.success('Thành công','Bình luận thành công!');
+						// Reset form after successful submission
+						$('.minh-fullname-comment').val('');
+						$('.minh-email-comment').val('');
+						$('.minh-phone-comment').val('');
+						$('.minh-content-comment').val('');
+					}, "2000")
+				}else if(data.trim() == 'bad_words'){
+					setTimeout(() => {
+						loader.hide();
+						toastr.error('Nội dung bình luận chứa từ ngữ không phù hợp!','Vui lòng sử dụng ngôn ngữ lịch sự!');
+					}, "2000")
+				}else{
+					setTimeout(() => {
+						loader.hide();
+						toastr.error('Có lỗi xảy ra!','Xin vui lòng thử lại!');
+					}, "2000")
+				}
+			});
+        }
+		return false;
+	})
+
 	$(document).on('click','.submit-form-contact-3', function(){
 		let _this = $(this)
 		let fullname = $('.va-fullname-contact-3').val()

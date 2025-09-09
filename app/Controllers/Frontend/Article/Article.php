@@ -46,6 +46,17 @@ class Article extends FrontendController{
                 ]
             ],
         ]);
+        $this->data['commentList'] = $this->AutoloadModel->_get_where([
+            'select' => 'tb1.id,tb1.fullname,tb1.phone,tb1.email,tb1.url,tb1.publish,tb1.comment,tb1.module,tb1.language,tb1.rate,tb1.parentid, tb1.created_at',
+            'table' => 'comment as tb1',
+            'join' => [
+                [
+                    'article_translate as tb2', 'tb1.url = tb2.canonical', 'inner'
+                ],
+            ],
+            'order_by' => 'tb1.created_at desc',
+            'limit' => 10,
+        ], TRUE);
         $cookie = $this->set_cookie($id, $this->data['object']);
         
 

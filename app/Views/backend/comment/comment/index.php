@@ -70,9 +70,6 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="uk-button">
-                                        <a href="<?php echo base_url('backend/comment/comment/create') ?>" class="btn btn-danger btn-sm"><i class="fa fa-plus"></i> Thêm mới Comment</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -91,7 +88,7 @@
                             <th class="text-center" style="width: 80px">Module</th>
                             <th class="text-center" style="width: 70px">Chi tiết</th>
                             <th >Comment</th>
-                            <th class="text-center" style="width: 100px">Đánh giá</th>
+                            <!-- <th class="text-center" style="width: 100px">Đánh giá</th> -->
                             <th class="text-center">Hiển thị</th>
                             <th class="text-center">Thao tác</th>
                         </tr>
@@ -117,7 +114,7 @@
                                     <a href="<?php echo $val['url'].HTSUFFIX ?>" target="_blank"><i class="fa fa-link" aria-hidden="true"></i></a>  
                                 </td>
                                 <td><?php echo $val['comment'] ?></td>
-                                <td class="text-center rate-view">
+                                <!-- <td class="text-center rate-view">
                                     <?php 
                                         for ($i = 1; $i <= $val['rate'] ; $i++) { 
                                             echo '<i class="star-rating fa fa-star" aria-hidden="true"></i>';
@@ -126,10 +123,10 @@
                                             echo '<i class="star-rating fa fa-star-o" aria-hidden="true"></i>';
                                         }
                                     ?>
-                                </td>
+                                </td> -->
                                 
                                 <td class="text-center publishonoffswitch" data-field="publish" data-module="<?php echo $module; ?>" data-where="id">
-                                    <div class="switch">
+                                    <div class="switch" style="display: flex; justify-content: center;">
                                         <div class="onoffswitch">
                                             <input type="checkbox" class="onoffswitch-checkbox publish" data-id="<?php echo $val['id'] ?>" id="publish-<?php echo $val['id'] ?>" <?php echo ($val['publish'] == 1 ? 'checked' : '') ?>>
                                             <label class="onoffswitch-label" for="publish-<?php echo $val['id'] ?>">
