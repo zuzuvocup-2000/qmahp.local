@@ -12,9 +12,10 @@ class ConfigBie{
 		$data['locate'] =  array(
 			0 => '-- Chọn vị trí Panel --',
             'home' => 'Trang chủ',
+            'join_hands' => 'Chung tay',
             // 'article' => 'Bài viết',
-            'aside_home' => 'Aside trang chủ',
-            'aside_art' => 'Aside bài viết',
+            // 'aside_home' => 'Aside trang chủ',
+            // 'aside_art' => 'Aside bài viết',
             // 'product' => 'Sản phẩm',
 		);
 		$data['dropdown'] =  array(

@@ -19,58 +19,55 @@
 </section>
 
 <!-- Activities Section -->
-<section id="activities" class="activities-section">
-    <div class="uk-container uk-container-center">
-        <div class="section-header">
-            <h2 class="section-title">Hoạt động gần đây</h2>
-            <p class="section-description">Những hoạt động thiện nguyện ý nghĩa của chúng tôi</p>
-        </div>
-
-        <div class="activities-grid">
-            <?php foreach ($activities as $index => $activity): ?>
-            <div class="activity-card">
-                <div class="activity-image">
-                    <img src="<?= base_url($activity['image']) ?>" alt="<?= htmlspecialchars($activity['title']) ?>" loading="lazy">
-                    <div class="activity-badge">
-                        <span class="date"><?= $activity['date'] ?></span>
-                    </div>
-                </div>
-                <div class="activity-content">
-                    <h3 class="activity-title"><?= $activity['title'] ?></h3>
-                    <p class="activity-location">
-                        <i class="icon-location"></i>
-                        <?= $activity['location'] ?>
-                    </p>
-                    <p class="activity-description"><?= $activity['description'] ?></p>
-                    <div class="activity-footer">
-                        <span class="activity-amount"><?= $activity['amount'] ?></span>
-                    </div>
-                </div>
+ <?php if(isset($panel['join-hand']) && is_array($panel['join-hand']) && count($panel['join-hand'])){ ?>
+    <section id="activities" class="activities-section">
+        <div class="uk-container uk-container-center">
+            <div class="section-header">
+                <h2 class="section-title"><?= $panel['join-hand']['title'] ?></h2>
+                <p class="section-description"><?= $panel['join-hand']['description'] ?></p>
             </div>
-            <?php endforeach; ?>
+
+            <div class="activities-grid">
+                <?php foreach ($panel['join-hand']['data'] as $index => $activity): ?>
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="<?= base_url($activity['image']) ?>" alt="<?= htmlspecialchars($activity['title']) ?>" loading="lazy">
+                        <div class="activity-badge">
+                            <span class="date"><?= date('d/m/Y', strtotime($activity['created_at'])) ?></span>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <h3 class="activity-title"><?= $activity['title'] ?></h3>
+                        <p class="activity-description">
+                            <?= mb_strimwidth(strip_tags(base64_decode($activity['description'])), 0, 512, '...') ?>
+                        </p>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php } ?>
 
 <!-- Impact Statistics -->
 <section class="impact-section">
     <div class="uk-container uk-container-center">
         <div class="impact-grid">
             <div class="impact-item">
-                <div class="impact-number">500+</div>
-                <div class="impact-label">Chăn ấm đã trao</div>
+                <div class="impact-number"><?= $general['banner_number_gift'] ?></div>
+                <div class="impact-label"><?= $general['banner_label_gift'] ?></div>
             </div>
             <div class="impact-item">
-                <div class="impact-number">50+</div>
-                <div class="impact-label">Căn nhà đã xây</div>
+                <div class="impact-number"><?= $general['banner_number_house'] ?></div>
+                <div class="impact-label"><?= $general['banner_label_house'] ?></div>
             </div>
             <div class="impact-item">
-                <div class="impact-number">1000+</div>
-                <div class="impact-label">Gia đình được hỗ trợ</div>
+                <div class="impact-number"><?= $general['banner_number_family'] ?></div>
+                <div class="impact-label"><?= $general['banner_label_family'] ?></div>
             </div>
             <div class="impact-item">
-                <div class="impact-number">20+</div>
-                <div class="impact-label">Tỉnh thành</div>
+                <div class="impact-number"><?= $general['banner_number_province'] ?></div>
+                <div class="impact-label"><?= $general['banner_label_province'] ?></div>
             </div>
         </div>
     </div>
@@ -81,37 +78,37 @@
     <div class="uk-container uk-container-center">
         <div class="donation-content">
             <div class="contact-info">
-                <h3>Về Quỹ Mái Ấm Hạnh Phúc</h3>
+                <h3><?php echo $keywordList['about-happy'] ?></h3>
                 <div class="info-content">
-                    <p>Quỹ Mái Ấm Hạnh Phúc được thành lập với mục tiêu hỗ trợ những hoàn cảnh khó khăn, mang đến mái ấm và hạnh phúc cho những người cần giúp đỡ.</p>
+                    <p><?php echo $keywordList['about-description'] ?></p>
                     
                     <div class="info-highlights">
                         <div class="highlight-item">
                             <i class="icon-heart"></i>
                             <div>
-                                <h4>Mục tiêu</h4>
-                                <p>Xây dựng mái ấm cho những gia đình có hoàn cảnh khó khăn</p>
+                                <h4><?php echo $keywordList['about-goal'] ?></h4>
+                                <p><?php echo $keywordList['about-goal-description'] ?></p>
                             </div>
                         </div>
                         
                         <div class="highlight-item">
                             <i class="icon-handshake"></i>
                             <div>
-                                <h4>Cam kết</h4>
-                                <p>Minh bạch trong mọi hoạt động và sử dụng đúng mục đích</p>
+                                <h4><?php echo $keywordList['about-commit'] ?></h4>
+                                <p><?php echo $keywordList['about-commit-description'] ?></p>
                             </div>
                         </div>
                         
                         <div class="highlight-item">
                             <i class="icon-community"></i>
                             <div>
-                                <h4>Tầm nhìn</h4>
-                                <p>Lan tỏa yêu thương và tạo nên cộng đồng nhân ái</p>
+                                <h4><?php echo $keywordList['about-vision'] ?></h4>
+                                <p><?php echo $keywordList['about-vision-description'] ?></p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <h3>Thông tin liên hệ</h3>
+                <h3><?php echo $keywordList['contact-info'] ?></h3>
                 <div class="contact-item">
                     <i class="icon-location"></i>
                     <div>
@@ -133,8 +130,8 @@
             </div>
 
             <div class="donation-form-wrapper">
-                <form class="donation-form" action="<?= base_url('chung-tay/submit-donation') ?>" method="post">
-                    <h3>Gửi thông tin đóng góp</h3>
+                <form class="donation-form" action="<?= base_url('chung-tay/submit-donation'.HTSUFFIX) ?>" method="post">
+                    <h3><?php echo $keywordList['send-info'] ?></h3>
                     
                     <?php if (session()->getFlashdata('success')): ?>
                         <div class="alert alert-success">
@@ -144,38 +141,84 @@
 
                     <?php if (session()->getFlashdata('errors')): ?>
                         <div class="alert alert-danger">
-                            <ul>
-                                <?php foreach (session()->getFlashdata('errors') as $error): ?>
-                                    <li><?= $error ?></li>
-                                <?php endforeach; ?>
-                            </ul>
+                            <?php 
+                                $errors = session()->getFlashdata('errors');
+                                if(is_array($errors)){
+                                    foreach($errors as $error){
+                                        echo $error;
+                                    }
+                                }else{
+                                    echo $errors;
+                                }
+                            ?>
                         </div>
                     <?php endif; ?>
 
+                    <?php 
+                    $formData = session()->getFlashdata('form_data');
+                    $fullname = $formData['fullname'] ?? '';
+                    $email = $formData['email'] ?? '';
+                    $phone = $formData['phone'] ?? '';
+                    $message = $formData['message'] ?? '';
+                    ?>
+
                     <div class="form-group">
-                        <label for="fullname">Họ và tên *</label>
-                        <input type="text" id="fullname" name="fullname" class="form-control" required>
+                        <label for="fullname"><?php echo $keywordList['fullname'] ?> *</label>
+                        <input type="text" id="fullname" name="fullname" class="form-control" value="<?= htmlspecialchars($fullname) ?>" required>
                     </div>
 
                     <div class="form-group">
                         <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
+                        <input type="email" id="email" name="email" class="form-control" value="<?= htmlspecialchars($email) ?>" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Số điện thoại *</label>
-                        <input type="tel" id="phone" name="phone" class="form-control" required>
+                        <label for="phone"><?php echo $keywordList['phone'] ?> *</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" value="<?= htmlspecialchars($phone) ?>" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Thông tin hoàn cảnh cần hỗ trợ</label>
-                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Mô tả chi tiết về hoàn cảnh cần hỗ trợ..."></textarea>
+                        <label for="message"><?php echo $keywordList['message'] ?></label>
+                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="<?php echo $keywordList['message-description'] ?>"><?= htmlspecialchars($message) ?></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-block">Gửi thông tin</button>
+                    <button type="submit" class="btn btn-primary btn-block"><?php echo $keywordList['send-info-btn'] ?></button>
                 </form>
             </div>
         </div>
+
+        <script>
+        // Auto scroll to form when there are errors
+        document.addEventListener('DOMContentLoaded', function() {
+            <?php if (session()->getFlashdata('errors') || session()->getFlashdata('success')): ?>
+                // Scroll to form when there are validation errors
+                const formElement = document.querySelector('.donation-form');
+                if (formElement) {
+                    // Add error highlight class
+                    formElement.classList.add('error-highlight');
+                    
+                    // Scroll to form with smooth animation
+                    formElement.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'center' 
+                    });
+                    
+                    // Focus on first input field
+                    const firstInput = formElement.querySelector('input[required]');
+                    if (firstInput) {
+                        setTimeout(function() {
+                            firstInput.focus();
+                        }, 500);
+                    }
+                    
+                    // Remove highlight after 5 seconds
+                    setTimeout(function() {
+                        formElement.classList.remove('error-highlight');
+                    }, 5000);
+                }
+            <?php endif; ?>
+        });
+        </script>
     </div>
 </section>
 
@@ -183,9 +226,9 @@
 <section class="cta-section">
     <div class="uk-container uk-container-center">
         <div class="cta-content">
-            <h2>QUỸ MÁI ẤM HẠNH PHÚC XIN CẢM ƠN</h2>
-            <p>NHỮNG TẤM LÒNG CÙNG ĐỒNG HÀNH CÙNG CHÚNG TÔI TRÊN CON ĐƯỜNG ƯỚC MƠ, HÀNH ĐỘNG VÀ KIẾN TẠO SỰ THAY ĐỔI!</p>
-            <a href="#donation-form" class="btn btn-primary btn-lg">Chung tay ngay</a>
+            <h2><?php echo $keywordList['thank-you'] ?></h2>
+            <p><?php echo $keywordList['thank-you-description'] ?></p>
+            <a href="#donation-form" class="btn btn-primary btn-lg"><?php echo $keywordList['join-hands-btn'] ?></a>
         </div>
     </div>
 </section>

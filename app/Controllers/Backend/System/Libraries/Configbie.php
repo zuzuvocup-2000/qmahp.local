@@ -50,15 +50,20 @@ class ConfigBie{
 				// 'image' => array('type' => 'images', 'label' => 'Ảnh liên hệ trang chủ'),
 			),
 		);
-		// $data['banner'] =  array(
-		// 	'label' => 'Cấu hình khác',
-		// 	'description' => 'Một số cấu hình được thêm vào tại đây',
-		// 	'value' => array(
-		// 		'header' => array('type' => 'images', 'label' => 'Banner đầu Header'),
-		// 		'footer' => array('type' => 'images', 'label' => 'Banner chân trang'),
-		// 		'news' => array('type' => 'images', 'label' => 'Banner tin tức'),
-		// 	),
-		// );
+		$data['banner'] =  array(
+			'label' => 'Chung tay',
+			'description' => 'Một số cấu hình được thêm vào tại đây',
+			'value' => array(
+				'number_gift' => array('type' => 'text', 'label' => 'Số lượng quà đã trao'),
+				'label_gift' => array('type' => 'text', 'label' => 'Nhãn quà đã trao'),
+				'number_house' => array('type' => 'text', 'label' => 'Số lượng căn nhà đã xây'),
+				'label_house' => array('type' => 'text', 'label' => 'Nhãn căn nhà đã xây'),
+				'number_family' => array('type' => 'text', 'label' => 'Số lượng gia đình được hỗ trợ'),
+				'label_family' => array('type' => 'text', 'label' => 'Nhãn gia đình được hỗ trợ'),
+				'number_province' => array('type' => 'text', 'label' => 'Số lượng tỉnh thành'),
+				'label_province' => array('type' => 'text', 'label' => 'Nhãn tỉnh thành'),
+			),
+		);
 		$data['seo'] =  array(
 			'label' => 'Cấu hình thẻ tiêu đề',
 			'description' => 'Cài đặt đầy đủ Thẻ tiêu đề và thẻ mô tả giúp xác định cửa hàng của bạn xuất hiện trên công cụ tìm kiếm.',

@@ -16,6 +16,7 @@ class ConfigBie{
             'ticket' => 'Thông tin phản hồi',
             'support' => 'Hỗ trợ báo giá',
             'baogia' => 'Báo giá',
+            'donation' => 'Thông tin đóng góp',
 		);
 		$text =  array(
             'email' => '[email] đã đăng ký nhận tin! Mong hệ thống phản hồi sớm nhất có thể!',
@@ -23,6 +24,7 @@ class ConfigBie{
             'ticket' => '[fullname] đã gửi phản hồi về Website của bạn, xin vui lòng trả lời sớm nhất có thể!',
             'support' => '[fullname] đã gửi hỗ trợ nhờ admin tư vấn báo giá, xin vui lòng trả lời sớm nhất có thể!',
             'baogia' => '[fullname] đã gửi báo giá về Sản phẩm, xin vui lòng trả lời sớm nhất có thể!',
+            'donation' => '[fullname] đã gửi thông tin đóng góp, xin vui lòng trả lời sớm nhất có thể!',
 		);
 		return [
 			'type' => $type,
