@@ -50,16 +50,72 @@
                                 <?php if(isset($commentList) && is_array($commentList) && count($commentList)){ 
                                     foreach($commentList as $comment){ 
                                 ?>
-                                <div class="comment-item">
+                                <div class="comment-item" data-comment-id="<?php echo $comment['id']; ?>">
                                     <div class="comment-header">
                                         <div class="comment-author">
-                                            <strong><?php echo $comment['fullname'] ?></strong>
+                                            <strong<?php echo (isset($auth['id']) && $comment['fullname'] == $auth['fullname']) ? ' class="admin"' : ''; ?>><?php echo $comment['fullname'] ?></strong>
                                             <span class="comment-date"><?php echo date('d/m/Y H:i', strtotime($comment['created_at'])) ?></span>
                                         </div>
                                     </div>
                                     <div class="comment-content">
                                         <?php echo strip_tags(base64_decode($comment['comment'])) ?>
                                     </div>
+                                    <div class="comment-actions">
+                                        <button type="button" class="btn-reply" data-comment-id="<?php echo $comment['id']; ?>">
+                                            <i class="fa fa-reply"></i> Trả lời
+                                        </button>
+                                    </div>
+                                    
+                                    <!-- Reply form (hidden by default) -->
+                                    <div class="reply-form-wrapper" id="reply-form-<?php echo $comment['id']; ?>" style="display: none;">
+                                        <form class="reply-form" data-parent-id="<?php echo $comment['id']; ?>">
+                                            <?php if(isset($auth['id']) && !empty($auth['id'])): ?>
+                                                <input type="hidden" class="minh-fullname-reply" value="<?php echo htmlspecialchars($auth['fullname'] ?? ''); ?>">
+                                                <input type="hidden" class="minh-email-reply" value="<?php echo htmlspecialchars($auth['email'] ?? ''); ?>">
+                                                <input type="hidden" class="minh-phone-reply" value="">
+                                            <?php else: ?>
+                                                <div class="form-group">
+                                                    <label>Họ và tên <span class="required">*</span></label>
+                                                    <input type="text" class="form-control minh-fullname-reply">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Email <span class="required">*</span></label>
+                                                    <input type="email" class="form-control minh-email-reply">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Số điện thoại <span class="required">*</span></label>
+                                                    <input type="tel" class="form-control minh-phone-reply">
+                                                </div>
+                                            <?php endif; ?>
+                                            <div class="form-group">
+                                                <label>Nội dung trả lời <span class="required">*</span></label>
+                                                <textarea class="form-control minh-content-reply" rows="3" placeholder="Nhập nội dung trả lời..."></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="button" class="btn-submit submit-form-reply">Gửi trả lời</button>
+                                                <button type="button" class="btn-cancel-reply">Hủy</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    
+                                    <!-- Display replies for this comment -->
+                                    <?php if(isset($replyList[$comment['id']]) && is_array($replyList[$comment['id']]) && count($replyList[$comment['id']])): ?>
+                                        <div class="replies-list">
+                                            <?php foreach($replyList[$comment['id']] as $reply): ?>
+                                                <div class="reply-item">
+                                                    <div class="reply-header">
+                                                        <div class="reply-author">
+                                                            <strong<?php echo (isset($auth['id']) && $reply['fullname'] == $auth['fullname']) ? ' class="admin"' : ''; ?>><?php echo $reply['fullname'] ?></strong>
+                                                            <span class="reply-date"><?php echo date('d/m/Y H:i', strtotime($reply['created_at'])) ?></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="reply-content">
+                                                        <?php echo strip_tags(base64_decode($reply['comment'])) ?>
+                                                    </div>
+                                                </div>
+                                            <?php endforeach; ?>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
                                 <?php }} else { ?>
                                 <div class="comment-item">
@@ -69,30 +125,33 @@
                                 </div>
                                 <?php } ?>
                             </div>
-                            
-                            <!-- Comment Pagination -->
-                            <?php if(isset($commentPagination) && !empty($commentPagination)){ ?>
-                            <div class="comment-pagination">
-                                <?php echo $commentPagination ?>
-                            </div>
-                            <?php } ?>
 
                             <div class="comment-form-wrapper">
                                 <form id="commentForm" class="comment-form">
-                                    <div class="form-group">
-                                        <label for="commentName">Họ và tên <span class="required">*</span></label>
-                                        <input type="text" id="commentName" name="name" class="form-control minh-fullname-comment">
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label for="commentEmail">Email <span class="required">*</span></label>
-                                        <input type="email" id="commentEmail" name="email" class="form-control minh-email-comment">
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label for="commentPhone">Số điện thoại <span class="required">*</span></label>
-                                        <input type="tel" id="commentPhone" name="phone" class="form-control minh-phone-comment">
-                                    </div>
+                                    <?php if(isset($auth['id']) && !empty($auth['id'])): ?>
+                                        <input type="hidden" class="minh-fullname-comment" value="<?php echo htmlspecialchars($auth['fullname'] ?? ''); ?>">
+                                        <input type="hidden" class="minh-email-comment" value="<?php echo htmlspecialchars($auth['email'] ?? ''); ?>">
+                                        <input type="hidden" class="minh-phone-comment" value="">
+                                        
+                                        <div class="form-group">
+                                            <label>Bình luận với tư cách quản trị viên: <strong><?php echo htmlspecialchars($auth['fullname'] ?? ''); ?></strong></label>
+                                        </div>
+                                    <?php else: ?>
+                                        <div class="form-group">
+                                            <label for="commentName">Họ và tên <span class="required">*</span></label>
+                                            <input type="text" id="commentName" name="name" class="form-control minh-fullname-comment">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="commentEmail">Email <span class="required">*</span></label>
+                                            <input type="email" id="commentEmail" name="email" class="form-control minh-email-comment">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="commentPhone">Số điện thoại <span class="required">*</span></label>
+                                            <input type="tel" id="commentPhone" name="phone" class="form-control minh-phone-comment">
+                                        </div>
+                                    <?php endif; ?>
                                     
                                     <div class="form-group">
                                         <label for="commentContent">Bình luận <span class="required">*</span></label>
@@ -118,208 +177,6 @@
         </div>
     </div>
 </section>
-
-<style>
-/* Comment Section Styles */
-.comment-section {
-    margin-top: 40px;
-    padding: 30px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    border: 1px solid #e9ecef;
-}
-
-.comment-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 25px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #007bff;
-}
-
-/* Comment Form Styles */
-.comment-form-wrapper {
-    background: #fff;
-    padding: 25px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.comment-form .form-group {
-    margin-bottom: 20px;
-}
-
-.comment-form label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: #333;
-}
-
-.comment-form .required {
-    color: #dc3545;
-}
-
-.comment-form .form-control {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    transition: border-color 0.3s ease;
-}
-
-.comment-form .form-control:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
-}
-
-.comment-form textarea.form-control {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.btn-submit {
-    background: #007bff;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-submit:hover {
-    background: #0056b3;
-}
-
-.btn-submit:disabled {
-    background: #6c757d;
-    cursor: not-allowed;
-}
-
-/* Comment List Styles */
-.comment-list {
-    background: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.comment-item {
-    padding: 20px;
-    border-bottom: 1px solid #e9ecef;
-}
-
-.comment-item:last-child {
-    border-bottom: none;
-}
-
-.comment-header {
-    margin-bottom: 10px;
-}
-
-.comment-author {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.comment-author strong {
-    color: #333;
-    font-size: 16px;
-}
-
-.comment-date {
-    color: #6c757d;
-    font-size: 14px;
-}
-
-.comment-content {
-    color: #555;
-    line-height: 1.6;
-    font-size: 15px;
-}
-
-/* Loader Styles */
-.loader {
-    text-align: center;
-    margin-top: 15px;
-}
-
-/* Comment Pagination Styles */
-.comment-pagination {
-    margin: 20px 0;
-    text-align: center;
-}
-
-.comment-pagination .pagination {
-    display: inline-flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.comment-pagination .pagination li {
-    margin: 0 2px;
-}
-
-.comment-pagination .pagination li a,
-.comment-pagination .pagination li span {
-    display: block;
-    padding: 8px 12px;
-    text-decoration: none;
-    border: 1px solid #ddd;
-    color: #333;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.comment-pagination .pagination li a:hover {
-    background: #007bff;
-    color: white;
-    border-color: #007bff;
-}
-
-.comment-pagination .pagination li.active span {
-    background: #007bff;
-    color: white;
-    border-color: #007bff;
-}
-
-.comment-pagination .pagination li.disabled span {
-    color: #6c757d;
-    background: #f8f9fa;
-    border-color: #dee2e6;
-    cursor: not-allowed;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .comment-section {
-        padding: 20px;
-        margin-top: 20px;
-    }
-    
-    .comment-form-wrapper {
-        padding: 20px;
-    }
-    
-    .comment-author {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .comment-date {
-        margin-top: 5px;
-    }
-}
-</style>
 
 <script>
 var currentUrl = window.location.href;

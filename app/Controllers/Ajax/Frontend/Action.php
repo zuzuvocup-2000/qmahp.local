@@ -308,22 +308,19 @@ class Action extends FrontendController{
         $message = $this->request->getPost('message');
         $phone = $this->request->getPost('phone');
         $url = $this->request->getPost('url');
+        $parentid = $this->request->getPost('parentid') ?: 0;
         
-        // Bad words filter
         $badWords = [
-            'địt', 'đụ', 'đéo', 'đĩ', 'đù', 'đù má', 'đù mẹ', 'đù má mày', 'đù mẹ mày',
+            'địt', 'đụ', 'đéo', 'đĩ', 'đù má', 'đù mẹ', 'đù má mày', 'đù mẹ mày',
             'fuck', 'shit', 'damn', 'bitch', 'asshole', 'cunt', 'piss', 'crap',
-            'chó', 'lợn', 'heo', 'súc vật', 'đồ chó', 'đồ lợn', 'đồ heo',
-            'ngu', 'ngu dốt', 'ngu si', 'đần', 'đần độn', 'khùng', 'điên',
             'chết tiệt', 'chết bầm', 'chết mẹ', 'chết cha', 'chết bà',
             'cút', 'cút đi', 'biến đi', 'đi chết', 'chết đi', 'cút xéo',
             'mẹ mày', 'cha mày', 'bà mày', 'ông mày', 'tổ mẹ mày', 'tổ cha mày',
-            'vãi', 'vãi lồn', 'vãi đái', 'vãi cứt', 'vãi lúa', 'vãi chưởng',
+            'vãi lồn', 'vãi đái', 'vãi cứt', 'vãi chưởng',
             'lồn', 'buồi', 'cặc', 'cứt', 'đái', 'ỉa', 'địt mẹ', 'đụ mẹ',
-            'con mẹ', 'con đĩ', 'con chó', 'con lợn', 'con heo', 'con súc vật'
+            'con đĩ', 'con chó', 'con lợn', 'con heo', 'con súc vật'
         ];
         
-        // Check for bad words
         $containsBadWords = false;
         $lowerFullname = strtolower($fullname);
         $lowerMessage = strtolower($message);
@@ -347,7 +344,9 @@ class Action extends FrontendController{
             'comment' => base64_encode($message),
             'module' => 'article',
             'url' => $url,
+            'parentid' => $parentid,
             'language' => 'vi',
+            'publish' => 1,
             'deleted_at' => 0,
             'created_at' => $this->currentTime
         ];

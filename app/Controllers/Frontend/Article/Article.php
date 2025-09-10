@@ -2,23 +2,27 @@
 namespace App\Controllers\Frontend\Article;
 use App\Controllers\FrontendController;
 use App\Models\LanguageKeywordModel;
+use App\Libraries\Authentication;
 
 class Article extends FrontendController{
 
     protected $data;
     protected $languageKeywordModel;
+    protected $Authentication;
 
     public function __construct(){
         $this->data = [];
         $this->data['module'] = 'article';
         $this->data['language'] = $this->currentLanguage();
         $this->languageKeywordModel = new LanguageKeywordModel();
+        $this->Authentication = new Authentication();
     }
 
     public function index($id = 0, $page = 1){
         helper(['mypagination']);
         $id = (int)$id;
-
+        $auth = $this->Authentication->check_auth();
+        $this->data['auth'] = $auth;
         $session = session();
         $this->data['keywordList'] = $this->languageKeywordModel->getKeywordTranslations($this->data['language']);
         $module_extract = explode("_", $this->data['module']);
@@ -46,17 +50,39 @@ class Article extends FrontendController{
                 ]
             ],
         ]);
-        $this->data['commentList'] = $this->AutoloadModel->_get_where([
+        $currentUrl = $_SERVER['REQUEST_URI'];
+        $urlParts = explode('/', $currentUrl);
+        $urlSlug = end($urlParts);
+        $urlSlug = str_replace('.html', '', $urlSlug);
+        
+        $allComments = $this->AutoloadModel->_get_where([
             'select' => 'tb1.id,tb1.fullname,tb1.phone,tb1.email,tb1.url,tb1.publish,tb1.comment,tb1.module,tb1.language,tb1.rate,tb1.parentid, tb1.created_at',
             'table' => 'comment as tb1',
-            'join' => [
-                [
-                    'article_translate as tb2', 'tb1.url = tb2.canonical', 'inner'
-                ],
+            'where' => [
+                'tb1.deleted_at' => 0,
+                'tb1.publish' => 1,
+                'tb1.module' => 'article',
+                'tb1.language' => 'vi',
+                'tb1.url' => $urlSlug
             ],
-            'order_by' => 'tb1.created_at desc',
-            'limit' => 10,
+            'order_by' => 'tb1.parentid asc, tb1.created_at asc',
         ], TRUE);
+        
+        $this->data['commentList'] = [];
+        $this->data['replyList'] = [];
+        
+        if(isset($allComments) && is_array($allComments) && count($allComments)) {
+            foreach($allComments as $comment) {
+                if($comment['parentid'] == 0) {
+                    $this->data['commentList'][] = $comment;
+                } else {
+                    if(!isset($this->data['replyList'][$comment['parentid']])) {
+                        $this->data['replyList'][$comment['parentid']] = [];
+                    }
+                    $this->data['replyList'][$comment['parentid']][] = $comment;
+                }
+            }
+        }
         $cookie = $this->set_cookie($id, $this->data['object']);
         
 

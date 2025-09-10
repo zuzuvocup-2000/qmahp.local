@@ -5862,6 +5862,170 @@ mepage-student .panel-body .article:hover .content * {
     font-size: 15px;
 }
 
+
+/* Loader Styles */
+.loader {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Comment Pagination Styles */
+.comment-pagination {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.comment-pagination .pagination {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comment-pagination .pagination li {
+    margin: 0 2px;
+}
+
+.comment-pagination .pagination li a,
+.comment-pagination .pagination li span {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    color: #333;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.comment-pagination .pagination li a:hover {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.comment-pagination .pagination li.active span {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.comment-pagination .pagination li.disabled span {
+    color: #6c757d;
+    background: #f8f9fa;
+    border-color: #dee2e6;
+    cursor: not-allowed;
+}
+
+/* Reply System Styles */
+.comment-actions {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #e9ecef;
+}
+
+.btn-reply {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-reply:hover {
+    background: #218838;
+}
+
+.reply-form-wrapper {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.reply-form .form-group {
+    margin-bottom: 15px;
+}
+
+.reply-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+.reply-form .form-control {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.reply-form .btn-submit {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.reply-form .btn-cancel-reply {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.replies-list {
+    margin-top: 15px;
+    margin-left: 30px;
+    border-left: 3px solid #e9ecef;
+    padding-left: 15px;
+}
+
+.reply-item {
+    background: #f8f9fa;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.reply-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.reply-author strong {
+    color: #333;
+    font-size: 14px;
+}
+
+.reply-author strong.admin {
+    color: #007bff;
+}
+
+.reply-date {
+    color: #6c757d;
+    font-size: 12px;
+}
+
+.reply-content {
+    color: #333;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .comment-section {

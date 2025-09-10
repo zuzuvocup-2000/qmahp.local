@@ -603,15 +603,12 @@ $(document).ready(function(){
 			let replyTo = _this.parent().siblings('.show-reply').find('.text-reply').text('@'+ replyName + ' : ');
 			replyTo.focus();
 			textLength = $.trim(_this.parent().siblings('.show-reply').find('.text-reply').val()).length;
-			//ban đầu ta ẩn nút gửi cmt
 			_this.parent().siblings('.show-reply').find('.btn-submit').attr('disabled' , '');
 
 			_this.attr('data-comment', 0);
-			_this.html('Bỏ comment');
 		}else{
 			_this.parent().siblings('.show-reply').html('');
 			_this.attr('data-comment', 1);
-			_this.html('Trả lời');
 		}
 		e.preventDefault();
 	});
@@ -1225,21 +1222,19 @@ $(document).ready(function(){
 		var loader = $('.loader');
 		loader.show();
 		
-		// List of inappropriate words (bad words filter)
+		let isLoggedIn = $('.minh-fullname-comment[type="hidden"]').length > 0;
+		
 		const badWords = [
-			'địt', 'đụ', 'đéo', 'đĩ', 'đù', 'đù má', 'đù mẹ', 'đù má mày', 'đù mẹ mày',
+			'địt', 'đụ', 'đéo', 'đĩ', 'đù má', 'đù mẹ', 'đù má mày', 'đù mẹ mày',
 			'fuck', 'shit', 'damn', 'bitch', 'asshole', 'cunt', 'piss', 'crap',
-			'chó', 'lợn', 'heo', 'súc vật', 'đồ chó', 'đồ lợn', 'đồ heo',
-			'ngu', 'ngu dốt', 'ngu si', 'đần', 'đần độn', 'khùng', 'điên',
 			'chết tiệt', 'chết bầm', 'chết mẹ', 'chết cha', 'chết bà',
 			'cút', 'cút đi', 'biến đi', 'đi chết', 'chết đi', 'cút xéo',
 			'mẹ mày', 'cha mày', 'bà mày', 'ông mày', 'tổ mẹ mày', 'tổ cha mày',
-			'vãi', 'vãi lồn', 'vãi đái', 'vãi cứt', 'vãi lúa', 'vãi chưởng',
+			'vãi lồn', 'vãi đái', 'vãi cứt', 'vãi chưởng',
 			'lồn', 'buồi', 'cặc', 'cứt', 'đái', 'ỉa', 'địt mẹ', 'đụ mẹ',
-			'con mẹ', 'con đĩ', 'con chó', 'con lợn', 'con heo', 'con súc vật'
+			'con đĩ', 'con chó', 'con lợn', 'con heo', 'con súc vật'
 		];
 		
-		// Function to check for bad words
 		function containsBadWords(text) {
 			const lowerText = text.toLowerCase();
 			return badWords.some(word => lowerText.includes(word.toLowerCase()));
@@ -1255,7 +1250,7 @@ $(document).ready(function(){
 				loader.hide();
 					toastr.error('Định dạng Email không hợp lệ!','Xin vui lòng thử lại!');
 				}, "2000")
-        }else if(phone.length == 0) {
+        }else if(!isLoggedIn && phone.length == 0) {
 			setTimeout(() => {
 				loader.hide();
 					toastr.error('Số điện thoại không hợp lệ!','Xin vui lòng thử lại!');
@@ -1280,10 +1275,11 @@ $(document).ready(function(){
 					setTimeout(() => {
 						loader.hide();
 						toastr.success('Thành công','Bình luận thành công!');
-						// Reset form after successful submission
-						$('.minh-fullname-comment').val('');
-						$('.minh-email-comment').val('');
-						$('.minh-phone-comment').val('');
+						if(!isLoggedIn) {
+							$('.minh-fullname-comment').val('');
+							$('.minh-email-comment').val('');
+							$('.minh-phone-comment').val('');
+						}
 						$('.minh-content-comment').val('');
 					}, "2000")
 				}else if(data.trim() == 'bad_words'){
@@ -1301,6 +1297,109 @@ $(document).ready(function(){
         }
 		return false;
 	})
+
+	// Reply form handlers
+	$(document).on('click','.btn-reply', function(){
+		let commentId = $(this).data('comment-id');
+		$('#reply-form-' + commentId).slideToggle();
+	});
+
+	$(document).on('click','.btn-cancel-reply', function(){
+		$(this).closest('.reply-form-wrapper').slideUp();
+		$(this).closest('.reply-form').find('textarea').val('');
+	});
+
+	$(document).on('click','.submit-form-reply', function(){
+		let fullname = $(this).closest('.reply-form').find('.minh-fullname-reply').val()
+		let email = $(this).closest('.reply-form').find('.minh-email-reply').val()
+		let phone = $(this).closest('.reply-form').find('.minh-phone-reply').val()
+		let message = $(this).closest('.reply-form').find('.minh-content-reply').val()
+		let parentId = $(this).closest('.reply-form').data('parent-id')
+		var loader = $('.loader');
+		loader.show();
+		
+		// Check if user is logged in (hidden fields exist)
+		let isLoggedIn = $(this).closest('.reply-form').find('.minh-fullname-reply[type="hidden"]').length > 0;
+		
+		// List of inappropriate words (bad words filter) - Only truly offensive words
+		const badWords = [
+			'địt', 'đụ', 'đéo', 'đĩ', 'đù má', 'đù mẹ', 'đù má mày', 'đù mẹ mày',
+			'fuck', 'shit', 'damn', 'bitch', 'asshole', 'cunt', 'piss', 'crap',
+			'chết tiệt', 'chết bầm', 'chết mẹ', 'chết cha', 'chết bà',
+			'cút', 'cút đi', 'biến đi', 'đi chết', 'chết đi', 'cút xéo',
+			'mẹ mày', 'cha mày', 'bà mày', 'ông mày', 'tổ mẹ mày', 'tổ cha mày',
+			'vãi lồn', 'vãi đái', 'vãi cứt', 'vãi chưởng',
+			'lồn', 'buồi', 'cặc', 'cứt', 'đái', 'ỉa', 'địt mẹ', 'đụ mẹ',
+			'con đĩ', 'con chó', 'con lợn', 'con heo', 'con súc vật'
+		];
+		
+		// Function to check for bad words
+		function containsBadWords(text) {
+			const lowerText = text.toLowerCase();
+			return badWords.some(word => lowerText.includes(word.toLowerCase()));
+		}
+		
+		if (fullname.length == 0) {
+			setTimeout(() => {
+				loader.hide();
+					toastr.error('Họ và tên không được để trống!','Xin vui lòng thử lại!');
+				}, "2000")
+        } else if(IsEmail(email) == false) {
+			setTimeout(() => {
+				loader.hide();
+					toastr.error('Định dạng Email không hợp lệ!','Xin vui lòng thử lại!');
+				}, "2000")
+        }else if(!isLoggedIn && phone.length == 0) {
+			setTimeout(() => {
+				loader.hide();
+					toastr.error('Số điện thoại không hợp lệ!','Xin vui lòng thử lại!');
+				}, "2000")
+        }else if(message.length < 10){
+			setTimeout(() => {
+				loader.hide();
+					toastr.error('Nội dung cần gửi tối thiểu 10 kí tự!','Xin vui lòng thử lại!');
+				}, "2000")
+        }else if(containsBadWords(fullname) || containsBadWords(message)){
+			setTimeout(() => {
+				loader.hide();
+					toastr.error('Nội dung bình luận chứa từ ngữ không phù hợp!','Vui lòng sử dụng ngôn ngữ lịch sự!');
+				}, "2000")
+        }else{
+        	let form_URL = 'ajax/frontend/action/comment_full';
+			$.post(form_URL, {
+				email : email,fullname : fullname,phone : phone,message : message,url : url,parentid : parentId
+			},
+			function(data){
+				if(data.trim() == 'success'){
+					setTimeout(() => {
+						loader.hide();
+						toastr.success('Thành công','Trả lời thành công!');
+						// Reset form after successful submission
+						if(!isLoggedIn) {
+							$(this).closest('.reply-form').find('.minh-fullname-reply').val('');
+							$(this).closest('.reply-form').find('.minh-email-reply').val('');
+							$(this).closest('.reply-form').find('.minh-phone-reply').val('');
+						}
+						$(this).closest('.reply-form').find('.minh-content-reply').val('');
+						$(this).closest('.reply-form-wrapper').slideUp();
+						// Reload page to show new reply
+						location.reload();
+					}, "2000")
+				}else if(data.trim() == 'bad_words'){
+					setTimeout(() => {
+						loader.hide();
+						toastr.error('Nội dung bình luận chứa từ ngữ không phù hợp!','Vui lòng sử dụng ngôn ngữ lịch sự!');
+					}, "2000")
+				}else{
+					setTimeout(() => {
+						loader.hide();
+						toastr.error('Có lỗi xảy ra!','Xin vui lòng thử lại!');
+					}, "2000")
+				}
+			});
+        }
+		return false;
+	});
 
 	$(document).on('click','.submit-form-contact-3', function(){
 		let _this = $(this)
