@@ -13,7 +13,7 @@ $recentActivities = $model->_get_where([
         'tb1.deleted_at' => 0,
         'tb1.publish' => 1,
     ],
-    'order_by' => 'tb1.created_at DESC',
+    'order_by' => 'tb1.updated_at DESC',
     'limit' => 3
 ], true);
 

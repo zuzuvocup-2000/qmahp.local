@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module>
-	<permissions>
+	<!-- <permissions>
 		<title>Nhóm - [Sản phẩm]</title>\
 		<item>
 			<param>backend/product/catalogue/index</param>
@@ -45,11 +45,11 @@
 			<param>backend/product/product/delete</param>
 			<description>Xóa</description>
 		</item>
-		<!-- <item>
+		 <item>
 			<param>backend/product/version/create</param>
 			<description>Phiên bản nâng cao</description>
-		</item> -->
-	</permissions>
+		</item> 
+	</permissions> -->
 	<!-- <permissions>
 		<title>Nhóm - [Thương hiệu]</title>
 		<item>
@@ -572,7 +572,7 @@
 			<description>Chỉnh sửa menu</description>
 		</item>
 	</permissions>
-	<permissions>
+	<!-- <permissions>
 		<title>Quản lý - [Khuyến mãi]</title>
 		<item>
 			<param>backend/promotion/promotion/index</param>
@@ -590,7 +590,7 @@
 			<param>backend/promotion/promotion/delete</param>
 			<description>Xóa</description>
 		</item>
-	</permissions>
+	</permissions> -->
 	<permissions>
 		<title>Quản lý - [Giao diện]</title>
 		<item>
