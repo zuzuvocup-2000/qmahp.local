@@ -722,4 +722,71 @@
     .charity-footer .contact-item i {
         margin: 0 auto 5px;
     }
+
+    .wrap-header-pc  {
+        position: fixed !important;
+        background-color: #fff;
+    }
+
+    .mobile-header{
+        top: 40px !important;
+    }
+
+    .hd-menu-search .icon {
+        color: #000;
+    }
+
+    .slide_title h1{
+        font-size: 3rem;
+        top: 10rem !important;
+    }
+
+    .slide-content {
+        height: 100%;
+    }
+
+    .overlay-slide .slide_title p {
+        position: absolute;
+        font-size: 3rem;
+        left: 10rem;
+        top: 17rem;
+    }
+
+    .main-slide .slide-show ul li .image img {
+        height: 500px;
+    }
+
+    .overlay-slide {
+        padding: 0;
+        top: inherit;
+        transform: inherit;
+    }
+
+    .about-us-content-wrapper{
+        margin-top: 0;
+    }
+
+    .overlay-slide .slide_title{
+        top: 0;
+    }
+
+    .about-quy-card-description p {
+        text-indent: 0
+    }
+
+    .charity-footer .activity-title,
+    .charity-footer .contact-item,
+    .charity-footer .contact-details{
+        text-align: left;
+    }
+
+    .charity-footer .activity-item,
+    .charity-footer .contact-item{
+        flex-direction: row;
+    }
+
+    .charity-footer .activity-date,
+    .charity-footer .activity-title {
+        margin-left: 10px;
+    }
 }
