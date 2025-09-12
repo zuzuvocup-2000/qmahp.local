@@ -89,11 +89,11 @@ if (!$isHomePage) {
 	</div>
 	<section class="upper">
 		<div class="uk-flex uk-flex-middle uk-flex-space-between">
-			<div class="logo"><a href="" title="Logo"><img src="<?php echo $general['homepage_logo']; ?>" alt="Logo" /></a></div>
+			<div class="logo"><a href="<?php echo BASE_URL; ?>" title="Logo"><img src="<?php echo $general['homepage_logo']; ?>" alt="Logo" /></a></div>
 			<div class="mb_toolbox uk-flex uk-flex-middle">
 				
 				<div class="hd-btn chungtay-btn">
-					<a href="chung-tay" title="" class="m0 uk-text-center" style="padding: 9px 5px;font-size: 16px;">Chung tay</a>
+					<a href="<?php echo $language == 'vi' ? BASE_URL . 'chung-tay'.HTSUFFIX : BASE_URL . 'en/join-hands'.HTSUFFIX; ?>" title="" class="m0 uk-text-center" style="padding: 9px 5px;font-size: 16px;"><?php echo $keywordList['hd-chung-tay']; ?></a>
 				</div>
 				<div class="hd-menu-search">
 					<a class="open-search icon no-hover" title="Tìm kiếm"><i class="fa fa-search" aria-hidden="true"></i></a>
