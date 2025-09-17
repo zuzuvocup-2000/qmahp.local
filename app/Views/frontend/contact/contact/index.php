@@ -39,10 +39,10 @@
         <div class="uk-container uk-container-center">
             <div class="wrap-contact">
                 <div class="wrap-form uk-grid uk-grid-large">
-                    <div class="uk-width-large-1-2">
+                    <div class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">
                         <div class="contact-map"><?php echo $general['contact_map'] ?></div> 
                     </div>
-                    <div class="uk-width-large-1-2">
+                    <div class="uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2">
                         <div class="contact-form-wrapper">
                             <form action="frontend/contact/contact/index" method="post" class="uk-form form form-contact">
                                 <div class="form-row">

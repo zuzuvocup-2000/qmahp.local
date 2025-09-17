@@ -13,7 +13,7 @@
             </div>
             <div class="uk-container uk-container-center">
                 <div class="about-us-content-wrapper">
-                    <div class="about-us-header">
+                    <div class="about-us-header wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s">
                         <h2 class="about-us-title">
                             <?php echo $aboutUs[0]['cat_title']; ?>
                         </h2>
@@ -22,7 +22,7 @@
                         </div>
                         <div class="about-us-divider"></div>
                     </div>
-                    <div class="about-us-description">
+                    <div class="about-us-description wow zoomIn" data-wow-duration="1s" data-wow-delay="0.4s">
                         <?php echo $aboutUs[0]['description']; ?>
                         <br>
                         <br>
@@ -36,7 +36,7 @@
     <?php if(isset($aboutQuy) && is_array($aboutQuy) && count($aboutQuy)){ ?>
         <section class="about-quy-section">
             <div class="uk-container uk-container-center">
-                <div class="about-quy-header">
+                <div class="about-quy-header wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s">
                     <h2 class="about-quy-title">
                         <?php echo $aboutQuy[0]['cat_title']; ?>
                     </h2>
@@ -52,7 +52,7 @@
                                         array_shift($tag);
                                     }
                         ?>
-                        <div class="uk-width-1-1 uk-width-medium-1-3">
+                        <div class="uk-width-1-1 uk-width-medium-1-3 wow zoomIn" data-wow-duration="1s" data-wow-delay="<?php echo 0.4 + ($i * 0.2); ?>s">
                             <div class="about-quy-card">
                                 <div class="about-quy-card-image">
                                     <img src="<?php echo $item['image']; ?>" alt="<?php echo $item['title']; ?>" />
@@ -96,7 +96,7 @@
     <?php if(isset($gallery) && is_array($gallery) && count($gallery)){ ?>
     <section class="gallery-wrap">
         <div class="uk-container uk-container-center">
-            <div class="gallery-header uk-text-center mb30">
+            <div class="gallery-header uk-text-center mb30 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s">
                 <h2 class="about-quy-title"><?php echo $gallery[0]['cat_title']; ?></h2>
             </div>
             <div class="gallery-content">
@@ -106,7 +106,7 @@
                         ['col' =>
                     2, 'row' => 1], ['col' => 1, 'row' => 2], ['col' => 1, 'row' => 1], ['col' => 1, 'row' => 1], ['col' => 1, 'row' => 2], ['col' => 2, 'row' => 1], ['col' => 1, 'row' => 1], ['col' => 1, 'row' => 1], ]; foreach ($gallery as $i
                     => $image) { $layout = $pattern[$i % 8]; $col = (int)$layout['col']; $row = (int)$layout['row']; ?>
-                    <div class="col-span-<?php echo $col; ?> row-span-<?php echo $row; ?>">
+                    <div class="col-span-<?php echo $col; ?> row-span-<?php echo $row; ?> wow zoomIn" data-wow-duration="0.8s" data-wow-delay="<?php echo 0.4 + ($i * 0.1); ?>s">
                         <a class="img-cover block h-full" href="<?php echo base_url($image['image']); ?>" data-lightbox="gallery">
                             <img class="w-full h-full object-cover" src="<?php echo base_url($image['image']); ?>" alt="<?php echo !empty($image['title']) ? $image['title'] : $image['cat_title']; ?>" />
                         </a>
@@ -120,14 +120,14 @@
     <?php if(isset($panel['field']) && is_array($panel['field']) && count($panel['field'])){ ?>
     <section class="service-section">
         <div class="uk-container uk-container-center">
-            <div class="service-header uk-text-center mb30">
+            <div class="service-header uk-text-center mb30 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s">
                 <h2 class="about-quy-title">
                     <?php echo $panel['field']['title']; ?>
                 </h2>
             </div>
             <div class="service-content">
                 <?php foreach($panel['field']['data'] as $key => $val){ ?>
-                <div class="uk-grid uk-grid-medium <?php echo $key % 2 == 0 ? 'uk-flex-row-reverse' : ''; ?>">
+                <div class="uk-grid uk-grid-medium <?php echo $key % 2 == 0 ? 'uk-flex-row-reverse' : ''; ?> wow zoomIn" data-wow-duration="1s" data-wow-delay="<?php echo 0.4 + ($key * 0.3); ?>s">
                     <div class="uk-width-small-1-1 uk-width-medium-2-5">
                         <div class="thumb">
                             <a href="" class="img-cover">

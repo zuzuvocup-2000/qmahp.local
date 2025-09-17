@@ -6249,6 +6249,43 @@ mepage-student .panel-body .article:hover .content * {
 }
 
 @media (max-width: 600px) {
+    .contact-form-wrapper{
+        margin-top: 10px !important;
+    }
+
+    .contact-form-section{
+        padding: 10px 0px !important;
+    }
+
+    .contact-item:last-child{
+        margin-bottom: 0px !important;
+    }
+
+    .contact-info, .form-invitation{
+        padding: 10px 0px !important;
+    }
+
+    .contact-body .contact-header .contact-info .company-title {
+        font-size: 25px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .contact-body .contact-header .contact-info .welcome-text {
+        font-size: 14px;
+    }
+
+    .contact-body .contact-header .form-invitation {
+        margin-top: 0px !important;
+    }
+
+    .contact-header{
+        padding: 0 !important;
+    }
+
+    .wrap-contact .uk-width-small-1-1{
+        padding: 0px !important;
+    }
+
     .service-section .content h3.title {
         font-size: 20px;
     }
@@ -6469,6 +6506,16 @@ mepage-student .panel-body .article:hover .content * {
 .mobile-submenu-link span {
     font-weight: 400;
 }
+
+.form-row input{
+    height: 40px !important;
+}
+
+.about-quy-card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
 /* Mobile Sidebar Responsive */
 @media (max-width: 480px) {

@@ -25,7 +25,7 @@ $recentActivities = $model->_get_where([
         <div class="uk-container uk-container-center">
             <div class="uk-grid uk-grid-match" data-uk-grid-margin>
                 <!-- Organization Info -->
-                <div class="uk-width-medium-1-4 uk-width-small-1-2">
+                <div class="uk-width-medium-1-4 uk-width-small-1-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s">
                     <div class="footer-section">
                         <div class="footer-logo">
                             <img src="<?php echo $general['homepage_logo_ft']; ?>" alt="<?php echo $general['homepage_company']; ?>" class="logo-img">
@@ -52,7 +52,7 @@ $recentActivities = $model->_get_where([
                 </div>
 
                 <!-- Quick Links -->
-                <div class="uk-width-medium-1-4 uk-width-small-1-2">
+                <div class="uk-width-medium-1-4 uk-width-small-1-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.4s">
                     <div class="footer-section">
                         <h3 class="footer-title"><?php echo $keywordList['quick-links-title']; ?></h3>
                         <ul class="footer-links">
@@ -64,7 +64,7 @@ $recentActivities = $model->_get_where([
                 </div>
 
                 <!-- Recent Activities -->
-                <div class="uk-width-medium-1-4 uk-width-small-1-2">
+                <div class="uk-width-medium-1-4 uk-width-small-1-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.6s">
                     <div class="footer-section">
                         <h3 class="footer-title"><?php echo $keywordList['recent-activities-title']; ?></h3>
                         <div class="recent-activities">
@@ -95,7 +95,7 @@ $recentActivities = $model->_get_where([
                 </div>
 
                 <!-- Contact Info -->
-                <div class="uk-width-medium-1-4 uk-width-small-1-2">
+                <div class="uk-width-medium-1-4 uk-width-small-1-2 wow zoomIn" data-wow-duration="1s" data-wow-delay="0.8s">
                     <div class="footer-section">
                         <h3 class="footer-title"><?php echo $keywordList['footer-contact-title']; ?></h3>
                         <div class="contact-info">
